@@ -8,7 +8,6 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 
 import com.example.administrator.yintaidemo.R;
-import com.google.gson.Gson;
 
 public abstract class BaseActivity extends AbstractActivity implements SwipeRefreshLayout.OnRefreshListener {
 
@@ -146,8 +145,6 @@ public abstract class BaseActivity extends AbstractActivity implements SwipeRefr
         }
 
 
-
-
     }
 
 
@@ -165,10 +162,7 @@ public abstract class BaseActivity extends AbstractActivity implements SwipeRefr
 
     private void initView() {
         bodyzong = (LinearLayout) findViewById(R.id.bodyzong);
-
-
         relative = (RelativeLayout) findViewById(R.id.relative);
-        // relative.setOnClickListener(this);
     }
 
     private void initViews() {

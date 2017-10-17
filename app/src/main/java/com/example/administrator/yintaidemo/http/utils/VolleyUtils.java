@@ -34,6 +34,8 @@ public class VolleyUtils {
     private VolleyUtils(Context context){
         queue = Volley.newRequestQueue(context);
     }
+
+
     public static VolleyUtils getInstance(Context context){
         if(settings==null){
             synchronized (VolleyUtils.class){
@@ -44,6 +46,7 @@ public class VolleyUtils {
 
         return settings;
     }
+
     public <T> Request<T> add(Request<T> request) {
         return  queue.add(request);
     }

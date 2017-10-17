@@ -28,7 +28,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * 　　　　　┃┫┫　┃┫┫
  * 　　　　　┗┻┛　┗┻┛
  * ━━━━━━神兽出没━━━━━━
- * Created by 习爸爸 on 2017/9/28.
  */
 
 public class RetrofitUtils {
@@ -58,7 +57,6 @@ public class RetrofitUtils {
     }
 
     public <T> T create(final Class<T> service) {
-
         return retrofit.create(service);
     }
 
