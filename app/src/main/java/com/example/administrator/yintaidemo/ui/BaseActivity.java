@@ -10,7 +10,7 @@ import android.widget.ScrollView;
 import com.example.administrator.yintaidemo.R;
 import com.google.gson.Gson;
 
-public abstract class BaseActivity extends AbstractActivity {
+public abstract class BaseActivity extends AbstractActivity implements SwipeRefreshLayout.OnRefreshListener {
     protected LinearLayout headerlayout;
     protected LinearLayout footerlayouts;
     protected LinearLayout notground;
@@ -100,6 +100,7 @@ public abstract class BaseActivity extends AbstractActivity {
         run();
 
 
+
     }
     public abstract void run();
 
@@ -177,6 +178,35 @@ public abstract class BaseActivity extends AbstractActivity {
         scrollView = (ScrollView) findViewById(R.id.scrollView);
         refreshlayout = (LinearLayout) findViewById(R.id.refreshlayout);
         refresh = (SwipeRefreshLayout) findViewById(R.id.refresh);
+        refresh.setOnRefreshListener(this);
         errorlayout = (LinearLayout) findViewById(R.id.errorlayout);
     }
+    public void setHeader(int id){
+        if (isShowHeader){
+            headerlayout.addView(infalter(id));
+        }
+
+    }
+public void setBody(int id){
+    if (isShowErrorBody){
+        bodyzong.addView(infalter(id));
+        return;
+    }
+    if (isShowNotScollBody){
+        bodyzong.addView(infalter(id));
+        return;
+    }
+    if (isShowRrefshBody){
+        bodyzong.addView(infalter(id));
+        return;
+    }
+    if (isShowScollBody){
+        bodyzong.addView(infalter(id));
+        return;
+    }
+
+
+
+}
+
 }
