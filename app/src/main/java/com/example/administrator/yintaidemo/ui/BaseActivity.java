@@ -189,24 +189,28 @@ public abstract class BaseActivity extends AbstractActivity implements SwipeRefr
     }
 public void setBody(int id){
     if (isShowErrorBody){
-        bodyzong.addView(infalter(id));
+        errorlayout.addView(infalter(id));
         return;
     }
     if (isShowNotScollBody){
-        bodyzong.addView(infalter(id));
+        notground.addView(infalter(id));
         return;
     }
     if (isShowRrefshBody){
-        bodyzong.addView(infalter(id));
+        refreshlayout.addView(infalter(id));
         return;
     }
     if (isShowScollBody){
-        bodyzong.addView(infalter(id));
+        ground.addView(infalter(id));
         return;
     }
 
 
 
 }
+public void setFooter(int id){
+    footerlayouts.addView(infalter(id));
+}
+
 
 }

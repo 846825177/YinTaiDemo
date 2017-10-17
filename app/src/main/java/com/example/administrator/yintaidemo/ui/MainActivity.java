@@ -19,9 +19,9 @@ public class MainActivity extends BaseActivity{
 
     @Override
     public void run() {
-    setHeader(R.layout.header);
+       setHeader(R.layout.header);
         setBody(R.layout.body);
-        setBody(R.layout.footer);
+        setFooter(R.layout.footer);
 
 
 
