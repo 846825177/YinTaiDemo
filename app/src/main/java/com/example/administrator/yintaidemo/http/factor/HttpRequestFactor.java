@@ -9,5 +9,6 @@ import com.example.administrator.yintaidemo.http.product.HttpRequest;
  */
 
 public interface HttpRequestFactor {
-    <T extends HttpRequest> HttpRequest create(Context context, Class<T> clz);
+    public abstract <T extends HttpRequest> HttpRequest create(Class<T> clz);
+    public abstract <T extends HttpRequest> HttpRequest create(Context context,Class<T> clz);
 }

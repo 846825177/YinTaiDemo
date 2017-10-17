@@ -14,6 +14,23 @@ import java.lang.reflect.InvocationTargetException;
 public class ConCreateHttpReqeust implements HttpRequestFactor{
 
     @Override
+    public <T extends HttpRequest> HttpRequest create(Class<T> clz) {
+        try {
+            HttpRequest o = (HttpRequest) Class.forName(clz.getName()).newInstance();
+            return o;
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+            return null;
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+            return null;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
     public <T extends HttpRequest> HttpRequest create(Context context, Class<T> clz) {
         try {
             Class<?> aClass = Class.forName(clz.getName());
