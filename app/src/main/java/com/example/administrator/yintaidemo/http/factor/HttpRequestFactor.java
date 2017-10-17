@@ -1,0 +1,13 @@
+package com.example.administrator.yintaidemo.http.factor;
+
+import android.content.Context;
+
+import com.example.administrator.yintaidemo.http.product.HttpRequest;
+
+/**
+ * Created by Mr Chen on 2017/10/17.
+ */
+
+public interface HttpRequestFactor {
+    <T extends HttpRequest> HttpRequest create(Context context, Class<T> clz);
+}

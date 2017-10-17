@@ -5,41 +5,11 @@ import android.os.Bundle;
 
 import com.example.administrator.yintaidemo.R;
 
-public class MainActivity extends BaseActivity{
+public class MainActivity extends AppCompatActivity {
 
     @Override
-    public void init() {
-
-        setShowHeader(true);
-        setShowScollBody(true);
-        setShowFooter(true);
-
-    }
-
-
-    @Override
-    public void run() {
-       setHeader(R.layout.header);
-        setBody(R.layout.body);
-        setFooter(R.layout.footer);
-
-
-
-    }
-
-    @Override
-    public void onRefresh() {
-if (refresh.isRefreshing()){
-    handler.postDelayed(new Runnable() {
-        @Override
-        public void run() {
-
-            refresh.setRefreshing(false);
-        }
-    },500);
-
-}
-
-
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
     }
 }
