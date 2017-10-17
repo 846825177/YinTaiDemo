@@ -1,33 +1,32 @@
 package com.example.administrator.yintaidemo.entity;
 
-import org.greenrobot.greendao.annotation.Entity;
-import org.greenrobot.greendao.annotation.Id;
-import org.greenrobot.greendao.annotation.Property;
-import org.greenrobot.greendao.annotation.Generated;
+import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.table.DatabaseTable;
 
 /**
  * Created by 张扬帆 on 2017/10/17.
  */
-@Entity(nameInDb = "shopcar")
-public class ShopCartEntity {
-    @Id(autoincrement = true)
-    private Long id;
-    @Property(nameInDb = "img")
+@DatabaseTable(tableName = "car")
+public class ShopEntity {
+    @DatabaseField(id = false, generatedId = true)
+    private int id;
+    @DatabaseField(columnName = "img")
     private String img;
-    @Property(nameInDb = "name")
+    @DatabaseField(columnName = "name")
     private String name;
-    @Property(nameInDb = "color")
+    @DatabaseField(columnName = "color")
     private String color;
-    @Property(nameInDb = "size")
+    @DatabaseField(columnName = "size")
     private String size;
-    @Property(nameInDb = "price")
+    @DatabaseField(columnName = "price")
     private double price;
-    @Property(nameInDb = "num")
+    @DatabaseField(columnName = "num")
     private int num;
-    @Generated(hash = 1162902045)
-    public ShopCartEntity(Long id, String img, String name, String color,
-            String size, double price, int num) {
-        this.id = id;
+
+    public ShopEntity() {
+    }
+
+    public ShopEntity(String img, String name, String color, String size, double price, int num) {
         this.img = img;
         this.name = name;
         this.color = color;
@@ -35,48 +34,51 @@ public class ShopCartEntity {
         this.price = price;
         this.num = num;
     }
-    @Generated(hash = 1103200236)
-    public ShopCartEntity() {
-    }
-    public Long getId() {
-        return this.id;
-    }
-    public void setId(Long id) {
-        this.id = id;
-    }
+
     public String getImg() {
-        return this.img;
+        return img;
     }
+
     public void setImg(String img) {
         this.img = img;
     }
+
     public String getName() {
-        return this.name;
+        return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public String getColor() {
-        return this.color;
+        return color;
     }
+
     public void setColor(String color) {
         this.color = color;
     }
+
     public String getSize() {
-        return this.size;
+        return size;
     }
+
     public void setSize(String size) {
         this.size = size;
     }
+
     public double getPrice() {
-        return this.price;
+        return price;
     }
+
     public void setPrice(double price) {
         this.price = price;
     }
+
     public int getNum() {
-        return this.num;
+        return num;
     }
+
     public void setNum(int num) {
         this.num = num;
     }
