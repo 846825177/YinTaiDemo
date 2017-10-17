@@ -29,7 +29,7 @@ public class ShopCartEntityDao extends AbstractDao<ShopCartEntity, Long> {
         public final static Property Name = new Property(2, String.class, "name", false, "name");
         public final static Property Color = new Property(3, String.class, "color", false, "color");
         public final static Property Size = new Property(4, String.class, "size", false, "size");
-        public final static Property Price = new Property(5, int.class, "price", false, "price");
+        public final static Property Price = new Property(5, double.class, "price", false, "price");
         public final static Property Num = new Property(6, int.class, "num", false, "num");
     }
 
@@ -51,7 +51,7 @@ public class ShopCartEntityDao extends AbstractDao<ShopCartEntity, Long> {
                 "\"name\" TEXT," + // 2: name
                 "\"color\" TEXT," + // 3: color
                 "\"size\" TEXT," + // 4: size
-                "\"price\" INTEGER NOT NULL ," + // 5: price
+                "\"price\" REAL NOT NULL ," + // 5: price
                 "\"num\" INTEGER NOT NULL );"); // 6: num
     }
 
@@ -89,7 +89,7 @@ public class ShopCartEntityDao extends AbstractDao<ShopCartEntity, Long> {
         if (size != null) {
             stmt.bindString(5, size);
         }
-        stmt.bindLong(6, entity.getPrice());
+        stmt.bindDouble(6, entity.getPrice());
         stmt.bindLong(7, entity.getNum());
     }
 
@@ -121,7 +121,7 @@ public class ShopCartEntityDao extends AbstractDao<ShopCartEntity, Long> {
         if (size != null) {
             stmt.bindString(5, size);
         }
-        stmt.bindLong(6, entity.getPrice());
+        stmt.bindDouble(6, entity.getPrice());
         stmt.bindLong(7, entity.getNum());
     }
 
@@ -138,7 +138,7 @@ public class ShopCartEntityDao extends AbstractDao<ShopCartEntity, Long> {
             cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2), // name
             cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3), // color
             cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4), // size
-            cursor.getInt(offset + 5), // price
+            cursor.getDouble(offset + 5), // price
             cursor.getInt(offset + 6) // num
         );
         return entity;
@@ -151,7 +151,7 @@ public class ShopCartEntityDao extends AbstractDao<ShopCartEntity, Long> {
         entity.setName(cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2));
         entity.setColor(cursor.isNull(offset + 3) ? null : cursor.getString(offset + 3));
         entity.setSize(cursor.isNull(offset + 4) ? null : cursor.getString(offset + 4));
-        entity.setPrice(cursor.getInt(offset + 5));
+        entity.setPrice(cursor.getDouble(offset + 5));
         entity.setNum(cursor.getInt(offset + 6));
      }
     
