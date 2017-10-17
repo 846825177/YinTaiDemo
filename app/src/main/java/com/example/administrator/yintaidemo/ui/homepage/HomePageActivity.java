@@ -1,12 +1,26 @@
 package com.example.administrator.yintaidemo.ui.homepage;
 
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
+import android.view.View;
 import android.widget.ImageView;
 
 import com.example.administrator.yintaidemo.R;
+import com.example.administrator.yintaidemo.adapters.HomePagerAdapter;
 import com.example.administrator.yintaidemo.ui.BaseActivity;
+import com.example.administrator.yintaidemo.ui.fragemnts.ClassifyFragment;
+import com.example.administrator.yintaidemo.ui.fragemnts.ForestallFragment;
+import com.example.administrator.yintaidemo.ui.fragemnts.HomeFragment;
+import com.example.administrator.yintaidemo.ui.fragemnts.MineYinTaiFragment;
+import com.example.administrator.yintaidemo.ui.fragemnts.ShoppingcartFragment;
+
+import java.util.ArrayList;
 
 public class HomePageActivity extends BaseActivity {
 
+
+    private ViewPager viewPager;
 
     @Override
     public void init() {
@@ -18,14 +32,39 @@ public class HomePageActivity extends BaseActivity {
 
     @Override
     public void run() {
-        setBody(R.layout.startpage_layout);
+        setBody(R.layout.body);
         setFooter(R.layout.footer);
         setHeader(R.layout.header);
         initView();
     }
     public void initView(){
-        ImageView imageView = bodyzong.findViewById(R.id.mStartPage);
-        imageView.setBackgroundResource(R.mipmap.ic_launcher);
+        viewPager = bodyzong.findViewById(R.id.viewpager);
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
+        ArrayList<String> stringArrayList = new ArrayList<>();
+        stringArrayList.add("首页");
+        stringArrayList.add("抢先");
+        stringArrayList.add("分类");
+        stringArrayList.add("购物车");
+        stringArrayList.add("我的银泰");
+
+
+        ArrayList<Fragment> arrayList = new ArrayList<>();
+        HomeFragment homeFragment = new HomeFragment();
+        ForestallFragment forestallFragment = new ForestallFragment();
+        ClassifyFragment classifyFragment = new ClassifyFragment();
+        ShoppingcartFragment shoppingcartFragment = new ShoppingcartFragment();
+        MineYinTaiFragment mineYinTaiFragment = new MineYinTaiFragment();
+        arrayList.add(homeFragment);
+        arrayList.add(forestallFragment);
+        arrayList.add(classifyFragment);
+        arrayList.add(shoppingcartFragment);
+        arrayList.add(mineYinTaiFragment);
+
+
+        HomePagerAdapter homePagerAdapter = new HomePagerAdapter(getSupportFragmentManager(),arrayList,stringArrayList);
+       tabLayout.setupWithViewPager(viewPager);
+        viewPager.setAdapter(homePagerAdapter);
+
     }
     @Override
     public void onRefresh() {
