@@ -26,7 +26,6 @@ public class StartActivity extends BaseActivity implements StartView<StartBean> 
 
     private ProgressBar mStart_progressBar;
     private SharedPreferences startpage;
-    private SharedPreferences.Editor edit;
     private ViewPager mStartViewPager;
     private ImageView mStartPage;
     private LinearLayout mViewPagerNumber;
@@ -53,10 +52,20 @@ public class StartActivity extends BaseActivity implements StartView<StartBean> 
         mStartViewPager = bodyzong.findViewById(R.id.mStartViewPager);
         mViewPagerNumber = bodyzong.findViewById(R.id.mViewPagerNumber);
         mStartJump = bodyzong.findViewById(R.id.mStartJump);
+
         mStartPage.setBackgroundResource(R.mipmap.welcome);
         mStart_progressBar.setVisibility(View.VISIBLE);
-        startpage = getSharedPreferences("startpage", MODE_PRIVATE);
-        edit = startpage.edit();
+        startpage = StartActivity.this.getSharedPreferences("startpage", this.MODE_PRIVATE);
+        mStartJump.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences.Editor page = startpage.edit();
+                page.putString("page", "1");
+                page.commit();
+                startActivity(new Intent(StartActivity.this, HomePageActivity.class));
+                finish();
+            }
+        });
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -84,10 +93,12 @@ public class StartActivity extends BaseActivity implements StartView<StartBean> 
     @Override
     public void success(StartBean startBean) {
         mStart_progressBar.setVisibility(View.GONE);
-        edit.putString("appkey", startBean.getData().getApp_data().getAppkey());
-        edit.putString("secretkey", startBean.getData().getApp_data().getSecretkey());
-        String page = startpage.getString("page", "");
-        if (page == null || page.equals("")) {
+        SharedPreferences.Editor editor = startpage.edit();
+        editor.putString("appkey", startBean.getData().getApp_data().getAppkey());
+        editor.putString("secretkey", startBean.getData().getApp_data().getSecretkey());
+        editor.commit();
+        String page = startpage.getString("page", "2");
+        if (page.equals("2")) {
             mViewPagerNumber.setVisibility(View.VISIBLE);
             mStartPage.setVisibility(View.GONE);
             mStartViewPager.setVisibility(View.VISIBLE);
