@@ -1,7 +1,10 @@
 package com.example.administrator.yintaidemo.ui;
 
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.administrator.yintaidemo.R;
 
@@ -11,7 +14,7 @@ public class MainActivity extends BaseActivity {
     @Override
     public void init() {
         setShowHeader(true);
-        setShowErrorBody(true);
+        setShowRrefshBody(true);
         setShowFooter(true);
 
 
@@ -19,9 +22,10 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void run() {
+
+        setHeader(R.layout.header);
         setBody(R.layout.body);
         setFooter(R.layout.footer);
-        setHeader(R.layout.header);
     }
 
     @Override
@@ -34,5 +38,16 @@ public class MainActivity extends BaseActivity {
           }
       },500);
      }
+    }
+    public void initview(){
+        ViewPager viewPager = bodyzong.findViewById(R.id.viewpager);
+        TabLayout tab= (TabLayout) findViewById(R.id.tab);
+
+
+
+
+
+
+
     }
 }

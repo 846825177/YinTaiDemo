@@ -20,7 +20,7 @@ public abstract class BaseActivity extends AbstractActivity implements SwipeRefr
     protected SwipeRefreshLayout refresh;
     protected LinearLayout errorlayout;
     protected LinearLayout bodyzong;
-    private RelativeLayout relative;
+    protected RelativeLayout relative;
 
     private boolean isShowHeader = false;
     private boolean isShowFooter = false;
@@ -106,9 +106,9 @@ public abstract class BaseActivity extends AbstractActivity implements SwipeRefr
 
     public void checkHeader() {
         if (isShowHeader) {
-            headerlayout.setVisibility(View.GONE);
-        } else {
             headerlayout.setVisibility(View.VISIBLE);
+        } else {
+            headerlayout.setVisibility(View.GONE);
         }
 
 
@@ -152,10 +152,10 @@ public abstract class BaseActivity extends AbstractActivity implements SwipeRefr
 
     public void checkFooter() {
         if (isShowFooter) {
-            footerlayouts.setVisibility(View.GONE);
+            footerlayouts.setVisibility(View.VISIBLE);
 
         } else {
-            footerlayouts.setVisibility(View.VISIBLE);
+            footerlayouts.setVisibility(View.GONE);
         }
 
 
