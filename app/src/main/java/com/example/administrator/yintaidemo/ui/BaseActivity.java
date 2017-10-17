@@ -212,5 +212,4 @@ public void setFooter(int id){
     footerlayouts.addView(infalter(id));
 }
 
-
 }
