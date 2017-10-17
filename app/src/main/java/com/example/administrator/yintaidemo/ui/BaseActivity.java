@@ -11,6 +11,14 @@ import com.example.administrator.yintaidemo.R;
 import com.google.gson.Gson;
 
 public abstract class BaseActivity extends AbstractActivity implements SwipeRefreshLayout.OnRefreshListener {
+
+    private boolean isShowHeader = false;
+    private boolean isShowFooter = false;
+
+    private boolean isShowNotScollBody = false;
+    private boolean isShowScollBody = false;
+    private boolean isShowRrefshBody = false;
+    private boolean isShowErrorBody = false;
     protected LinearLayout headerlayout;
     protected LinearLayout footerlayouts;
     protected LinearLayout notground;
@@ -22,8 +30,6 @@ public abstract class BaseActivity extends AbstractActivity implements SwipeRefr
     protected LinearLayout bodyzong;
     protected RelativeLayout relative;
 
-    private boolean isShowHeader = false;
-    private boolean isShowFooter = false;
 
     public boolean isShowHeader() {
         return isShowHeader;
@@ -40,11 +46,6 @@ public abstract class BaseActivity extends AbstractActivity implements SwipeRefr
     public void setShowFooter(boolean showFooter) {
         isShowFooter = showFooter;
     }
-
-    private boolean isShowNotScollBody = false;
-    private boolean isShowScollBody = false;
-    private boolean isShowRrefshBody = false;
-    private boolean isShowErrorBody = false;
 
 
 
@@ -116,11 +117,11 @@ public abstract class BaseActivity extends AbstractActivity implements SwipeRefr
 
     public void checkBody() {
         if (isShowScollBody){
-            ground.setVisibility(View.VISIBLE);
+            scrollView.setVisibility(View.VISIBLE);
             return;
 
         }else {
-       ground.setVisibility(View.GONE);
+            scrollView.setVisibility(View.GONE);
         }
 
         if (isShowNotScollBody){
@@ -138,10 +139,10 @@ public abstract class BaseActivity extends AbstractActivity implements SwipeRefr
         }
 
         if (isShowRrefshBody){
-            refreshlayout.setVisibility(View.VISIBLE);
+            refresh.setVisibility(View.VISIBLE);
             return;
         }else {
-            refreshlayout.setVisibility(View.GONE);
+            refresh.setVisibility(View.GONE);
         }
 
 
