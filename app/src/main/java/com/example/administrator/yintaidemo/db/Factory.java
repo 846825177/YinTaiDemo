@@ -9,9 +9,4 @@ public class Factory implements InterfaceFactory {
     public InterfaceDatabase createDbGreenDao() {
         return new DbGreenDao();
     }
-
-    @Override
-    public InterfaceDatabase createDbOrmLite() {
-        return new DbOrmLite();
-    }
 }

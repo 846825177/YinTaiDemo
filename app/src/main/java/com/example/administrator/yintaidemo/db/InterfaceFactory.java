@@ -6,6 +6,4 @@ package com.example.administrator.yintaidemo.db;
 
 public interface InterfaceFactory {
     InterfaceDatabase createDbGreenDao();
-
-    InterfaceDatabase createDbOrmLite();
 }
