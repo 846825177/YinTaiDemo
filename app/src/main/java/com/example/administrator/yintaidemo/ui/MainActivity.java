@@ -13,8 +13,9 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void init() {
-        setShowHeader(true);
-        setShowRrefshBody(true);
+       setShowHeader(true);
+       setShowErrorBody(true);
+     //   setShowRrefshBody(true);
         setShowFooter(true);
 
 

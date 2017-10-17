@@ -46,6 +46,7 @@
         </ScrollView>
         <android.support.v4.widget.SwipeRefreshLayout
             android:layout_width="match_parent"
+            android:visibility="gone"
             android:id="@+id/refresh"
             android:orientation="vertical"
             android:layout_height="match_parent">
@@ -56,6 +57,7 @@
                 android:layout_height="match_parent"></LinearLayout>
         </android.support.v4.widget.SwipeRefreshLayout>
         <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:id="@+id/errorlayout"
