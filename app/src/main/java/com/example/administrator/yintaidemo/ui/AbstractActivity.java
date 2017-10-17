@@ -15,6 +15,7 @@ protected Handler handler=new Handler();
 
     void toast(String s){
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
+
     }
 
 }
