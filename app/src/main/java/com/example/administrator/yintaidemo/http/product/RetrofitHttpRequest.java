@@ -1,10 +1,9 @@
 package com.example.administrator.yintaidemo.http.product;
 
-import android.util.Log;
-
 import com.example.administrator.yintaidemo.apis.Retrofits;
 import com.example.administrator.yintaidemo.http.utils.RetrofitUtils;
 import com.example.administrator.yintaidemo.interfaces.HttpCallBack;
+import com.example.administrator.yintaidemo.utils.ShowLargeLog;
 import com.google.gson.Gson;
 
 import java.io.IOException;
@@ -44,7 +43,7 @@ public class RetrofitHttpRequest<T> implements HttpRequest<T> {
 
                         try {
                             String string = responseBody.string();
-                            Log.e("TAG",string);
+                            ShowLargeLog.show(string,3900);
                             //TODO 注意这个地方：
 
                             Gson gson = new Gson();
@@ -72,4 +71,5 @@ public class RetrofitHttpRequest<T> implements HttpRequest<T> {
     public void get(String url, Type type, HttpCallBack<T> callBack) {
 
     }
+
 }

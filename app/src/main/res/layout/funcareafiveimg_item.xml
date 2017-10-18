@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:descendantFocusability="beforeDescendants"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
@@ -17,6 +18,7 @@
             android:layout_height="50dp" />
 
         <TextView
+            android:textSize="10sp"
             android:id="@+id/mTextViwe_fun_a"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -35,6 +37,7 @@
             android:layout_height="50dp" />
 
         <TextView
+            android:textSize="10sp"
             android:id="@+id/mTextViwe_fun_b"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -55,6 +58,7 @@
         <TextView
             android:id="@+id/mTextViwe_fun_c"
             android:layout_width="wrap_content"
+            android:textSize="10sp"
             android:layout_height="wrap_content" />
     </LinearLayout>
 
@@ -72,6 +76,7 @@
 
         <TextView
             android:id="@+id/mTextViwe_fun_d"
+            android:textSize="10sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -90,6 +95,7 @@
 
         <TextView
             android:id="@+id/mTextViwe_fun_e"
+            android:textSize="10sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>

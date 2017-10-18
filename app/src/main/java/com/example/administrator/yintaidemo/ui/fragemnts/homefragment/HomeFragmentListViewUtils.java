@@ -225,8 +225,8 @@ public class HomeFragmentListViewUtils {
                 break;
             case ITEM_TYPE_THREEIMGLEFTONE:
                 Glide.with(context).load(bean.getItems().get(0).getImgurl()).into(threeimgleftoneViewHolder.mThreeimgLeftone_left);
-                Glide.with(context).load(bean.getItems().get(1).getImgurl()).into(threeimgleftoneViewHolder.mThreeimgLeftone_left);
-                Glide.with(context).load(bean.getItems().get(2).getImgurl()).into(threeimgleftoneViewHolder.mThreeimgLeftone_left);
+                Glide.with(context).load(bean.getItems().get(1).getImgurl()).into(threeimgleftoneViewHolder.mThreeimgLeftone_right_top);
+                Glide.with(context).load(bean.getItems().get(2).getImgurl()).into(threeimgleftoneViewHolder.mThreeimgLeftone_right_btm);
                 break;
             case ITEM_TYPE_THREEIMGLEFTTWO:
                 Glide.with(context).load(bean.getItems().get(0).getImgurl()).into(threeimglefttwoViewHolder.mThreeimglefttwo_left_top);
