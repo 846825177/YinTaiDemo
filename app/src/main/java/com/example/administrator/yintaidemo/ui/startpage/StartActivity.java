@@ -161,6 +161,7 @@ public class StartActivity extends BaseActivity implements StartView<StartBean> 
 
         } else {
             startActivity(new Intent(StartActivity.this, HomePageActivity.class));
+            finish();
         }
 
 

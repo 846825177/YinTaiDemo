@@ -33,17 +33,22 @@
         android:visibility="gone">
 
     </LinearLayout>
-
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/startbottom"
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
     <Button
+        android:layout_above="@id/startbottom"
         android:id="@+id/mStartJump"
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
         android:background="@drawable/startpage_iamge_junpbutton"
         android:ems="10"
         android:text="立即体验"
-        android:textColor="#600f" />
+        android:textColor="#600f"
+        android:visibility="gone" />
+
+
 </RelativeLayout>

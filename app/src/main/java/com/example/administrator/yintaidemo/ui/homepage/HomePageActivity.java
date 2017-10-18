@@ -3,15 +3,13 @@ package com.example.administrator.yintaidemo.ui.homepage;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.view.View;
-import android.widget.ImageView;
 
 import com.example.administrator.yintaidemo.R;
 import com.example.administrator.yintaidemo.adapters.HomePagerAdapter;
 import com.example.administrator.yintaidemo.ui.BaseActivity;
 import com.example.administrator.yintaidemo.ui.fragemnts.ClassifyFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.ForestallFragment;
-import com.example.administrator.yintaidemo.ui.fragemnts.HomeFragment;
+import com.example.administrator.yintaidemo.ui.fragemnts.homefragment.HomeFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.MineYinTaiFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.ShoppingcartFragment;
 
