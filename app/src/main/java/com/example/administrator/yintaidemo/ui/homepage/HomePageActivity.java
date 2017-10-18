@@ -35,7 +35,8 @@ public class HomePageActivity extends BaseActivity {
         setHeader(R.layout.header);
         initView();
     }
-    public void initView(){
+
+    public void initView() {
         viewPager = bodyzong.findViewById(R.id.viewpager);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
         ArrayList<String> stringArrayList = new ArrayList<>();
@@ -59,20 +60,28 @@ public class HomePageActivity extends BaseActivity {
         arrayList.add(mineYinTaiFragment);
 
 
-        HomePagerAdapter homePagerAdapter = new HomePagerAdapter(getSupportFragmentManager(),arrayList,stringArrayList);
-       tabLayout.setupWithViewPager(viewPager);
+        HomePagerAdapter homePagerAdapter = new HomePagerAdapter(getSupportFragmentManager(), arrayList, stringArrayList);
+        tabLayout.setupWithViewPager(viewPager);
         viewPager.setAdapter(homePagerAdapter);
 
+        tabLayout.getTabAt(0).setIcon(R.drawable.homepage_shape);
+        tabLayout.getTabAt(1).setIcon(R.drawable.forestall_shape);
+        tabLayout.getTabAt(2).setIcon(R.drawable.classify_shape);
+        tabLayout.getTabAt(3).setIcon(R.drawable.shopping_shape);
+        tabLayout.getTabAt(4).setIcon(R.drawable.mineyintai_shape);
+
+
     }
+
     @Override
     public void onRefresh() {
-        if (refresh.isRefreshing()){
+        if (refresh.isRefreshing()) {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     refresh.setRefreshing(false);
                 }
-            },500);
+            }, 500);
         }
     }
 
