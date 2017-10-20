@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.yintaidemo">
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS"/>
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icon"
@@ -14,16 +16,15 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ui.AbstractActivity" />
         <activity android:name=".ui.BaseActivity" />
-        <activity android:name=".ui.startpage.StartActivity" >
+        <activity android:name=".ui.startpage.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.homepage.HomePageActivity">
-
-        </activity>
+        <activity android:name=".ui.homepage.HomePageActivity"></activity>
+        <activity android:name=".ui.LoginActivity"></activity>
     </application>
 
 </manifest>

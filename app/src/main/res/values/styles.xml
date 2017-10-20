@@ -7,5 +7,15 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="login_share_img">
+        <item name="android:layout_width">@dimen/w110dip</item>
+        <item name="android:layout_height">@dimen/h110dip</item>
+    </style>
+    <style name="login_other_txt">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/color_666666</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/h14dip</item>
+    </style>
 </resources>
