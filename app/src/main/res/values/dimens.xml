@@ -3,7 +3,7 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    
+
     <!-- 四类字体大小 -->
     <dimen name="micro_text_size">12sp</dimen>
     <dimen name="small_text_size">14sp</dimen>
@@ -16,7 +16,7 @@
     <!-- 首页Gallery高度 -->
     <dimen name="index_gallery_height">100dp</dimen>
     <!-- 首页Gallery高度 -->
-	<dimen name="h220dip">110.0dip</dimen>
+    <dimen name="h220dip">110.0dip</dimen>
 
     <!-- 字体大小按1.8换算 -->
     <dimen name="text_size_72">40.0sp</dimen>
@@ -661,19 +661,19 @@
     <dimen name="h430dip">215.0dip</dimen>
     <dimen name="h460dip">230.0dip</dimen>
     <dimen name="h490dip">245.0dip</dimen>
-    
-       <!-- 分类 - 二级分类项 -->
+
+    <!-- 分类 - 二级分类项 -->
     <dimen name="categorylist_header">@dimen/h140dip</dimen>
-    
+
     <dimen name="categorylist_brand_item_iv_width">@dimen/w120dip</dimen>
     <dimen name="categorylist_brand_item_iv_height">@dimen/h80dip</dimen>
-    
-    
+
+
     <dimen name="categorylist_recommend_item_iv_width">@dimen/w130dip</dimen>
     <dimen name="categorylist_recommend_item_iv_height">@dimen/h130dip</dimen>
     <dimen name="categorylist_recommend_item_tv_textsize">@dimen/text_size_24</dimen>
-    
-    
+
+
     <dimen name="categorylist_more_item_tv_textsize">@dimen/text_size_26</dimen>
 
 </resources>
