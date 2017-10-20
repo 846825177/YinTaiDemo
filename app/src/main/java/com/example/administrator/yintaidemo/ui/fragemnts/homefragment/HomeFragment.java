@@ -35,6 +35,7 @@ public class HomeFragment extends Fragment implements HomeFragmentView<HomePageB
     private ArrayList<String> banner = new ArrayList<>();
     private View inflate;
     private int pageindex = 1;
+    private List<HomePageBean.DataBean.BannerlistBean> bannerlist;
 
     @Nullable
     @Override
@@ -82,15 +83,19 @@ public class HomeFragment extends Fragment implements HomeFragmentView<HomePageB
         adapter.notifyDataSetChanged();
         if(pageindex==1){
             banner.clear();
-            List<HomePageBean.DataBean.BannerlistBean> bannerlist = homePageBean.getData().getBannerlist();
+            bannerlist = homePageBean.getData().getBannerlist();
             mList.addAll(templatelist);
             for (int i = 0; i < bannerlist.size(); i++) {
                 banner.add(bannerlist.get(i).getImgurl());
             }
-        }
-        mHomeFragment_banner.setImagesUrl(banner);
 
-        adapter.notifyDataSetChanged();
+            mHomeFragment_banner.setImagesUrl(banner);
+
+            adapter.notifyDataSetChanged();
+       }
+
+
+
         mListView.stopRefresh();
         mListView.stopLoadMore();
         //获取当前时间
@@ -111,10 +116,22 @@ public class HomeFragment extends Fragment implements HomeFragmentView<HomePageB
         pageindex = 1;
         getData(pageindex);
 
+
     }
 
     @Override
     public void onLoadMore() {
         getData(++pageindex);
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+
+
+
+
     }
 }

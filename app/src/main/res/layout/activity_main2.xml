@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:orientation="vertical"
+    tools:context="com.example.administrator.yintaidemo.ui.settlement.SettlementcenterActivity">
+
+<android.support.v7.widget.Toolbar
+    android:layout_width="match_parent"
+    android:id="@+id/tool"
+    android:background="#fff"
+    android:layout_height="wrap_content"></android.support.v7.widget.Toolbar>
+ <LinearLayout
+     android:layout_margin="5dp"
+     android:orientation="vertical"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+     <LinearLayout
+         android:layout_marginTop="10dp"
+         android:layout_width="match_parent"
+         android:background="#ccc"
+         android:layout_height="2dp"></LinearLayout>
+
+     <LinearLayout
+         android:layout_margin="5dp"
+
+         android:layout_weight="1"
+         android:orientation="vertical"
+         android:background="@drawable/settlmentcentershap"
+         android:layout_width="match_parent"
+         android:layout_height="0dp">
+
+         <TextView
+             android:id="@+id/textView"
+             android:layout_width="match_parent"
+             android:layout_height="30dp"
+             android:gravity="center"
+             android:text="请提交并核对订单信息"
+             android:textColor="#f0f" />
+
+         <TextView
+             android:layout_marginTop="2dp"
+             android:id="@+id/tv_address"
+
+             android:text="收货人地址"
+             android:layout_width="match_parent"
+             android:layout_height="30dp" />
+         <LinearLayout
+
+             android:layout_width="match_parent"
+             android:background="#666666"
+             android:layout_height="2dp"></LinearLayout>
+         <TextView
+             android:layout_marginTop="2dp"
+             android:id="@+id/tv_paymentmethod"
+
+             android:text="支付方式"
+             android:layout_width="match_parent"
+             android:layout_height="30dp" />
+         <LinearLayout
+
+             android:layout_width="match_parent"
+             android:background="#ccc"
+             android:layout_height="2dp"></LinearLayout>
+         <TextView
+             android:layout_marginTop="2dp"
+             android:id="@+id/tv_sendtime"
+
+             android:text="送货时间"
+             android:layout_width="match_parent"
+             android:layout_height="30dp" />
+         <LinearLayout
+
+             android:layout_width="match_parent"
+             android:background="#ccc"
+             android:layout_height="2dp"></LinearLayout>
+         <TextView
+             android:layout_marginTop="2dp"
+             android:id="@+id/tv_receipt"
+
+             android:text="索要发票"
+             android:layout_width="match_parent"
+             android:layout_height="30dp" />
+         <LinearLayout
+
+             android:layout_width="match_parent"
+             android:background="#ccc"
+             android:layout_height="2dp"></LinearLayout>
+
+         <TextView
+             android:layout_marginTop="2dp"
+             android:id="@+id/tv_useCoupon"
+
+             android:text="使用优惠券"
+             android:layout_width="match_parent"
+             android:layout_height="30dp" />
+         <LinearLayout
+
+             android:layout_width="match_parent"
+             android:background="#ccc"
+             android:layout_height="2dp"></LinearLayout>
+         <TextView
+             android:layout_marginTop="2dp"
+             android:id="@+id/tv_uerremaining"
+
+             android:text="使用银元余额  (可抵扣订单金额)"
+             android:layout_width="match_parent"
+             android:layout_height="30dp" />
+         <LinearLayout
+
+             android:layout_width="match_parent"
+             android:background="#ccc"
+             android:layout_height="2dp"></LinearLayout>
+         <LinearLayout
+             android:gravity="center_vertical"
+             android:background="#5ccc"
+             android:layout_width="match_parent"
+             android:layout_marginTop="8dp"
+             android:layout_height="20dp">
+             <TextView
+                 android:text="活动   "
+                 android:textSize="13sp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" />
+             <TextView
+                 android:text="普通商品"
+                 android:textSize="8sp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" />
+
+         </LinearLayout>
+         <LinearLayout
+
+             android:layout_width="match_parent"
+             android:background="#ccc"
+             android:layout_height="2dp"></LinearLayout>
+
+
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+             <ImageView
+                 android:id="@+id/settlement_shop_image"
+                 android:background="@mipmap/ic_launcher"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content" />
+             <LinearLayout
+                 android:orientation="vertical"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content">
+                 <TextView
+                     android:text="name"
+                     android:layout_width="wrap_content"
+                     android:id="@+id/settlement_shop_name"
+                     android:layout_height="wrap_content" />
+
+                 <TextView
+                     android:id="@+id/colororsize"
+                     android:text="shop_colororsize"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:text="数量:1"
+                     android:id="@+id/num"
+                     android:layout_height="wrap_content" />
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:text="价钱:"
+                     android:id="@+id/settlement_shop_price"
+                     android:layout_height="wrap_content" />
+             </LinearLayout>
+             <LinearLayout
+
+                 android:layout_width="match_parent"
+                 android:background="#ccc"
+                 android:layout_height="2dp"></LinearLayout>
+
+         </LinearLayout>
+
+
+
+         <LinearLayout
+             android:layout_marginTop="5dp"
+             android:layout_width="match_parent"
+             android:orientation="vertical"
+             android:layout_height="wrap_content">
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+                 <TextView
+                     android:text="数量总计:"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+                 <TextView
+                     android:id="@+id/settlement_shop_numamount"
+                     android:text="1件"
+                     android:textColor="#f05"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+
+             </LinearLayout>
+
+
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+                 <TextView
+                     android:text="优惠:"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+                 <TextView
+                     android:id="@+id/settlement_shopdiscounts"
+                     android:text="0.0"
+                     android:textColor="#f05"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+
+             </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+                 <TextView
+                     android:text="运费:"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+                 <TextView
+                     android:id="@+id/settlement_shopalreadyprice"
+                     android:text="0(该订单以满199元,运费以免)"
+                     android:textColor="#f05"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+
+             </LinearLayout>
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+                 <TextView
+                     android:text="使用银元:"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+                 <TextView
+                     android:id="@+id/settlement_ueryinyuan"
+                     android:text="0"
+                     android:textColor="#f05"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+
+             </LinearLayout>
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+                 <TextView
+                     android:text="使用余额:"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+                 <TextView
+                     android:id="@+id/settlement_ueryve"
+                     android:text="0"
+                     android:textColor="#f05"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+
+             </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+                 <TextView
+                     android:text="您需要支付:"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+                 <TextView
+                     android:id="@+id/settlement_zhifuprice"
+                     android:text="0"
+                     android:textColor="#f05"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+
+             </LinearLayout>
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+                 <TextView
+                     android:text="获取积分:"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+                 <TextView
+                     android:id="@+id/settlement_getjifen"
+                     android:text="8000"
+                     android:textColor="#f05"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+
+             </LinearLayout>
+
+             <Button
+                 android:layout_marginTop="3dp"
+                 android:textColor="#fff"
+                 android:text="提交订单"
+                 android:background="#f05"
+                 android:layout_width="match_parent"
+                 android:id="@+id/button_tijiaodingdan"
+                 android:layout_height="wrap_content" />
+
+         </LinearLayout>
+
+
+
+     </LinearLayout>
+
+
+
+ </LinearLayout>
+
+
+
+</LinearLayout>

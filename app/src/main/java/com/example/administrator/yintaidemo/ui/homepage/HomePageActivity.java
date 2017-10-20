@@ -1,5 +1,6 @@
 package com.example.administrator.yintaidemo.ui.homepage;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -12,6 +13,7 @@ import com.example.administrator.yintaidemo.ui.fragemnts.ForestallFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.homefragment.HomeFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.MineYinTaiFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.ShoppingcartFragment;
+import com.example.administrator.yintaidemo.ui.settlement.SettlementscenterActivity;
 
 import java.util.ArrayList;
 
@@ -52,6 +54,29 @@ public class HomePageActivity extends BaseActivity {
         ForestallFragment forestallFragment = new ForestallFragment();
         ClassifyFragment classifyFragment = new ClassifyFragment();
         ShoppingcartFragment shoppingcartFragment = new ShoppingcartFragment();
+        shoppingcartFragment.OnsetJump(new ShoppingcartFragment.SetJump() {
+            @Override
+            public void jump() {
+                viewPager.setCurrentItem(0);
+
+            }
+        });
+        shoppingcartFragment.OnSetJumpSettlement(new ShoppingcartFragment.SetJumpSettlement() {
+                                                     @Override
+                                                     public void jumpsettlement(String name, String image, String color, String size, int num, double price, int judge) {
+                                                         Intent intent = new Intent(HomePageActivity.this, SettlementscenterActivity.class);
+                                                         intent.putExtra("name",name);
+                                                         intent.putExtra("image",image);
+                                                         intent.putExtra("color",color);
+                                                         intent.putExtra("size",size);
+                                                         intent.putExtra("num",num);
+                                                         intent.putExtra("price",price);
+                                                         intent.putExtra("judge",judge);
+
+                                                         startActivity(intent);
+                                                     }
+                                                 }
+        );
         MineYinTaiFragment mineYinTaiFragment = new MineYinTaiFragment();
         arrayList.add(homeFragment);
         arrayList.add(forestallFragment);
@@ -70,6 +95,9 @@ public class HomePageActivity extends BaseActivity {
         tabLayout.getTabAt(2).setIcon(R.drawable.classify_shape);
         tabLayout.getTabAt(3).setIcon(R.drawable.shopping_shape);
         tabLayout.getTabAt(4).setIcon(R.drawable.mineyintai_shape);
+
+//      GreenDaoUtils.getUtils(HomePageActivity.this).getDao().insert(new ShopCartEntity(null,"http://img02.tooopen.com/images/20160617/tooopen_sy_165387259697.jpg","衣服","红色","M码",188.01,1));
+//      GreenDaoUtils.getUtils(HomePageActivity.this).getDao().insert(new ShopCartEntity(null,"http://img02.tooopen.com/images/20160617/tooopen_sy_165387259697.jpg","衣服","绿色","M码",133.01,1));
 
 
     }

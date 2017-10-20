@@ -4,6 +4,7 @@ import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Property;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Transient;
 
 /**
  * Created by 张扬帆 on 2017/10/17.
@@ -24,6 +25,17 @@ public class ShopCartEntity {
     private double price;
     @Property(nameInDb = "num")
     private int num;
+    @Transient
+    private boolean ischeckd=false;
+
+    public boolean ischeckd() {
+        return ischeckd;
+    }
+
+    public void setIscheckd(boolean ischeckd) {
+        this.ischeckd = ischeckd;
+    }
+
     @Generated(hash = 1162902045)
     public ShopCartEntity(Long id, String img, String name, String color,
             String size, double price, int num) {
@@ -80,4 +92,8 @@ public class ShopCartEntity {
     public void setNum(int num) {
         this.num = num;
     }
+
+
+
+
 }
