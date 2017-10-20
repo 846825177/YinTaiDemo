@@ -8,7 +8,7 @@ import com.example.administrator.yintaidemo.R;
 import com.example.administrator.yintaidemo.adapters.HomePagerAdapter;
 import com.example.administrator.yintaidemo.ui.BaseActivity;
 import com.example.administrator.yintaidemo.ui.fragemnts.ClassifyFragment;
-import com.example.administrator.yintaidemo.ui.fragemnts.ForestallFragment;
+import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.ForestallFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.homefragment.HomeFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.MineYinTaiFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.ShoppingcartFragment;
