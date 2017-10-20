@@ -2,11 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
+    android:background="#F7FBF7"
     android:orientation="vertical">
-
-    <com.example.administrator.yintaidemo.views.XListView
-        android:id="@+id/mListView_homefragment"
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/mRecycler"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></com.example.administrator.yintaidemo.views.XListView>
+        android:layout_height="match_parent"></com.jcodecraeer.xrecyclerview.XRecyclerView>
 </LinearLayout>

@@ -64,7 +64,6 @@ public class HomePageActivity extends BaseActivity {
         tabLayout.setupWithViewPager(viewPager);
         viewPager.setAdapter(homePagerAdapter);
 
-
         tabLayout.getTabAt(0).setIcon(R.drawable.homepage_shape);
         tabLayout.getTabAt(1).setIcon(R.drawable.forestall_shape);
         tabLayout.getTabAt(2).setIcon(R.drawable.classify_shape);

@@ -584,7 +584,7 @@ public class HomePageBean {
                         private int marketprice;
                         private String name;
                         private int operatemode;
-                        private int price;
+                        private double price;
                         private int providercode;
                         private List<?> prmotionlist;
 
@@ -660,11 +660,11 @@ public class HomePageBean {
                             this.operatemode = operatemode;
                         }
 
-                        public int getPrice() {
+                        public double getPrice() {
                             return price;
                         }
 
-                        public void setPrice(int price) {
+                        public void setPrice(double price) {
                             this.price = price;
                         }
 

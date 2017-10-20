@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -52,8 +53,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(PhoneParamsUtils.getPhoneWidth(context) / 3, ViewGroup.LayoutParams.WRAP_CONTENT);
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false);
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(PhoneParamsUtils.getPhoneWidth(context) / 3, LinearLayout.LayoutParams.WRAP_CONTENT);
         view.setLayoutParams(params);
         ViewHolder holder = new ViewHolder(view);
         return holder;
@@ -61,9 +62,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(items.get(position).getWidth(), items.get(position).getHeight());
+        holder.mImage_recyc.setLayoutParams(params);
         holder.mRecycler_title.setText(items.get(position).getExtra().getProductdetail().getName());
-        holder.mPrice.setText("￥" + items.get(position).getExtra().getProductdetail().getPrice() + ".00");
+        holder.mPrice.setText("￥" + items.get(position).getExtra().getProductdetail().getPrice());
         Glide.with(context).load(items.get(position).getImgurl()).into(holder.mImage_recyc);
+
     }
 
     @Override
