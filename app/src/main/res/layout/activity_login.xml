@@ -185,6 +185,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/log_QQ"
                         style="@style/login_share_img"
                         android:src="@drawable/login_qq" />
 
