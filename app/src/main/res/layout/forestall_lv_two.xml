@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#000"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/img_forestall_lv_two"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/name_forestall_lv_two"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="哈哈哈哈哈哈哈"
+        android:textColor="#fff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/discount_forestall_lv_two"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/name_forestall_lv_two"
+        android:layout_marginTop="10dp"
+        android:text="呵呵呵呵呵呵呵呵"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/time_forestall_lv_two"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/discount_forestall_lv_two"
+        android:layout_below="@+id/discount_forestall_lv_two"
+        android:layout_marginTop="10dp"
+        android:text="时间"
+        android:textColor="#fff" />
+</RelativeLayout>

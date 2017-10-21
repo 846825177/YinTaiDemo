@@ -2,6 +2,7 @@ package com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.pres
 
 import android.content.Context;
 
+import com.example.administrator.yintaidemo.interfaces.HttpCallBack;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.model.ForestallModel;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.views.ForestallView;
 
@@ -20,7 +21,7 @@ public class ForestallPresenter {
         model=new ForestallModel();
     }
 
-    public void request(Map<String,String> mParams){
-        model.request((Context) view,mParams,view);
+    public void request(Context  context,Map<String,String> mParams){
+        model.request(context, mParams,view);
     }
 }

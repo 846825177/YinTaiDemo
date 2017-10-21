@@ -5,17 +5,25 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.administrator.yintaidemo.R;
+import com.example.administrator.yintaidemo.http.BaseParams;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.adapter.ForestallAdapter;
+import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.entity.Forestall;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.fragments.LastFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.fragments.OutFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.fragments.TheFragment;
+import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.presenter.ForestallPresenter;
+import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.views.ForestallView;
+import com.example.administrator.yintaidemo.utils.PhoneParamsUtils;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by dell on 2017/10/17.
@@ -27,6 +35,7 @@ public class ForestallFragment extends Fragment {
     private ForestallAdapter adapter;
     private ArrayList<Fragment> fragments;
     private ArrayList<String> strings;
+    private List<Forestall.DataBean.ActivityinfoBean.ActivitylistBean> list;
 
     @Nullable
     @Override
@@ -39,6 +48,7 @@ public class ForestallFragment extends Fragment {
     }
 
     private void initData() {
+
         strings = new ArrayList<>();
         strings.add("正在进行");
         strings.add("最后疯抢");
@@ -48,7 +58,8 @@ public class ForestallFragment extends Fragment {
         fragments.add(new LastFragment());
         fragments.add(new TheFragment());
 
-        adapter=new ForestallAdapter(getChildFragmentManager(),strings,fragments);
+
+        adapter = new ForestallAdapter(getChildFragmentManager(), strings, fragments);
         vp_forestall.setAdapter(adapter);
         tl_forestall.setupWithViewPager(vp_forestall);
     }
@@ -57,4 +68,5 @@ public class ForestallFragment extends Fragment {
         tl_forestall = (TabLayout) view.findViewById(R.id.tl_forestall);
         vp_forestall = (ViewPager) view.findViewById(R.id.vp_forestall);
     }
+
 }
