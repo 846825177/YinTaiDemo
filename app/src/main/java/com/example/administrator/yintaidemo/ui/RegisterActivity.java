@@ -42,8 +42,10 @@ public class RegisterActivity extends Activity {
         if (TextUtils.isEmpty(edittext)) {
             Toast.makeText(this, "手机号不能为空", Toast.LENGTH_SHORT).show();
         }else {
-
-            startActivity(new Intent(RegisterActivity.this,VerificationActivity.class));
+            Intent intent = new Intent(RegisterActivity.this,VerificationActivity.class);
+            intent.putExtra("phone",edittext);
+            startActivity(intent);
+          //  startActivity(new Intent(RegisterActivity.this,VerificationActivity.class));
         }
 
 
