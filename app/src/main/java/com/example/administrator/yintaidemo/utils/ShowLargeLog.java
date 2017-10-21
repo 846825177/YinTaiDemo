@@ -30,4 +30,7 @@ public class ShowLargeLog {
             Log.e("success",logContent);
         }
     }
+    public static   void showLog(String s) {
+        Log.e("TAG", s);
+    }
 }

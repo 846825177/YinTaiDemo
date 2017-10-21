@@ -13,6 +13,7 @@ import com.example.administrator.yintaidemo.entity.HomePageBean;
 import com.example.administrator.yintaidemo.http.BaseParams;
 import com.example.administrator.yintaidemo.ui.fragemnts.homefragment.presenters.HomeFragmentPresenter;
 import com.example.administrator.yintaidemo.ui.fragemnts.homefragment.views.HomeFragmentView;
+import com.example.administrator.yintaidemo.utils.JumpActivityUtils;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.recker.flybanner.FlyBanner;
 
@@ -42,6 +43,7 @@ public class HomeFragment extends Fragment implements HomeFragmentView<HomePageB
         mHomeFragment_banner = bannerView.findViewById(R.id.mHomeFragment_Banner);
         initView(view);
         adapter = new HomeRecyclerViewAdapter(mList, getActivity());
+        adapter.setOnItemClickListener((jumpurl) -> JumpActivityUtils.jump(getActivity(), jumpurl));
         mRecycler.setAdapter(adapter);
         mRecycler.addHeaderView(bannerView);
         getData(pageindex);
@@ -67,12 +69,12 @@ public class HomeFragment extends Fragment implements HomeFragmentView<HomePageB
         adapter.notifyDataSetChanged();
         List<HomePageBean.DataBean.BannerlistBean> bannerlist = homePageBean.getData().getBannerlist();
 
-       if(bannerlist!=null&&bannerlist.size()>0){
-           for (int i = 0; i < bannerlist.size(); i++) {
-               banner.add(bannerlist.get(i).getImgurl());
-           }
-           mHomeFragment_banner.setImagesUrl(banner);
-       }
+        if (bannerlist != null && bannerlist.size() > 0) {
+            for (int i = 0; i < bannerlist.size(); i++) {
+                banner.add(bannerlist.get(i).getImgurl());
+            }
+            mHomeFragment_banner.setImagesUrl(banner);
+        }
         mRecycler.refreshComplete();
         mRecycler.loadMoreComplete();
 

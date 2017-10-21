@@ -24,7 +24,6 @@ public class HomePageActivity extends BaseActivity {
 
 
     private ViewPager viewPager;
-    private ImageView title;
     private ImageView home_scan;
     private EditText search;
 
