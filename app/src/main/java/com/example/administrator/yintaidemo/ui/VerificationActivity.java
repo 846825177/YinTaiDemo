@@ -1,6 +1,7 @@
 package com.example.administrator.yintaidemo.ui;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -39,7 +40,6 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
         setContentView(R.layout.activity_verification);
         Intent intent = getIntent();
         String phone = intent.getStringExtra("phone");
-
         initView();
         yanzheng_text_shoujihao.setText(phone);
     }
@@ -139,9 +139,11 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
                             Log.d(TAG, "get verification code successful.");
                         } else if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) { //提交验证码
                             Log.d(TAG, "submit code successful");
+
                             Toast.makeText(VerificationActivity.this, "提交验证码成功", Toast.LENGTH_SHORT).show();
 //                            Intent intent = new Intent(VerificationActivity.this, Main2Activity.class);
 //                            startActivity(intent);
+                            submit();
                         } else {
                             Log.d(TAG, data.toString());
                         }
@@ -162,6 +164,7 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
                             e.printStackTrace();
                         }
                     }
+
                     break;
                 case 0x01:
                     yanzheng_btn_huoqu.setText("重新发送(" + msg.arg1 + ")");
@@ -183,8 +186,18 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
         }
 
         String pass = yanzheng_edit_pass.getText().toString().trim();
+        String name = yanzheng_text_shoujihao.getText().toString().trim();
         if (TextUtils.isEmpty(pass)) {
+            SharedPreferences sp = getSharedPreferences("p", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sp.edit();
+            editor.putString("uName", name);
+            editor.putString("pWord", pass);
+
+            //	 通过editor对象的commit方法把数据给提交过去,完成存储
+            editor.commit();
             Toast.makeText(this, "pass不能为空", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(VerificationActivity.this, LoginActivity.class);
+            startActivity(intent);
             return;
         }
 

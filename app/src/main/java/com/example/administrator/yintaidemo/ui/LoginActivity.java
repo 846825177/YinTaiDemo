@@ -3,6 +3,7 @@ package com.example.administrator.yintaidemo.ui;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -33,11 +34,15 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private LinearLayout login_alipay;
     private LinearLayout login_weibo;
     private ImageView log_QQ;
+    private String pWord,uName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        SharedPreferences sh=getSharedPreferences("p", MODE_PRIVATE);
+        pWord = sh.getString("pWord",null);
+        uName = sh.getString("uName", null);
         if (Build.VERSION.SDK_INT >= 23) {
             String[] mPermissionList = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.CALL_PHONE, Manifest.permission.READ_LOGS, Manifest.permission.READ_PHONE_STATE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.SET_DEBUG_APP, Manifest.permission.SYSTEM_ALERT_WINDOW, Manifest.permission.GET_ACCOUNTS, Manifest.permission.WRITE_APN_SETTINGS};
             ActivityCompat.requestPermissions(this, mPermissionList, 123);
@@ -54,6 +59,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         login_alipay = (LinearLayout) findViewById(R.id.login_alipay);
         login_weibo = (LinearLayout) findViewById(R.id.login_weibo);
 
+        login_pass.setText(pWord);
+        login_name.setText(uName);
         login_submit.setOnClickListener(this);
         login_textview_zhuce.setOnClickListener(this);
         log_QQ = (ImageView) findViewById(R.id.log_QQ);
