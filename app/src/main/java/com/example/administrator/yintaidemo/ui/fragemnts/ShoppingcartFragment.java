@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static android.R.id.list;
-import static com.example.administrator.yintaidemo.R.id.num;
+
 
 
 /**
@@ -32,6 +32,9 @@ import static com.example.administrator.yintaidemo.R.id.num;
  */
 //购物车
 public class ShoppingcartFragment extends Fragment implements View.OnClickListener {
+
+    private ArrayList<ShopCartEntity> chuanzhilist = new ArrayList<>();
+
 
 
     public interface SetJump {
@@ -46,13 +49,17 @@ public class ShoppingcartFragment extends Fragment implements View.OnClickListen
 
 
     public interface SetJumpSettlement {
-        void jumpsettlement(String name,
-                            String image,
-                            String color,
-                            String size,
-                            int num,
-                            double price,
-                            int judge);
+//        void jumpsettlement(String name,
+//                            String image,
+//                            String color,
+//                            String size,
+//                            int num,
+//                            double price,
+//                            int judge);
+
+        void jumpsettlement( List<ShopCartEntity> chuanzhilist,int judge,int count);
+
+
     }
 
     public SetJumpSettlement setJumpSettlement;
@@ -79,6 +86,7 @@ public class ShoppingcartFragment extends Fragment implements View.OnClickListen
     //去结算
     private Button button_totalprice;
     private List<ShopCartEntity> list1;
+
     private ShopAdapter shopAdapter;
 
 
@@ -258,19 +266,39 @@ public class ShoppingcartFragment extends Fragment implements View.OnClickListen
                if (judge==3){
                    Toast.makeText(getActivity(), "请勾选内容", Toast.LENGTH_SHORT).show();
                }else {
+
+                   chuanzhilist.clear();
                    for (int i = 0; i < list.size(); i++) {
+
                        boolean ischeckd = list.get(i).ischeckd();
                        if (ischeckd) {
+                      chuanzhilist.add(list.get(i));
                            //名字颜色型号数量价钱  运费
-                           setJumpSettlement.jumpsettlement(list.get(i).getName(),
-                                   list.get(i).getImg(),
-                                   list.get(i).getColor(),
-                                   list.get(i).getSize(),
-                                   list.get(i).getNum(), list.get(i).getPrice(), judge);
+//                           setJumpSettlement.jumpsettlement(list.get(i).getName(),
+//                                   list.get(i).getImg(),
+//                                   list.get(i).getColor(),
+//                                   list.get(i).getSize(),
+//                                   list.get(i).getNum(), list.get(i).getPrice(), judge);
+
+//
+//                           String name = list.get(i).getName();
+//                           String img = list.get(i).getImg();
+//                           String color = list.get(i).getColor();
+//                           String size = list.get(i).getSize();
+//                           int num = list.get(i).getNum();
+//                           double price = list.get(i).getPrice();
+//                           int judge = this.judge;
+//                           int count = this.count;
+
+                           setJumpSettlement.jumpsettlement(chuanzhilist,judge,count);
+
+
                        }
-
-
                    }
+
+
+
+
 
                }
 

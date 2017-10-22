@@ -1,5 +1,8 @@
 package com.example.administrator.yintaidemo.entity;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Property;
@@ -10,7 +13,7 @@ import org.greenrobot.greendao.annotation.Transient;
  * Created by 张扬帆 on 2017/10/17.
  */
 @Entity(nameInDb = "shopcar")
-public class ShopCartEntity {
+public class ShopCartEntity implements Parcelable {
     @Id(autoincrement = true)
     private Long id;
     @Property(nameInDb = "img")
@@ -94,6 +97,43 @@ public class ShopCartEntity {
     }
 
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
 
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeValue(this.id);
+        dest.writeString(this.img);
+        dest.writeString(this.name);
+        dest.writeString(this.color);
+        dest.writeString(this.size);
+        dest.writeDouble(this.price);
+        dest.writeInt(this.num);
+        dest.writeByte(this.ischeckd ? (byte) 1 : (byte) 0);
+    }
 
+    protected ShopCartEntity(Parcel in) {
+        this.id = (Long) in.readValue(Long.class.getClassLoader());
+        this.img = in.readString();
+        this.name = in.readString();
+        this.color = in.readString();
+        this.size = in.readString();
+        this.price = in.readDouble();
+        this.num = in.readInt();
+        this.ischeckd = in.readByte() != 0;
+    }
+
+    public static final Parcelable.Creator<ShopCartEntity> CREATOR = new Parcelable.Creator<ShopCartEntity>() {
+        @Override
+        public ShopCartEntity createFromParcel(Parcel source) {
+            return new ShopCartEntity(source);
+        }
+
+        @Override
+        public ShopCartEntity[] newArray(int size) {
+            return new ShopCartEntity[size];
+        }
+    };
 }

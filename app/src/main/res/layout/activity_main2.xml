@@ -141,49 +141,10 @@
 
 
 
-         <LinearLayout
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content">
-
-             <ImageView
-                 android:id="@+id/settlement_shop_image"
-                 android:background="@mipmap/ic_launcher"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content" />
-             <LinearLayout
-                 android:orientation="vertical"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content">
-                 <TextView
-                     android:text="name"
-                     android:layout_width="wrap_content"
-                     android:id="@+id/settlement_shop_name"
-                     android:layout_height="wrap_content" />
-
-                 <TextView
-                     android:id="@+id/colororsize"
-                     android:text="shop_colororsize"
-                     android:layout_width="wrap_content"
-                     android:layout_height="wrap_content" />
-                 <TextView
-                     android:layout_width="wrap_content"
-                     android:text="数量:1"
-                     android:id="@+id/num"
-                     android:layout_height="wrap_content" />
-                 <TextView
-                     android:layout_width="wrap_content"
-                     android:text="价钱:"
-                     android:id="@+id/settlement_shop_price"
-                     android:layout_height="wrap_content" />
-             </LinearLayout>
-             <LinearLayout
-
-                 android:layout_width="match_parent"
-                 android:background="#ccc"
-                 android:layout_height="2dp"></LinearLayout>
-
-         </LinearLayout>
-
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/listview2"
+        android:layout_height="wrap_content"></ListView>
 
 
          <LinearLayout

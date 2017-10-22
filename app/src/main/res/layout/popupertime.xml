@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:background="#fff"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_marginTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:textColor="#000"
+        android:gravity="center"
+        android:text="请选择送货时间"
+        android:layout_width="match_parent"
+        android:textSize="20dp"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/po_one"
+            android:layout_marginTop="5dp"
+            android:textColor="#666"
+            android:layout_width="wrap_content"
+            android:text="工作日,双休日与假日均可送货"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    <LinearLayout
+       android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#ccc"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/po_two"
+            android:layout_marginTop="5dp"
+            android:textColor="#666"
+            android:layout_width="wrap_content"
+            android:text="只双休日,假日送货(工作日不送货)"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#ccc"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"></LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/po_three"
+            android:layout_marginTop="5dp"
+            android:textColor="#666"
+            android:layout_width="wrap_content"
+            android:text="只工作日送货(双休日,假日不用送货)"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#ccc"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"></LinearLayout>
+
+
+    <Button
+        android:id="@+id/po_button"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:textColor="#f04"
+        android:text="取消"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+</LinearLayout>

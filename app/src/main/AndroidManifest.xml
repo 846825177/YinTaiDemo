@@ -24,7 +24,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.homepage.HomePageActivity" />
-        <activity android:name=".ui.settlement.SettlementscenterActivity"></activity>
+        <activity android:name=".ui.settlement.SettlementscenterActivity" />
+        <activity android:name=".ui.settlement.AdressActivity" />
+        <activity android:name=".ui.settlement.PayActivity" />
+        <activity android:name=".ui.settlement.WantPicketActivity"></activity>
     </application>
 
 </manifest>

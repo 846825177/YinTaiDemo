@@ -1,14 +1,16 @@
 package com.example.administrator.yintaidemo.ui.homepage;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 
 import com.example.administrator.yintaidemo.R;
 import com.example.administrator.yintaidemo.adapters.HomePagerAdapter;
+import com.example.administrator.yintaidemo.entity.ShopCartEntity;
 import com.example.administrator.yintaidemo.ui.BaseActivity;
-import com.example.administrator.yintaidemo.ui.fragemnts.ClassifyFragment;
+import com.example.administrator.yintaidemo.ui.fragemnts.classifyfragment.ClassifyFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.ForestallFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.homefragment.HomeFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.MineYinTaiFragment;
@@ -16,6 +18,7 @@ import com.example.administrator.yintaidemo.ui.fragemnts.ShoppingcartFragment;
 import com.example.administrator.yintaidemo.ui.settlement.SettlementscenterActivity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class HomePageActivity extends BaseActivity {
 
@@ -61,22 +64,38 @@ public class HomePageActivity extends BaseActivity {
 
             }
         });
+//        shoppingcartFragment.OnSetJumpSettlement(new ShoppingcartFragment.SetJumpSettlement() {
+//                                                     @Override
+//                                                     public void jumpsettlement(String name, String image, String color, String size, int num, double price, int judge) {
+//                                                         Intent intent = new Intent(HomePageActivity.this, SettlementscenterActivity.class);
+//                                                         intent.putExtra("name",name);
+//                                                         intent.putExtra("image",image);
+//                                                         intent.putExtra("color",color);
+//                                                         intent.putExtra("size",size);
+//                                                         intent.putExtra("num",num);
+//                                                         intent.putExtra("price",price);
+//                                                         intent.putExtra("judge",judge);
+//
+//                                                         startActivity(intent);
+//                                                     }
+//                                                 }
+//        );
         shoppingcartFragment.OnSetJumpSettlement(new ShoppingcartFragment.SetJumpSettlement() {
-                                                     @Override
-                                                     public void jumpsettlement(String name, String image, String color, String size, int num, double price, int judge) {
-                                                         Intent intent = new Intent(HomePageActivity.this, SettlementscenterActivity.class);
-                                                         intent.putExtra("name",name);
-                                                         intent.putExtra("image",image);
-                                                         intent.putExtra("color",color);
-                                                         intent.putExtra("size",size);
-                                                         intent.putExtra("num",num);
-                                                         intent.putExtra("price",price);
-                                                         intent.putExtra("judge",judge);
+            @Override
+            public void jumpsettlement(List<ShopCartEntity> chuanzhilist, int judge, int count) {
 
-                                                         startActivity(intent);
-                                                     }
-                                                 }
-        );
+
+                Intent intent = new Intent(HomePageActivity.this, SettlementscenterActivity.class);
+                intent.putParcelableArrayListExtra("jihe", (ArrayList<? extends Parcelable>) chuanzhilist);
+                intent.putExtra("judge",judge);
+                intent.putExtra("count",count);
+                startActivity(intent);
+
+
+            }
+        });
+
+
         MineYinTaiFragment mineYinTaiFragment = new MineYinTaiFragment();
         arrayList.add(homeFragment);
         arrayList.add(forestallFragment);

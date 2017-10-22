@@ -23,7 +23,9 @@ public class HomeFragmentModelImp implements HomeFragmentModel {
 
         HttpRequestFactor factor = new ConCreateHttpReqeust();
         HttpRequest httpRequest = factor.create(RetrofitHttpRequest.class);
+        //为获取接口的泛型
         Type[] genericInterfaces = callback.getClass().getGenericInterfaces();
+
         Type[] actualTypeArguments = ((ParameterizedType) genericInterfaces[0]).getActualTypeArguments();
         Type types =  actualTypeArguments[0];
 
