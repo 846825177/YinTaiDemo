@@ -311,5 +311,6 @@ public class ShoppingcartFragment extends Fragment implements View.OnClickListen
     public void onResume() {
         super.onResume();
         query();
+        checkBoxall.setChecked(false);
     }
 }
