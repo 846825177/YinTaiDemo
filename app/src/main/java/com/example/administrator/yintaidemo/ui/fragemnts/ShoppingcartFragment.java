@@ -290,12 +290,13 @@ public class ShoppingcartFragment extends Fragment implements View.OnClickListen
 //                           int judge = this.judge;
 //                           int count = this.count;
 
-                           setJumpSettlement.jumpsettlement(chuanzhilist,judge,count);
+
 
 
                        }
                    }
-
+                   count = chuanzhilist.size();
+                   setJumpSettlement.jumpsettlement(chuanzhilist,judge,count);
 
 
 
