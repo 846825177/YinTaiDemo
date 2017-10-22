@@ -30,7 +30,7 @@ public class HomePageActivity extends BaseActivity {
     @Override
     public void init() {
         setShowHeader(true);
-        setShowErrorBody(true);
+        setShowNotScollBody(true);
         setShowFooter(true);
 
     }
