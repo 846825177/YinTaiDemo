@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -16,33 +17,20 @@ import com.example.administrator.yintaidemo.utils.PhoneParamsUtils;
 
 import java.util.List;
 
-/**
- * -------- This is 羊驼! -------
- * 　　　┏┓　　　┏┓
- * 　　┏┛┻━━━┛┻┓
- * 　　┃　　　　　　　┃
- * 　　┃　　　━　　　┃
- * 　　┃　┳┛　┗┳　┃
- * 　　┃　　　　　　　┃
- * 　　┃　　　┻　　　┃
- * 　　┃　　　　　　　┃
- * 　　┗━┓　　　┏━┛
- * 　　　　┃　　　┃神兽保佑
- * 　　　　┃　　　┃代码无BUG！
- * 　　　　┃　　　┗━━━┓
- * 　　　　┃　　　　　　　┣┓
- * 　　　　┃　　　　　　　┏┛
- * 　　　　┗┓┓┏━┳┓┏┛
- * 　　　　　┃┫┫　┃┫┫
- * 　　　　　┗┻┛　┗┻┛
- * ━━━━━━神兽出没━━━━━━
- * Created by 习爸爸 on 2017/9/28.
- */
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
     private Context context;
     private List<HomePageBean.DataBean.TemplatelistBean.ItemsBean> items;
+    private OnItemClickListener onItemClickListener;
+
+    interface OnItemClickListener {
+        void click(HomePageBean.DataBean.TemplatelistBean.ItemsBean items);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
 
     public RecyclerViewAdapter(Context context, List<HomePageBean.DataBean.TemplatelistBean.ItemsBean> items) {
         this.context = context;
@@ -52,8 +40,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(PhoneParamsUtils.getPhoneWidth(context) / 3, ViewGroup.LayoutParams.WRAP_CONTENT);
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_item, parent, false);
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(PhoneParamsUtils.getPhoneWidth(context) / 3, LinearLayout.LayoutParams.WRAP_CONTENT);
         view.setLayoutParams(params);
         ViewHolder holder = new ViewHolder(view);
         return holder;
@@ -61,9 +49,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(items.get(position).getWidth(), items.get(position).getHeight());
+        holder.mImage_recyc.setLayoutParams(params);
         holder.mRecycler_title.setText(items.get(position).getExtra().getProductdetail().getName());
-        holder.mPrice.setText("￥" + items.get(position).getExtra().getProductdetail().getPrice() + ".00");
+        holder.mPrice.setText("￥" + items.get(position).getExtra().getProductdetail().getPrice());
         Glide.with(context).load(items.get(position).getImgurl()).into(holder.mImage_recyc);
+        holder.itemView.setOnClickListener((v) -> onItemClickListener.click(items.get(position)));
+
     }
 
     @Override
@@ -76,9 +68,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         private ImageView mImage_recyc;
         private TextView mPrice;
         private TextView mRecycler_title;
+        private View itemView;
 
         public ViewHolder(View itemView) {
             super(itemView);
+            this.itemView = itemView;
             mImage_recyc = (ImageView) itemView.findViewById(R.id.mImage_recyc);
             mPrice = (TextView) itemView.findViewById(R.id.mPrice);
             mRecycler_title = (TextView) itemView.findViewById(R.id.mRecycler_title);

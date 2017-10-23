@@ -5,8 +5,8 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <com.example.administrator.yintaidemo.ui.fragemnts.homefragment.MeasuredRecyclerView
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/mRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="240dp" />
+        android:layout_height="wrap_content" />
 </LinearLayout>

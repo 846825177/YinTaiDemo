@@ -1,34 +1,36 @@
 package com.example.administrator.yintaidemo.ui.homepage;
 
 import android.content.Intent;
-import android.os.Parcelable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.administrator.yintaidemo.R;
 import com.example.administrator.yintaidemo.adapters.HomePagerAdapter;
-import com.example.administrator.yintaidemo.entity.ShopCartEntity;
 import com.example.administrator.yintaidemo.ui.BaseActivity;
-import com.example.administrator.yintaidemo.ui.fragemnts.classifyfragment.ClassifyFragment;
-import com.example.administrator.yintaidemo.ui.fragemnts.ForestallFragment;
-import com.example.administrator.yintaidemo.ui.fragemnts.homefragment.HomeFragment;
+import com.example.administrator.yintaidemo.ui.SearchActivity;
+import com.example.administrator.yintaidemo.ui.fragemnts.ClassifyFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.MineYinTaiFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.ShoppingcartFragment;
-import com.example.administrator.yintaidemo.ui.settlement.SettlementscenterActivity;
+import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.ForestallFragment;
+import com.example.administrator.yintaidemo.ui.fragemnts.homefragment.HomeFragment;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class HomePageActivity extends BaseActivity {
 
 
     private ViewPager viewPager;
+    private ImageView home_scan;
+    private EditText search;
 
     @Override
     public void init() {
         setShowHeader(true);
-        setShowErrorBody(true);
+        setShowNotScollBody(true);
         setShowFooter(true);
 
     }
@@ -37,12 +39,16 @@ public class HomePageActivity extends BaseActivity {
     public void run() {
         setBody(R.layout.body);
         setFooter(R.layout.footer);
-        setHeader(R.layout.header);
+        setHeader(R.layout.header_view);
         initView();
     }
 
     public void initView() {
         viewPager = bodyzong.findViewById(R.id.viewpager);
+        home_scan = (ImageView) headerlayout.findViewById(R.id.home_scan);
+        search = (EditText) headerlayout.findViewById(R.id.search);
+        search.setOnClickListener((v) -> startActivity(new Intent(HomePageActivity.this, SearchActivity.class)));
+        home_scan.setOnClickListener((v) -> Toast.makeText(this, "二维码扫描", Toast.LENGTH_SHORT).show());
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
         ArrayList<String> stringArrayList = new ArrayList<>();
         stringArrayList.add("首页");
@@ -57,45 +63,6 @@ public class HomePageActivity extends BaseActivity {
         ForestallFragment forestallFragment = new ForestallFragment();
         ClassifyFragment classifyFragment = new ClassifyFragment();
         ShoppingcartFragment shoppingcartFragment = new ShoppingcartFragment();
-        shoppingcartFragment.OnsetJump(new ShoppingcartFragment.SetJump() {
-            @Override
-            public void jump() {
-                viewPager.setCurrentItem(0);
-
-            }
-        });
-//        shoppingcartFragment.OnSetJumpSettlement(new ShoppingcartFragment.SetJumpSettlement() {
-//                                                     @Override
-//                                                     public void jumpsettlement(String name, String image, String color, String size, int num, double price, int judge) {
-//                                                         Intent intent = new Intent(HomePageActivity.this, SettlementscenterActivity.class);
-//                                                         intent.putExtra("name",name);
-//                                                         intent.putExtra("image",image);
-//                                                         intent.putExtra("color",color);
-//                                                         intent.putExtra("size",size);
-//                                                         intent.putExtra("num",num);
-//                                                         intent.putExtra("price",price);
-//                                                         intent.putExtra("judge",judge);
-//
-//                                                         startActivity(intent);
-//                                                     }
-//                                                 }
-//        );
-        shoppingcartFragment.OnSetJumpSettlement(new ShoppingcartFragment.SetJumpSettlement() {
-            @Override
-            public void jumpsettlement(List<ShopCartEntity> chuanzhilist, int judge, int count) {
-
-
-                Intent intent = new Intent(HomePageActivity.this, SettlementscenterActivity.class);
-                intent.putParcelableArrayListExtra("jihe", (ArrayList<? extends Parcelable>) chuanzhilist);
-                intent.putExtra("judge",judge);
-                intent.putExtra("count",count);
-                startActivity(intent);
-
-
-            }
-        });
-
-
         MineYinTaiFragment mineYinTaiFragment = new MineYinTaiFragment();
         arrayList.add(homeFragment);
         arrayList.add(forestallFragment);
@@ -108,15 +75,11 @@ public class HomePageActivity extends BaseActivity {
         tabLayout.setupWithViewPager(viewPager);
         viewPager.setAdapter(homePagerAdapter);
 
-
         tabLayout.getTabAt(0).setIcon(R.drawable.homepage_shape);
         tabLayout.getTabAt(1).setIcon(R.drawable.forestall_shape);
         tabLayout.getTabAt(2).setIcon(R.drawable.classify_shape);
         tabLayout.getTabAt(3).setIcon(R.drawable.shopping_shape);
         tabLayout.getTabAt(4).setIcon(R.drawable.mineyintai_shape);
-
-//      GreenDaoUtils.getUtils(HomePageActivity.this).getDao().insert(new ShopCartEntity(null,"http://img02.tooopen.com/images/20160617/tooopen_sy_165387259697.jpg","衣服","红色","M码",188.01,1));
-//      GreenDaoUtils.getUtils(HomePageActivity.this).getDao().insert(new ShopCartEntity(null,"http://img02.tooopen.com/images/20160617/tooopen_sy_165387259697.jpg","衣服","绿色","M码",133.01,1));
 
 
     }
@@ -132,5 +95,9 @@ public class HomePageActivity extends BaseActivity {
             }, 500);
         }
     }
+
+
+
+
 
 }

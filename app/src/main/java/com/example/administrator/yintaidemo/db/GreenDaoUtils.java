@@ -2,9 +2,9 @@ package com.example.administrator.yintaidemo.db;
 
 import android.content.Context;
 
-import com.jiyun.com.day07_greendao.DaoMaster;
-import com.jiyun.com.day07_greendao.DaoSession;
-import com.jiyun.com.day07_greendao.ShopCartEntityDao;
+import com.example.administrator.yintaidemo.db.dao.DaoMaster;
+import com.example.administrator.yintaidemo.db.dao.DaoSession;
+import com.example.administrator.yintaidemo.db.dao.ShopCartEntityDao;
 
 /**
  * Created by 张扬帆 on 2017/10/17.

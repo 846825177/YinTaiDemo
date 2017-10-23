@@ -3,6 +3,7 @@ package com.example.administrator.yintaidemo.ui.fragemnts.homefragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +13,11 @@ import com.example.administrator.yintaidemo.entity.HomePageBean;
 import com.example.administrator.yintaidemo.http.BaseParams;
 import com.example.administrator.yintaidemo.ui.fragemnts.homefragment.presenters.HomeFragmentPresenter;
 import com.example.administrator.yintaidemo.ui.fragemnts.homefragment.views.HomeFragmentView;
-import com.example.administrator.yintaidemo.views.XListView;
+import com.example.administrator.yintaidemo.utils.JumpActivityUtils;
+import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.recker.flybanner.FlyBanner;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,33 +26,31 @@ import java.util.Map;
  * Created by dell on 2017/10/17.
  */
 //首页
-public class HomeFragment extends Fragment implements HomeFragmentView<HomePageBean>, XListView.IXListViewListener {
+public class HomeFragment extends Fragment implements HomeFragmentView<HomePageBean>, XRecyclerView.LoadingListener {
 
-    private XListView mListView;
     private ArrayList<HomePageBean.DataBean.TemplatelistBean> mList = new ArrayList<>();
-    private HomeListViewAdapter adapter;
-    private FlyBanner mHomeFragment_banner;
     private ArrayList<String> banner = new ArrayList<>();
-    private View inflate;
     private int pageindex = 1;
-    private List<HomePageBean.DataBean.BannerlistBean> bannerlist;
+    private XRecyclerView mRecycler;
+    private HomeRecyclerViewAdapter adapter;
+    private FlyBanner mHomeFragment_banner;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.homefragment, container, false);
-        inflate = inflater.inflate(R.layout.homefragment_banner, null);
-        mHomeFragment_banner = inflate.findViewById(R.id.mHomeFragment_Banner);
-
-
+        View bannerView = LayoutInflater.from(getActivity()).inflate(R.layout.homefragment_banner, container, false);
+        mHomeFragment_banner = bannerView.findViewById(R.id.mHomeFragment_Banner);
         initView(view);
+        adapter = new HomeRecyclerViewAdapter(mList, getActivity());
+        adapter.setOnItemClickListener((jumpurl) -> JumpActivityUtils.jump(getActivity(), jumpurl));
+        mRecycler.setAdapter(adapter);
+        mRecycler.addHeaderView(bannerView);
         getData(pageindex);
         return view;
     }
 
     private void getData(int pageindex) {
-        if (pageindex == 1)
-            mList.clear();
         HomeFragmentPresenter presenter = new HomeFragmentPresenter(this);
         Map<String, String> mParams = new HashMap<>();
         BaseParams.getParams(mParams, getActivity());
@@ -62,48 +60,27 @@ public class HomeFragment extends Fragment implements HomeFragmentView<HomePageB
         mParams.put("ver", "3.0");
         presenter.request(getActivity(), mParams);
 
-
-    }
-
-    private void initView(View view) {
-        mListView = (XListView) view.findViewById(R.id.mListView_homefragment);
-        mListView.addHeaderView(inflate);
-        mListView.setPullLoadEnable(true);
-        adapter = new HomeListViewAdapter(mList, getActivity());
-        mListView.setAdapter(adapter);
-        mListView.setXListViewListener(this);
-
     }
 
 
     @Override
     public void success(HomePageBean homePageBean) {
-        List<HomePageBean.DataBean.TemplatelistBean> templatelist = homePageBean.getData().getTemplatelist();
-        mList.addAll(templatelist);
+        mList.addAll(homePageBean.getData().getTemplatelist());
         adapter.notifyDataSetChanged();
-        if(pageindex==1){
-            banner.clear();
-            bannerlist = homePageBean.getData().getBannerlist();
-            mList.addAll(templatelist);
+        List<HomePageBean.DataBean.BannerlistBean> bannerlist = homePageBean.getData().getBannerlist();
+
+        if (bannerlist != null && bannerlist.size() > 0) {
             for (int i = 0; i < bannerlist.size(); i++) {
                 banner.add(bannerlist.get(i).getImgurl());
             }
-
             mHomeFragment_banner.setImagesUrl(banner);
+        }
+        mRecycler.refreshComplete();
+        mRecycler.loadMoreComplete();
 
-            adapter.notifyDataSetChanged();
-       }
+//        mRecycler.setPullRefreshEnabled(false);
+//        mRecycler.setLoadingMoreEnabled(false);
 
-
-
-        mListView.stopRefresh();
-        mListView.stopLoadMore();
-        //获取当前时间
-        Date curDate = new Date(System.currentTimeMillis());
-        //格式化
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日HH:mm:ss");
-        String time = formatter.format(curDate);
-        mListView.setRefreshTime(time);
     }
 
     @Override
@@ -111,27 +88,22 @@ public class HomeFragment extends Fragment implements HomeFragmentView<HomePageB
 
     }
 
+    private void initView(View view) {
+        mRecycler = (XRecyclerView) view.findViewById(R.id.mRecycler);
+        mRecycler.setLayoutManager(new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL));
+        mRecycler.setLoadingListener(this);
+    }
+
     @Override
     public void onRefresh() {
+        mList.clear();
+        banner.clear();
         pageindex = 1;
         getData(pageindex);
-
-
     }
 
     @Override
     public void onLoadMore() {
         getData(++pageindex);
-    }
-
-
-    @Override
-    public void onResume() {
-        super.onResume();
-
-
-
-
-
     }
 }

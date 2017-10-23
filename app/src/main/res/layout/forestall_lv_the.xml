@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/img_forestall_lv_the"
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/title_forestall_lv_the"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="nameeeeeeeeeeeeeeeeee" />
+
+    <TextView
+        android:id="@+id/name_forestall_lv_the"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/title_forestall_lv_the"
+        android:layout_alignStart="@+id/title_forestall_lv_the"
+        android:layout_below="@+id/title_forestall_lv_the"
+        android:layout_marginTop="22dp"
+        android:text="titleeeeeeeeeeeee" />
+</RelativeLayout>

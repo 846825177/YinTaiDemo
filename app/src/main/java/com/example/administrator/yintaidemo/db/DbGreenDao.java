@@ -3,7 +3,7 @@ package com.example.administrator.yintaidemo.db;
 import android.content.Context;
 
 import com.example.administrator.yintaidemo.entity.ShopCartEntity;
-import com.jiyun.com.day07_greendao.ShopCartEntityDao;
+import com.example.administrator.yintaidemo.db.dao.ShopCartEntityDao;
 
 import java.util.List;
 

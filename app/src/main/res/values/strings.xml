@@ -6,5 +6,35 @@
     <string name="xlistview_header_last_time">上次更新时间：</string>
     <string name="xlistview_footer_hint_normal">查看更多</string>
     <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <!-- 登陆 LoginActivity-->
+    <string name="login">登录</string>
+    <string name="reg">注册</string>
+    <string name="username_hint">邮箱/用户名/手机号</string>
+    <string name="pwd_hint">密码</string>
+    <string name="login_other_way">使用其它账号登录</string>
+    <string name="login_qq">QQ</string>
+    <string name="login_alipay">支付宝</string>
+    <string name="login_weibo">新浪微博</string>
 
+    <!--注册 RegisterPhone1Activity、RegisterPhone2Activity-->
+    <string name="server_send_success">已发送，请尽快使用</string>
+    <string name="send_validvode_success">验证码已成功发送，请注意查收</string>
+    <string name="server_error">服务器异常,请稍后再试</string>
+    <string name="register_phone_input">请输入手机号</string>
+    <string name="register_phone_right">请输入正确的手机号码</string>
+    <string name="number_format">0123456789</string>
+    <string name="sumbit_and_get_validcode">提交并获取验证码</string>
+    <string name="register_success">注册成功</string>
+    <string name="register_validcode_send_success">验证码已成功发送，请注意查收</string>
+    <string name="register_reget_validcode">重新获取</string>
+    <string name="validcode_input">请输入验证码</string>
+    <string name="password_input">请输入密码</string>
+    <string name="password_wrong_format">密码格式不正确</string>
+    <string name="your_register_phone">您注册的手机号为:</string>
+    <string name="validcode">验证码</string>
+    <string name="reget_validcode">获取验证码</string>
+    <string name="password">密   码</string>
+    <string name="password_length">设置密码，6-16个字符</string>
+    <string name="register_sumbit">提交</string>
+    <string name="reg_tip">请输入您的手机号</string>
 </resources>
