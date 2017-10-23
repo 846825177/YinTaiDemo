@@ -17,33 +17,20 @@ import com.example.administrator.yintaidemo.utils.PhoneParamsUtils;
 
 import java.util.List;
 
-/**
- * -------- This is 羊驼! -------
- * 　　　┏┓　　　┏┓
- * 　　┏┛┻━━━┛┻┓
- * 　　┃　　　　　　　┃
- * 　　┃　　　━　　　┃
- * 　　┃　┳┛　┗┳　┃
- * 　　┃　　　　　　　┃
- * 　　┃　　　┻　　　┃
- * 　　┃　　　　　　　┃
- * 　　┗━┓　　　┏━┛
- * 　　　　┃　　　┃神兽保佑
- * 　　　　┃　　　┃代码无BUG！
- * 　　　　┃　　　┗━━━┓
- * 　　　　┃　　　　　　　┣┓
- * 　　　　┃　　　　　　　┏┛
- * 　　　　┗┓┓┏━┳┓┏┛
- * 　　　　　┃┫┫　┃┫┫
- * 　　　　　┗┻┛　┗┻┛
- * ━━━━━━神兽出没━━━━━━
- * Created by 习爸爸 on 2017/9/28.
- */
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
     private Context context;
     private List<HomePageBean.DataBean.TemplatelistBean.ItemsBean> items;
+    private OnItemClickListener onItemClickListener;
+
+    interface OnItemClickListener {
+        void click(HomePageBean.DataBean.TemplatelistBean.ItemsBean items);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
 
     public RecyclerViewAdapter(Context context, List<HomePageBean.DataBean.TemplatelistBean.ItemsBean> items) {
         this.context = context;
@@ -67,6 +54,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.mRecycler_title.setText(items.get(position).getExtra().getProductdetail().getName());
         holder.mPrice.setText("￥" + items.get(position).getExtra().getProductdetail().getPrice());
         Glide.with(context).load(items.get(position).getImgurl()).into(holder.mImage_recyc);
+        holder.itemView.setOnClickListener((v) -> onItemClickListener.click(items.get(position)));
 
     }
 
@@ -80,9 +68,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         private ImageView mImage_recyc;
         private TextView mPrice;
         private TextView mRecycler_title;
+        private View itemView;
 
         public ViewHolder(View itemView) {
             super(itemView);
+            this.itemView = itemView;
             mImage_recyc = (ImageView) itemView.findViewById(R.id.mImage_recyc);
             mPrice = (TextView) itemView.findViewById(R.id.mPrice);
             mRecycler_title = (TextView) itemView.findViewById(R.id.mRecycler_title);

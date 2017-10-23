@@ -48,6 +48,16 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
     public static final int ITEM_TYPE_CAROUSELFIGURE = 10;
     public static final int ITEM_TYPE_PRODUCTDOUBLECOLUMN = 11;
     private RecyclerViewAdapter recyclerViewAdapter;
+    private OnItemClickListener onItemClickListener;
+
+
+    interface OnItemClickListener {
+        void click(HomePageBean.DataBean.TemplatelistBean.ItemsBean bean);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
 
     @Override
     public int getItemViewType(int position) {
@@ -178,10 +188,21 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
             Glide.with(context).load(items.get(2).getImgurl()).into(((FuncareafiveimgViewHolder) holder).mImage_fun_c);
             Glide.with(context).load(items.get(3).getImgurl()).into(((FuncareafiveimgViewHolder) holder).mImage_fun_d);
             Glide.with(context).load(items.get(4).getImgurl()).into(((FuncareafiveimgViewHolder) holder).mImage_fun_e);
+            ((FuncareafiveimgViewHolder) holder).mImage_fun_a.setOnClickListener((v -> onItemClickListener.click(items.get(0))));
+            ((FuncareafiveimgViewHolder) holder).mImage_fun_b.setOnClickListener((v -> onItemClickListener.click(items.get(1))));
+            ((FuncareafiveimgViewHolder) holder).mImage_fun_c.setOnClickListener((v -> onItemClickListener.click(items.get(2))));
+            ((FuncareafiveimgViewHolder) holder).mImage_fun_d.setOnClickListener((v -> onItemClickListener.click(items.get(3))));
+            ((FuncareafiveimgViewHolder) holder).mImage_fun_e.setOnClickListener((v -> onItemClickListener.click(items.get(4))));
+            ((FuncareafiveimgViewHolder) holder).mTextViwe_fun_a.setOnClickListener((v -> onItemClickListener.click(items.get(0))));
+            ((FuncareafiveimgViewHolder) holder).mTextViwe_fun_b.setOnClickListener((v -> onItemClickListener.click(items.get(1))));
+            ((FuncareafiveimgViewHolder) holder).mTextViwe_fun_c.setOnClickListener((v -> onItemClickListener.click(items.get(2))));
+            ((FuncareafiveimgViewHolder) holder).mTextViwe_fun_d.setOnClickListener((v -> onItemClickListener.click(items.get(3))));
+            ((FuncareafiveimgViewHolder) holder).mTextViwe_fun_e.setOnClickListener((v -> onItemClickListener.click(items.get(4))));
 
         }
         if (holder instanceof FloorheadViewHolder) {
             Glide.with(context).load(bean.getItems().get(0).getImgurl()).into(((FloorheadViewHolder) holder).mFloorHead);
+            ((FloorheadViewHolder) holder).mFloorHead.setOnClickListener(v -> onItemClickListener.click(bean.getItems().get(0)));
         }
         if (holder instanceof FloorspaceViewHolder) {
 
@@ -189,6 +210,7 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
         if (holder instanceof ProductsinglerowViewHolder) {
             if (recyclerViewAdapter == null) {
                 recyclerViewAdapter = new RecyclerViewAdapter(context, bean.getItems());
+                recyclerViewAdapter.setOnItemClickListener((item) -> onItemClickListener.click(item));
                 ((ProductsinglerowViewHolder) holder).mRecyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
                 ((ProductsinglerowViewHolder) holder).mRecyclerView.setAdapter(recyclerViewAdapter);
             } else {
@@ -196,29 +218,42 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
             }
         }
         if (holder instanceof FloorfootViewHolder) {
-
+            FloorfootViewHolder holder1 = (FloorfootViewHolder) holder;
         }
         if (holder instanceof TwoimgaverageViewHolder) {
             Glide.with(context).load(bean.getItems().get(0).getImgurl()).into(((TwoimgaverageViewHolder) holder).mImage_Left);
             Glide.with(context).load(bean.getItems().get(1).getImgurl()).into(((TwoimgaverageViewHolder) holder).mImage_Right);
+            ((TwoimgaverageViewHolder) holder).mImage_Left.setOnClickListener(v -> onItemClickListener.click(bean.getItems().get(0)));
+            ((TwoimgaverageViewHolder) holder).mImage_Right.setOnClickListener(v -> onItemClickListener.click(bean.getItems().get(1)));
         }
         if (holder instanceof OneimgViewHolder) {
             Glide.with(context).load(bean.getItems().get(0).getImgurl()).into(((OneimgViewHolder) holder).mOneImg_a);
+            ((OneimgViewHolder) holder).mOneImg_a.setOnClickListener(v -> onItemClickListener.click(bean.getItems().get(0)));
         }
         if (holder instanceof ThreeimgleftoneViewHolder) {
             Glide.with(context).load(bean.getItems().get(0).getImgurl()).into(((ThreeimgleftoneViewHolder) holder).mThreeimgLeftone_left);
             Glide.with(context).load(bean.getItems().get(1).getImgurl()).into(((ThreeimgleftoneViewHolder) holder).mThreeimgLeftone_right_top);
             Glide.with(context).load(bean.getItems().get(2).getImgurl()).into(((ThreeimgleftoneViewHolder) holder).mThreeimgLeftone_right_btm);
+            ((ThreeimgleftoneViewHolder) holder).mThreeimgLeftone_left.setOnClickListener(v -> onItemClickListener.click(bean.getItems().get(0)));
+            ((ThreeimgleftoneViewHolder) holder).mThreeimgLeftone_right_top.setOnClickListener(v -> onItemClickListener.click(bean.getItems().get(1)));
+            ((ThreeimgleftoneViewHolder) holder).mThreeimgLeftone_right_btm.setOnClickListener(v -> onItemClickListener.click(bean.getItems().get(2)));
+
         }
         if (holder instanceof ThreeimglefttwoViewHolder) {
             Glide.with(context).load(bean.getItems().get(0).getImgurl()).into(((ThreeimglefttwoViewHolder) holder).mThreeimglefttwo_left_top);
             Glide.with(context).load(bean.getItems().get(1).getImgurl()).into(((ThreeimglefttwoViewHolder) holder).mThreeimglefttwo_left_btm);
             Glide.with(context).load(bean.getItems().get(2).getImgurl()).into(((ThreeimglefttwoViewHolder) holder).mThreeimglefttwo_right);
+            ((ThreeimglefttwoViewHolder) holder).mThreeimglefttwo_left_top.setOnClickListener(v -> onItemClickListener.click(bean.getItems().get(0)));
+            ((ThreeimglefttwoViewHolder) holder).mThreeimglefttwo_left_btm.setOnClickListener(v -> onItemClickListener.click(bean.getItems().get(1)));
+            ((ThreeimglefttwoViewHolder) holder).mThreeimglefttwo_right.setOnClickListener(v -> onItemClickListener.click(bean.getItems().get(2)));
         }
         if (holder instanceof ThreeimgabreastViewHolder) {
             Glide.with(context).load(bean.getItems().get(0).getImgurl()).into(((ThreeimgabreastViewHolder) holder).mImage_ThreeImgAbreast_a);
             Glide.with(context).load(bean.getItems().get(1).getImgurl()).into(((ThreeimgabreastViewHolder) holder).mImage_ThreeImgAbreast_b);
             Glide.with(context).load(bean.getItems().get(2).getImgurl()).into(((ThreeimgabreastViewHolder) holder).mImage_ThreeImgAbreast_c);
+            ((ThreeimgabreastViewHolder) holder).mImage_ThreeImgAbreast_a.setOnClickListener(v -> onItemClickListener.click(bean.getItems().get(0)));
+            ((ThreeimgabreastViewHolder) holder).mImage_ThreeImgAbreast_b.setOnClickListener(v -> onItemClickListener.click(bean.getItems().get(1)));
+            ((ThreeimgabreastViewHolder) holder).mImage_ThreeImgAbreast_c.setOnClickListener(v -> onItemClickListener.click(bean.getItems().get(2)));
         }
         if (holder instanceof CarouselfigureViewHolder) {
             ArrayList<String> flybanner = new ArrayList<>();
@@ -227,6 +262,12 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
             }
 
             ((CarouselfigureViewHolder) holder).mCarouselFigure.setImagesUrl(flybanner);
+            ((CarouselfigureViewHolder) holder).mCarouselFigure.setOnItemClickListener(new FlyBanner.OnItemClickListener() {
+                @Override
+                public void onItemClick(int position) {
+                    onItemClickListener.click(bean.getItems().get(position));
+                }
+            });
         }
 
         if (holder instanceof ProductDoubleColumnViewHolder) {
@@ -244,7 +285,15 @@ public class HomeRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
             viewHolder.mTextView_left_title.setText(name1);
             viewHolder.mTextView_left_price.setText("￥" + price1 + "");
             viewHolder.mTextView_right_title.setText(name2);
-            viewHolder.mTextView_right_price.setText("￥"+price2 + "");
+            viewHolder.mTextView_right_price.setText("￥" + price2 + "");
+
+            viewHolder.mImagetLeft.setOnClickListener(v -> onItemClickListener.click(itemsBeanList.get(0)));
+            viewHolder.mTextView_left_title.setOnClickListener(v -> onItemClickListener.click(itemsBeanList.get(0)));
+            viewHolder.mTextView_left_price.setOnClickListener(v -> onItemClickListener.click(itemsBeanList.get(0)));
+            viewHolder.mImageRight.setOnClickListener(v -> onItemClickListener.click(itemsBeanList.get(1)));
+            viewHolder.mTextView_right_title.setOnClickListener(v -> onItemClickListener.click(itemsBeanList.get(1)));
+            viewHolder.mTextView_right_price.setOnClickListener(v -> onItemClickListener.click(itemsBeanList.get(1)));
+
 
         }
 

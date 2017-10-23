@@ -64,7 +64,7 @@ android:layout_gravity="center"
                   android:textSize="18sp" />
           </LinearLayout>
 
-          <TextView
+          <Button
               android:id="@+id/phone1_button"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"

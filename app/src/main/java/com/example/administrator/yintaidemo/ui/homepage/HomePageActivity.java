@@ -1,17 +1,22 @@
 package com.example.administrator.yintaidemo.ui.homepage;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.administrator.yintaidemo.R;
 import com.example.administrator.yintaidemo.adapters.HomePagerAdapter;
 import com.example.administrator.yintaidemo.ui.BaseActivity;
+import com.example.administrator.yintaidemo.ui.SearchActivity;
 import com.example.administrator.yintaidemo.ui.fragemnts.ClassifyFragment;
-import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.ForestallFragment;
-import com.example.administrator.yintaidemo.ui.fragemnts.homefragment.HomeFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.MineYinTaiFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.ShoppingcartFragment;
+import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.ForestallFragment;
+import com.example.administrator.yintaidemo.ui.fragemnts.homefragment.HomeFragment;
 
 import java.util.ArrayList;
 
@@ -19,11 +24,13 @@ public class HomePageActivity extends BaseActivity {
 
 
     private ViewPager viewPager;
+    private ImageView home_scan;
+    private EditText search;
 
     @Override
     public void init() {
         setShowHeader(true);
-        setShowErrorBody(true);
+        setShowNotScollBody(true);
         setShowFooter(true);
 
     }
@@ -32,12 +39,16 @@ public class HomePageActivity extends BaseActivity {
     public void run() {
         setBody(R.layout.body);
         setFooter(R.layout.footer);
-        setHeader(R.layout.header);
+        setHeader(R.layout.header_view);
         initView();
     }
 
     public void initView() {
         viewPager = bodyzong.findViewById(R.id.viewpager);
+        home_scan = (ImageView) headerlayout.findViewById(R.id.home_scan);
+        search = (EditText) headerlayout.findViewById(R.id.search);
+        search.setOnClickListener((v) -> startActivity(new Intent(HomePageActivity.this, SearchActivity.class)));
+        home_scan.setOnClickListener((v) -> Toast.makeText(this, "二维码扫描", Toast.LENGTH_SHORT).show());
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
         ArrayList<String> stringArrayList = new ArrayList<>();
         stringArrayList.add("首页");
@@ -84,5 +95,9 @@ public class HomePageActivity extends BaseActivity {
             }, 500);
         }
     }
+
+
+
+
 
 }
