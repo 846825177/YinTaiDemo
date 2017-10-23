@@ -103,7 +103,7 @@ public class HomePageActivity extends BaseActivity {
         tabLayout.getTabAt(2).setIcon(R.drawable.classify_shape);
         tabLayout.getTabAt(3).setIcon(R.drawable.shopping_shape);
         tabLayout.getTabAt(4).setIcon(R.drawable.mineyintai_shape);
-
+        viewPager.setOffscreenPageLimit(5);
 
     }
 

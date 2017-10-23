@@ -156,7 +156,6 @@ public class ShoppingcartFragment extends Fragment implements View.OnClickListen
             @Override
             public void onClick(View v) {
                 sumprice = 0;
-//                judge=3;
                 if (checkBoxall.isChecked()) {
 
                     for (int i = 0; i < list.size(); i++) {

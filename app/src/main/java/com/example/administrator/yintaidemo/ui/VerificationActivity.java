@@ -192,7 +192,7 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
         if (TextUtils.isEmpty(yanzhengma)) {
             Toast.makeText(this, "yanzhengma不能为空", Toast.LENGTH_SHORT).show();
             return;
-        }
+        }else {
 
         String pass = yanzheng_edit_pass.getText().toString().trim();
         String name = yanzheng_text_shoujihao.getText().toString().trim();
@@ -205,11 +205,13 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
             //	 通过editor对象的commit方法把数据给提交过去,完成存储
             editor.commit();
             Toast.makeText(this, "pass不能为空", Toast.LENGTH_SHORT).show();
+
+            return;
+        }else {
             Intent intent = new Intent(VerificationActivity.this, LoginActivity.class);
             startActivity(intent);
-            return;
         }
 
 
-    }
+    }}
 }
