@@ -49,13 +49,7 @@ public class ShoppingcartFragment extends Fragment implements View.OnClickListen
 
 
     public interface SetJumpSettlement {
-//        void jumpsettlement(String name,
-//                            String image,
-//                            String color,
-//                            String size,
-//                            int num,
-//                            double price,
-//                            int judge);
+
 
         void jumpsettlement( List<ShopCartEntity> chuanzhilist,int judge,int count);
 
@@ -110,11 +104,7 @@ public class ShoppingcartFragment extends Fragment implements View.OnClickListen
                         double price = list.get(i).getPrice();
                         //判断 购物车中该商品添加了几次   以及对价格的影响
 
-//                        if (num == 0) {
-//                            sumprice += price;
-//                        } else {
-//                            sumprice += price * num;
-//                        }
+
                         sumprice += price * num;
 
 

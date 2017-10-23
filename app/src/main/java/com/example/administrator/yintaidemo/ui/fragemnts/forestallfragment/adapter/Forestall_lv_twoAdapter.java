@@ -56,7 +56,7 @@ public class Forestall_lv_twoAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) view.getTag();
         }
-        Glide.with(context).load(list.get(i).getImgurl()).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.img_forestall_lv_two);
+        Glide.with(context).load(list.get(i).getImgurl())/*.diskCacheStrategy(DiskCacheStrategy.ALL)*/.into(holder.img_forestall_lv_two);
         holder.name_forestall_lv_two.setText(list.get(i).getName());
         holder.discount_forestall_lv_two.setText(list.get(i).getDiscount());
         String endtime = list.get(i).getEndtime();

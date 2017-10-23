@@ -53,7 +53,7 @@ public class Forestall_lv_TheAdapter extends BaseAdapter {
         }else {
             hodler= (ViewHolder) view.getTag();
         }
-        Glide.with(context).load(list.get(i).getLogoimage()).diskCacheStrategy(DiskCacheStrategy.ALL).into(hodler.img_forestall_lv_the);
+        Glide.with(context).load(list.get(i).getLogoimage())/*.diskCacheStrategy(DiskCacheStrategy.ALL)*/.into(hodler.img_forestall_lv_the);
         hodler.name_forestall_lv_the.setText(list.get(i).getBrandname());
         hodler.title_forestall_lv_the.setText(list.get(i).getName());
         return view;

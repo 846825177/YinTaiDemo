@@ -66,24 +66,9 @@ public class SettlementscenterActivity extends AppCompatActivity implements View
 
         setSupportActionBar(tool);
 
-//        intent.putExtra("name",name);
-//        intent.putExtra("image",image);
-//        intent.putExtra("color",color);
-//        intent.putExtra("size",size);
-//        intent.putExtra("num",num);
-//        intent.putExtra("price",price);
-//        intent.putExtra("judge",judge);
-
-//        final Intent intent = getIntent();
-//        String name = intent.getStringExtra("name");
-//        String image = intent.getStringExtra("image");
-//        String color = intent.getStringExtra("color");
-//        double price = intent.getDoubleExtra("price", 0);
-//        String size = intent.getStringExtra("size");
-//        int num = intent.getIntExtra("num", 1);
-//        intent.getIntExtra("judge", 7);
 
         Intent intent = getIntent();
+
         list = intent.getParcelableArrayListExtra("jihe");
         int judge = intent.getIntExtra("judge", 7);
         int count = intent.getIntExtra("count", 7);
@@ -93,11 +78,7 @@ public class SettlementscenterActivity extends AppCompatActivity implements View
       //  Toast.makeText(this, count, Toast.LENGTH_SHORT).show();
 
 
-//        Glide.with(SettlementscenterActivity.this).load(image).into(settlement_shop_image);
-//        settlement_shop_name.setText(name);
-//        colororsize.setText(color + "|" + size);
-//        this.num.setText("数量:" + num);
-//        settlement_shop_price.setText("价钱:" + price);
+
 
 
 
