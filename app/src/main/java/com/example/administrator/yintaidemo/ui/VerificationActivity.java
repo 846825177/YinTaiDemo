@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +34,7 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
 
     EventHandler eventHandler;
     String strPhoneNumber;
+    private ImageView yanzheng_img_fanhui;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +53,16 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
         yanzheng_edit_yanzhengma = (EditText) findViewById(R.id.yanzheng_edit_yanzhengma);
         yanzheng_edit_pass = (EditText) findViewById(R.id.yanzheng_edit_pass);
         yanzheng_btn_tijiao = (Button) findViewById(R.id.yanzheng_btn_tijiao);
-
+        yanzheng_img_fanhui = (ImageView) findViewById(R.id.yanzheng_img_fanhui);
         yanzheng_btn_huoqu.setOnClickListener(this);
         yanzheng_btn_tijiao.setOnClickListener(this);
+        yanzheng_img_fanhui.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(VerificationActivity.this,RegisterActivity.class));
+                finish();
+            }
+        });
         //   SMSSDK.init(this, "1946473cf2db0", "6619774d8587a6eecdbd06f52abaa346");
         MobSDK.init(this, "1fa649caa0f2e", "5aa32796d717241e86d14939a4b0bc51");
         eventHandler = new EventHandler() {
@@ -93,7 +102,7 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
                 Log.d(TAG, yanzheng_edit_yanzhengma.getText().toString());
                 SMSSDK.submitVerificationCode("86", strPhoneNumber, yanzheng_edit_yanzhengma.getText().toString());
             } else {
-                Toast.makeText(this, "密码长度不正确", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "请输入验证码", Toast.LENGTH_SHORT).show();
             }
         } else if (v.getId() == R.id.yanzheng_btn_huoqu) {
             strPhoneNumber = yanzheng_text_shoujihao.getText().toString();
@@ -139,11 +148,11 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
                             Log.d(TAG, "get verification code successful.");
                         } else if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) { //提交验证码
                             Log.d(TAG, "submit code successful");
-
+                            submit();
                             Toast.makeText(VerificationActivity.this, "提交验证码成功", Toast.LENGTH_SHORT).show();
 //                            Intent intent = new Intent(VerificationActivity.this, Main2Activity.class);
 //                            startActivity(intent);
-                            submit();
+
                         } else {
                             Log.d(TAG, data.toString());
                         }
@@ -200,8 +209,6 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
             startActivity(intent);
             return;
         }
-
-        // TODO validate success, do something
 
 
     }

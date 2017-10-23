@@ -77,7 +77,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.login_submit:
-
+submit();
                 break;
             case R.id.login_textview_zhuce:
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
@@ -112,18 +112,15 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     private void submit() {
         // validate
         String name = login_name.getText().toString().trim();
-        if (TextUtils.isEmpty(name)) {
-            Toast.makeText(this, "name不能为空", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
         String pass = login_pass.getText().toString().trim();
-        if (TextUtils.isEmpty(pass)) {
-            Toast.makeText(this, "pass不能为空", Toast.LENGTH_SHORT).show();
+        if (TextUtils.isEmpty(name)&&TextUtils.isEmpty(pass)) {
+            Toast.makeText(this, "用户名密码不能为空", Toast.LENGTH_SHORT).show();
             return;
+        }else {
+
         }
 
-        // TODO validate success, do something
+
 
 
     }

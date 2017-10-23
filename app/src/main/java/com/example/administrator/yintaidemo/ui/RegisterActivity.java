@@ -3,7 +3,6 @@ package com.example.administrator.yintaidemo.ui;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,6 +14,7 @@ public class RegisterActivity extends Activity {
 
     private EditText phone1_edittext;
     private Button phone1_button;
+    private String strPhoneNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,14 +37,16 @@ public class RegisterActivity extends Activity {
 
 
     private void submit() {
-        // validate
-        String edittext = phone1_edittext.getText().toString().trim();
-        if (TextUtils.isEmpty(edittext)) {
-            Toast.makeText(this, "手机号不能为空", Toast.LENGTH_SHORT).show();
+
+        strPhoneNumber = phone1_edittext.getText().toString();
+        if (null == strPhoneNumber || "".equals(strPhoneNumber) || strPhoneNumber.length() != 11) {
+            Toast.makeText(this, "电话号码输入有误", Toast.LENGTH_SHORT).show();
+            return;
         }else {
             Intent intent = new Intent(RegisterActivity.this,VerificationActivity.class);
-            intent.putExtra("phone",edittext);
+            intent.putExtra("phone",strPhoneNumber);
             startActivity(intent);
+            finish();
           //  startActivity(new Intent(RegisterActivity.this,VerificationActivity.class));
         }
 
