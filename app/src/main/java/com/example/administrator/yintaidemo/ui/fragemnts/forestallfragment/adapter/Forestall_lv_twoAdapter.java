@@ -1,6 +1,8 @@
 package com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.adapter;
 
 import android.content.Context;
+import android.os.Handler;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,10 +11,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.administrator.yintaidemo.R;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.entity.Forestall;
+import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.utils.TimeUtils;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -45,7 +48,7 @@ public class Forestall_lv_twoAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        ViewHolder holder;
+        final ViewHolder holder;
         if (view == null) {
             view = LayoutInflater.from(context).inflate(R.layout.forestall_lv_two, null);
             holder = new ViewHolder(view);
@@ -53,12 +56,15 @@ public class Forestall_lv_twoAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) view.getTag();
         }
-        Glide.with(context).load(list.get(i).getImgurl()).into(holder.img_forestall_lv_two);
+        Glide.with(context).load(list.get(i).getImgurl()).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.img_forestall_lv_two);
         holder.name_forestall_lv_two.setText(list.get(i).getName());
         holder.discount_forestall_lv_two.setText(list.get(i).getDiscount());
-        holder.time_forestall_lv_two.setText(list.get(i).getEndtime());
+        String endtime = list.get(i).getEndtime();
+        holder.time_forestall_lv_two.setText(TimeUtils.getEndData(endtime));
+
         return view;
     }
+
 
     public static class ViewHolder {
         public View rootView;
@@ -66,6 +72,7 @@ public class Forestall_lv_twoAdapter extends BaseAdapter {
         public TextView name_forestall_lv_two;
         public TextView discount_forestall_lv_two;
         public TextView time_forestall_lv_two;
+        public SwipeRefreshLayout srl_forestall_lv_two;
 
         public ViewHolder(View rootView) {
             this.rootView = rootView;
@@ -76,4 +83,5 @@ public class Forestall_lv_twoAdapter extends BaseAdapter {
         }
 
     }
+
 }

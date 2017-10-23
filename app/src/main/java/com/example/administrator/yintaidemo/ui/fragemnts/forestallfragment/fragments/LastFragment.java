@@ -3,18 +3,21 @@ package com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.frag
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.ListView;
 
 import com.example.administrator.yintaidemo.R;
 import com.example.administrator.yintaidemo.http.BaseParams;
+import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.adapter.Forestall_lv_twoAdapter;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.entity.Forestall;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.presenter.ForestallPresenter;
+import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.utils.TimeUtils;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.views.ForestallView;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -22,18 +25,18 @@ import java.util.List;
  * Created by 张扬帆 on 2017/10/20.
  */
 
-public class LastFragment extends Fragment implements ForestallView<Forestall>{
-    private ImageView img_forestall_lv_two;
-    private TextView name_forestall_lv_two;
-    private TextView discount_forestall_lv_two;
-    private TextView time_forestall_lv_two;
+public class LastFragment extends Fragment implements ForestallView<Forestall> {
     private List<Forestall.DataBean.ActivityinfoBean.ActivitylistBean> list;
+    private List<Forestall.DataBean.ActivityinfoBean.ActivitylistBean> datalist;
+    private ListView lv_forestall_vp;
+    private Forestall_lv_twoAdapter adapter;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.forestall_lv_two, container, false);
+        View view = inflater.inflate(R.layout.forestall_vp, container, false);
         initView(view);
+        initData();
         return view;
     }
 
@@ -48,25 +51,30 @@ public class LastFragment extends Fragment implements ForestallView<Forestall>{
         map.put("method", "products.limitbuy");
         BaseParams.getParams(map, getContext());
         ForestallPresenter presenter = new ForestallPresenter(this);
-        presenter.request(getContext(),map);
-
+        presenter.request(getContext(), map);
 
     }
 
     private void initView(View view) {
-        img_forestall_lv_two = (ImageView) view.findViewById(R.id.img_forestall_lv_two);
-        name_forestall_lv_two = (TextView) view.findViewById(R.id.name_forestall_lv_two);
-        discount_forestall_lv_two = (TextView) view.findViewById(R.id.discount_forestall_lv_two);
-        time_forestall_lv_two = (TextView) view.findViewById(R.id.time_forestall_lv_two);
+        lv_forestall_vp = (ListView) view.findViewById(R.id.lv_forestall_vp);
     }
 
     @Override
     public void success(Forestall forestall) {
+        String s=forestall.toString();
         list = forestall.getData().getActivityinfo().get(0).getActivitylist();
+        datalist = new ArrayList<>();
         for (int i = 0; i < list.size(); i++) {
             String endtime = list.get(i).getEndtime();
-
+            boolean b = TimeUtils.getLong(endtime);
+            if (b) {
+                datalist.add(list.get(i));
+                Log.e("TAG",datalist.size()+"");
+            }
         }
+
+        adapter = new Forestall_lv_twoAdapter(datalist, getContext());
+        lv_forestall_vp.setAdapter(adapter);
     }
 
     @Override
