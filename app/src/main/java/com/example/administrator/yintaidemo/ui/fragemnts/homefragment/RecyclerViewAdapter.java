@@ -25,7 +25,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private OnItemClickListener onItemClickListener;
 
     interface OnItemClickListener {
-        void click(String jumpUrl);
+        void click(HomePageBean.DataBean.TemplatelistBean.ItemsBean items);
     }
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
@@ -54,7 +54,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.mRecycler_title.setText(items.get(position).getExtra().getProductdetail().getName());
         holder.mPrice.setText("￥" + items.get(position).getExtra().getProductdetail().getPrice());
         Glide.with(context).load(items.get(position).getImgurl()).into(holder.mImage_recyc);
-        holder.itemView.setOnClickListener((v) -> onItemClickListener.click(items.get(position).getJumpurl()));
+        holder.itemView.setOnClickListener((v) -> onItemClickListener.click(items.get(position)));
 
     }
 

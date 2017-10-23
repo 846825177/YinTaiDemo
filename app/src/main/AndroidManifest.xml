@@ -101,8 +101,10 @@
             android:name="UMENG_APPKEY"
             android:value="59ea918d677baa54e0000062" >
         </meta-data>
-        <activity android:name=".ui.SearchActivity" />
         <activity android:name=".ui.WebActivity"></activity>
+        <activity android:name=".ui.AutoProductActivity"></activity>
+        <activity android:name=".ui.CustomProductAcitivity"></activity>
+        <activity android:name=".ui.GeneralProductActivity"></activity>
     </application>
 
 </manifest>
