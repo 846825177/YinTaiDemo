@@ -22,7 +22,8 @@ import org.json.JSONObject;
 
 import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
-
+/*
+* 短信验证*/
 public class VerificationActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "SmsYanzheng";
 
@@ -197,6 +198,11 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
         String pass = yanzheng_edit_pass.getText().toString().trim();
         String name = yanzheng_text_shoujihao.getText().toString().trim();
         if (TextUtils.isEmpty(pass)) {
+
+            Toast.makeText(this, "pass不能为空", Toast.LENGTH_SHORT).show();
+
+            return;
+        }else {
             SharedPreferences sp = getSharedPreferences("p", MODE_PRIVATE);
             SharedPreferences.Editor editor = sp.edit();
             editor.putString("uName", name);
@@ -204,10 +210,6 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
 
             //	 通过editor对象的commit方法把数据给提交过去,完成存储
             editor.commit();
-            Toast.makeText(this, "pass不能为空", Toast.LENGTH_SHORT).show();
-
-            return;
-        }else {
             Intent intent = new Intent(VerificationActivity.this, LoginActivity.class);
             startActivity(intent);
         }
