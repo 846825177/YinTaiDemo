@@ -2,7 +2,6 @@ package com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.pres
 
 import android.content.Context;
 
-import com.example.administrator.yintaidemo.interfaces.HttpCallBack;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.model.ForestallModel;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.views.ForestallView;
 

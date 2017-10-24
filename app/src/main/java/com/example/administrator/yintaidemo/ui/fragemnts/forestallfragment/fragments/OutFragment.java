@@ -16,7 +16,6 @@ import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.entit
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.presenter.ForestallPresenter;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.views.ForestallView;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 

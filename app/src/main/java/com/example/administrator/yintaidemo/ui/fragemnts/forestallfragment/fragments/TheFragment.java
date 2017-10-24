@@ -6,7 +6,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.administrator.yintaidemo.R;
 import com.example.administrator.yintaidemo.http.BaseParams;
@@ -22,10 +24,11 @@ import java.util.List;
  * Created by 张扬帆 on 2017/10/20.
  */
 
-public class TheFragment extends Fragment implements ForestallView<Forestall>{
+public class TheFragment extends Fragment implements ForestallView<Forestall>, View.OnClickListener {
     private ListView lv_forestall_vp;
     private Forestall forestall;
     private List<Forestall.DataBean.ActivityinfoBean.ActivitylistBean> list;
+    private LinearLayout ll_forestall_lv_head;
 
     @Nullable
     @Override
@@ -38,6 +41,10 @@ public class TheFragment extends Fragment implements ForestallView<Forestall>{
 
     private void initView(View view) {
         lv_forestall_vp = (ListView) view.findViewById(R.id.lv_forestall_vp);
+        View head = LayoutInflater.from(getContext()).inflate(R.layout.forestall_lv_head, null);
+        lv_forestall_vp.addHeaderView(head);
+        ll_forestall_lv_head = (LinearLayout) view.findViewById(R.id.ll_forestall_lv_head);
+        ll_forestall_lv_head.setOnClickListener(this);
     }
 
     private void initData() {
@@ -58,12 +65,17 @@ public class TheFragment extends Fragment implements ForestallView<Forestall>{
     @Override
     public void success(Forestall forestall) {
         list = forestall.getData().getActivityinfo().get(0).getActivitylist();
-        Forestall_lv_TheAdapter adapter = new Forestall_lv_TheAdapter(list,getContext());
+        Forestall_lv_TheAdapter adapter = new Forestall_lv_TheAdapter(list, getContext());
         lv_forestall_vp.setAdapter(adapter);
     }
 
     @Override
     public void failure(Exception e) {
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        Toast.makeText(getContext(), "活动订阅成功，将会提前提醒您抢购开始", Toast.LENGTH_SHORT).show();
     }
 }
