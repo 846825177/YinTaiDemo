@@ -37,7 +37,7 @@
     <string name="password_length">设置密码，6-16个字符</string>
     <string name="register_sumbit">提交</string>
     <string name="reg_tip">请输入您的手机号</string>
-    <?xml version="1.0" encoding="utf-8"?>
+
         <!-- 公用字符串 -->
 
         <string name="tip_title1">温馨提示</string>
