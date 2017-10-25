@@ -1,8 +1,7 @@
 package com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.adapter;
 
 import android.content.Context;
-import android.os.Handler;
-import android.support.v4.widget.SwipeRefreshLayout;
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.administrator.yintaidemo.R;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.entity.Forestall;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.utils.TimeUtils;
@@ -24,7 +22,9 @@ import java.util.List;
 
 public class Forestall_lv_twoAdapter extends BaseAdapter {
     private List<Forestall.DataBean.ActivityinfoBean.ActivitylistBean> list;
+
     private Context context;
+    private ViewHolder holder;
 
     public Forestall_lv_twoAdapter(List<Forestall.DataBean.ActivityinfoBean.ActivitylistBean> list, Context context) {
         this.list = list;
@@ -48,7 +48,6 @@ public class Forestall_lv_twoAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        final ViewHolder holder;
         if (view == null) {
             view = LayoutInflater.from(context).inflate(R.layout.forestall_lv_two, null);
             holder = new ViewHolder(view);
@@ -60,7 +59,18 @@ public class Forestall_lv_twoAdapter extends BaseAdapter {
         holder.name_forestall_lv_two.setText(list.get(i).getName());
         holder.discount_forestall_lv_two.setText(list.get(i).getDiscount());
         String endtime = list.get(i).getEndtime();
-        holder.time_forestall_lv_two.setText(TimeUtils.getEndData(endtime));
+        CountDownTimer timer = new CountDownTimer(TimeUtils.getValue(endtime), 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                // TODO Auto-generated method stub
+                holder.time_forestall_lv_two.setText(TimeUtils.getTime(TimeUtils.getValue(endtime)));
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+        }.start();
 
         return view;
     }
@@ -72,7 +82,6 @@ public class Forestall_lv_twoAdapter extends BaseAdapter {
         public TextView name_forestall_lv_two;
         public TextView discount_forestall_lv_two;
         public TextView time_forestall_lv_two;
-        public SwipeRefreshLayout srl_forestall_lv_two;
 
         public ViewHolder(View rootView) {
             this.rootView = rootView;

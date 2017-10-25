@@ -5,24 +5,18 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.administrator.yintaidemo.R;
-import com.example.administrator.yintaidemo.http.BaseParams;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.adapter.ForestallAdapter;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.entity.Forestall;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.fragments.LastFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.fragments.OutFragment;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.fragments.TheFragment;
-import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.presenter.ForestallPresenter;
-import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.views.ForestallView;
-import com.example.administrator.yintaidemo.utils.PhoneParamsUtils;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 /**

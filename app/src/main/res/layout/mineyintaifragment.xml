@@ -40,6 +40,7 @@
                     android:layout_marginTop="20dp">
 
                     <ImageView
+                        android:id="@+id/mineyintai_img"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:visibility="gone"
@@ -57,6 +58,7 @@
                             android:layout_margin="8dp">
 
                             <TextView
+                                android:id="@+id/mineyintai_yhm"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -66,10 +68,11 @@
                                 android:textSize="15sp" />
 
                             <TextView
+                                android:id="@+id/mineyintai_yhm_mc"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:text="用户名:"
+                                android:layout_toRightOf="@+id/mineyintai_yhm"
+                                android:text="？？sunshine"
                                 android:visibility="gone"
                                 android:textColor="#ffff"
                                 android:textSize="15sp" />
@@ -77,6 +80,7 @@
                         </RelativeLayout>
 
                         <TextView
+                            android:id="@+id/mineyintai_hy"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -92,7 +96,7 @@
 
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/text_hunaying"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -107,18 +111,20 @@
                     android:id="@+id/img_dengluzhuce"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView"
+                    android:layout_below="@+id/text_hunaying"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="14dp"
                     android:src="@mipmap/more_login"
                     />
 
                 <RelativeLayout
+
+                    android:visibility="gone"
+                    android:id="@+id/mineyintai_relative"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_alignParentBottom="true"
-                    android:layout_toEndOf="@+id/textView"
-                    android:layout_toRightOf="@+id/textView">
+               >
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -131,7 +137,7 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="积分"
-                            android:visibility="gone"
+
                             android:textColor="#ffff"
                             android:textSize="15sp" />
 
@@ -141,7 +147,7 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="银元"
-                            android:visibility="gone"
+
                             android:textColor="#ffff"
                             android:textSize="15sp" />
 
@@ -151,7 +157,7 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="余额"
-                            android:visibility="gone"
+
                             android:textColor="#ffff"
                             android:textSize="15sp" />
                     </LinearLayout>
@@ -595,6 +601,23 @@
                 android:layout_height="1dp"
                 android:layout_marginBottom="10dp"
                 android:background="#f000" />
+            <RelativeLayout
+                android:id="@+id/mineyintai_tc"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="退出登录"
+                    android:textSize="15sp" />
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 

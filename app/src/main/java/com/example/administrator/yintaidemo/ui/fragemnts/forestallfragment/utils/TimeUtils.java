@@ -1,14 +1,8 @@
 package com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.utils;
 
-import android.os.Handler;
-import android.widget.TextView;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import static android.R.attr.format;
-import static com.example.administrator.yintaidemo.R.id.textView;
 
 /**
  * Created by 张扬帆 on 2017/10/20.
@@ -16,84 +10,61 @@ import static com.example.administrator.yintaidemo.R.id.textView;
 
 public class TimeUtils {
 
-    private static Handler handler=new Handler();
-    //获取当前时间
+    //将获取来的结束时间通过字符串截取为日历时间
+    public static long getEnd(String end) {
+        String endtime = end.replace("T", " ");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        try {
+            Date date = dateFormat.parse(endtime);
+            long time = date.getTime();
+            return time;
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    //获取当前时间。
     public static long getNow() {
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Date date = new Date(System.currentTimeMillis());
-        String now = formatter.format(date);
-
-        try {
-            Date nowdate = formatter.parse(now);
-            long nowtime = nowdate.getTime();
-
-            return nowtime;
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return 0;
+        long now = System.currentTimeMillis();
+        return now;
     }
 
-    public static String getEndData(String ends){
-        String end = ends.replace("T", " ");
-        return end;
-    }
-
-    //获取结束时间   并转换为时间戳对象
-    public static long getEnd(String ends) {
-        String end = ends.replace("T", " ");
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        try {
-            Date enddate = formatter.parse(end);
-            long endtime = enddate.getTime();
-            return endtime;
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return 0;
-    }
-
-    //转换成时间戳 判断是否是最后一天。
-    public static boolean getLong(String ends) {
-        long end = getEnd(ends);
+    //获取两个时间之间的差值
+    public static long getValue(String string) {
         long now = getNow();
+        long end = getEnd(string);
+        long value = (end - now) / 1000;
+        return value;
+    }
 
-        long time = end - now;
-        long daytime = 24 * 60 * 60 * 1000;
-        if (time < daytime) {
+    //获取剩余几天几时几分几秒。
+    public static String getTime(long ss) {
+        //获取剩余多少天 分钟 小时
+        long day = ss / 60 / 60 / 24;
+
+        //获取剩余多少小时
+        long hour = ss / 60 / 60 - day * 24;
+
+        //获取剩余多少分钟
+        long min = ss / 60 - day * 24 * 60 - hour * 60;
+
+        //获取剩余多少秒
+        long second = ss - day * 24 * 60 * 60 - hour * 60 * 60 - min * 60;
+        String s = "剩余时间:" + day + "天  " + hour + "：" + min + "：" + second;
+
+//        Toast.makeText(this, s, Toast.LENGTH_SHORT).show();
+        return s;
+    }
+
+    public static boolean getLong(String endtime) {
+        long now = getNow();
+        long end = getEnd(endtime);
+        int value = (int) ((end - now) / 1000);
+        int i = 24 * 60 * 60;
+        if (value<i){
             return true;
         }
         return false;
-    }
-
-
-
-    //将时间转换为时间戳对象   获取剩余时间
-    public static void send(String end) {
-        long end1 = getEnd(end);
-        long now = getNow();
-
-        //一天的毫秒值
-        long daytime = 24 * 60 * 60;
-        //计算毫秒值
-        long time = (end1 - now) / 1000;
-
-        while (time > 0){
-            time--;
-            //判断有没有超过一天。
-            int dd = (int) (time / daytime);
-
-            //获取相差时间
-            //获取相差小时数
-            long hh = time / 60 / 60 %24 ;
-            //获取相差分钟数
-            long mm = time / 60 % 60;
-            //获取相差秒数
-            long ss = time % 60;
-
-
-            String sheng = dd + "天" + hh + ":" + mm + ":" + ss + "";
-
-        }
     }
 }
