@@ -15,13 +15,11 @@ import android.widget.Toast;
 import com.example.administrator.yintaidemo.R;
 import com.example.administrator.yintaidemo.adapters.AutoProductAdapter;
 import com.example.administrator.yintaidemo.entity.AutoProductBean;
-import com.example.administrator.yintaidemo.entity.Data;
 import com.example.administrator.yintaidemo.http.BaseParams;
 import com.example.administrator.yintaidemo.ui.customproduct.presenters.CustomPresenter;
 import com.example.administrator.yintaidemo.ui.customproduct.views.CustomViews;
 import com.example.administrator.yintaidemo.utils.JumpActivityUtils;
 import com.example.administrator.yintaidemo.utils.PhoneParamsUtils;
-import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -96,20 +94,10 @@ public class AutoProductActivity extends BaseActivity implements CustomViews<Aut
         String searchCondition = mTempMap.get("searchCondition");
         BaseParams.getParams(mParams, AutoProductActivity.this);
         HashMap<String, String> mParam = PhoneParamsUtils.signBusinessParameter(AutoProductActivity.this, (HashMap<String, String>) mParams);
-        mParam.put("timereq", JumpActivityUtils.getTime());
-        mParam.put("wantype", "wifi");
-        mParam.put("ver", "2.1");
-        Data data = new Data();
-        data.setQuery_string(searchCondition);
-        data.setDisplaycount("30");
-        data.setOrder_type("5");
-        data.setPage_index("1");
-        data.setKeyword("");
-        Gson gson  = new Gson();
-        String s = gson.toJson(data);
-        mParam.put("data", s);
         mParam.put("method", "products.getlist");
-
+        mParam.put("ver", "2.1");
+        mParam.put("data", "{\"query_string\":\"N=50000111\",\"displaycount\":\"30\",\"order_type\":\"5\",\"page_index\":\"1\",\"keyword\":\"\"}");
+        mParam.put("timereq", JumpActivityUtils.getTime());
         CustomPresenter presenter = new CustomPresenter(this);
         presenter.send(null, mParam);
     }

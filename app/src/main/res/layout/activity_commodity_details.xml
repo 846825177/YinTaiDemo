@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+  >
+    <!--身体-->
+    <ScrollView
+        android:id="@+id/body_commodity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <include layout="@layout/body_commodity"></include>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer_commodity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/body_commodity"
+        android:orientation="vertical">
+
+        <include layout="@layout/footer_commodity"></include>
+
+    </LinearLayout>
+
+
+    <!--底部布局-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/commodityfoot"></include>
+    </RelativeLayout>
+</RelativeLayout>

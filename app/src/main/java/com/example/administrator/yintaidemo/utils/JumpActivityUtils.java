@@ -57,4 +57,5 @@ public class JumpActivityUtils {
         return df.format(new Date());
 
     }
+
 }

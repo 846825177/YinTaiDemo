@@ -8,6 +8,7 @@ import com.example.administrator.yintaidemo.entity.GeneraProductBean;
 import com.example.administrator.yintaidemo.http.BaseParams;
 import com.example.administrator.yintaidemo.ui.customproduct.presenters.CustomPresenter;
 import com.example.administrator.yintaidemo.ui.customproduct.views.CustomViews;
+import com.example.administrator.yintaidemo.utils.JumpActivityUtils;
 import com.example.administrator.yintaidemo.utils.PhoneParamsUtils;
 
 import java.util.HashMap;
@@ -37,10 +38,10 @@ public class GeneralProductActivity extends BaseActivity implements CustomViews<
         Map<String,String> mParam = new HashMap<>();
         BaseParams.getParams(mParam,this);
         HashMap<String, String> mParams = PhoneParamsUtils.signBusinessParameter(this, (HashMap<String, String>) mParam);
+        mParam.put("timereq", JumpActivityUtils.getTime());
         mParams.put("ver","3.0");
         mParams.put("data","{\"itemcode\":\"21-467-4420\"}");
         mParams.put("method","products.getproduct");
-
         customPresenter.send("",mParams);
     }
 
