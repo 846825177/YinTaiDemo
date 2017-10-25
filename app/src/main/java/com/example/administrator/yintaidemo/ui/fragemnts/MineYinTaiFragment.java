@@ -1,5 +1,7 @@
 package com.example.administrator.yintaidemo.ui.fragemnts;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -47,6 +49,7 @@ public class MineYinTaiFragment extends Fragment implements View.OnClickListener
     private String stringPassword;
     private String uName;
     private String pWord;
+    private int img_dengluzhuceVisibility;
 
     @Nullable
     @Override
@@ -61,12 +64,6 @@ public class MineYinTaiFragment extends Fragment implements View.OnClickListener
         return view;
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-
-
-    }
 
     private void initView(View view) {
         mineyintai_img = (ImageView) view.findViewById(R.id.mineyintai_img);
@@ -77,10 +74,33 @@ public class MineYinTaiFragment extends Fragment implements View.OnClickListener
         img_dengluzhuce = (ImageView) view.findViewById(R.id.img_dengluzhuce);
         text_hunaying = (TextView) view.findViewById(R.id.text_hunaying);
         mineyintai_tc = (RelativeLayout) view.findViewById(R.id.mineyintai_tc);
+        //退出登录点击事件
         mineyintai_tc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                AlertDialog.Builder ad = new AlertDialog.Builder(getActivity());
+                ad.setTitle("温馨提示")//标题
+                        .setMessage("是否退出登录")//内容
+                        .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
 
+                            }
+                        })
+                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                img_dengluzhuce.setVisibility(View.VISIBLE);
+                                text_hunaying.setVisibility(View.VISIBLE);
+                                mineyintai_img.setVisibility(View.GONE);
+                                mineyintai_relative.setVisibility(View.GONE);
+                                mineyintai_yhm.setVisibility(View.GONE);
+                                mineyintai_yhm_mc.setVisibility(View.GONE);
+                                mineyintai_hy.setVisibility(View.GONE);
+                                mineyintai_tc.setVisibility(View.GONE);
+                            }
+                        });
+                ad.create().show();
             }
         });
         relativelayout_shoucang = (RelativeLayout) view.findViewById(R.id.relativelayout_shoucang);
@@ -93,6 +113,7 @@ public class MineYinTaiFragment extends Fragment implements View.OnClickListener
         relativelayout_shezhi = (RelativeLayout) view.findViewById(R.id.relativelayout_shezhi);
         relativelayout_qingchu = (RelativeLayout) view.findViewById(R.id.relativelayout_qingchu);
         relativelayout_gengduo = (RelativeLayout) view.findViewById(R.id.relativelayout_gengduo);
+        //登录注册图片的点击事件
         img_dengluzhuce.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,12 +128,14 @@ public class MineYinTaiFragment extends Fragment implements View.OnClickListener
         relativelayout_dizhi.setOnClickListener(this);
         relativelayout_xiaoxi.setOnClickListener(this);
         relativelayout_shezhi.setOnClickListener(this);
+        //清除缓存的点击事件
         relativelayout_qingchu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "清除完毕", Toast.LENGTH_SHORT).show();
             }
         });
+
         relativelayout_gengduo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,36 +146,109 @@ public class MineYinTaiFragment extends Fragment implements View.OnClickListener
 
     @Override
     public void onClick(View view) {
+        img_dengluzhuceVisibility = img_dengluzhuce.getVisibility();
         switch (view.getId()) {
-
             case R.id.relativelayout_shoucang:
+                if (img_dengluzhuceVisibility == 0) {
+                    startActivityForResult(new Intent(getActivity(), LoginActivity.class), 100);
+                } else if (img_dengluzhuceVisibility == 8) {
+                    img_dengluzhuce.setVisibility(View.GONE);
+                    text_hunaying.setVisibility(View.GONE);
+                    mineyintai_img.setVisibility(View.VISIBLE);
+                    mineyintai_relative.setVisibility(View.VISIBLE);
+                    mineyintai_yhm.setVisibility(View.VISIBLE);
+                    mineyintai_yhm_mc.setVisibility(View.VISIBLE);
+                    mineyintai_hy.setVisibility(View.VISIBLE);
+                    mineyintai_tc.setVisibility(View.VISIBLE);
+                }
+
                 break;
             case R.id.relativelayout_zuijin:
                 break;
             case R.id.relativelayout_daizhifu:
+                if (img_dengluzhuceVisibility == 0) {
+                    startActivityForResult(new Intent(getActivity(), LoginActivity.class), 100);
+                } else if (img_dengluzhuceVisibility == 8) {
+                    img_dengluzhuce.setVisibility(View.GONE);
+                    text_hunaying.setVisibility(View.GONE);
+                    mineyintai_img.setVisibility(View.VISIBLE);
+                    mineyintai_relative.setVisibility(View.VISIBLE);
+                    mineyintai_yhm.setVisibility(View.VISIBLE);
+                    mineyintai_yhm_mc.setVisibility(View.VISIBLE);
+                    mineyintai_hy.setVisibility(View.VISIBLE);
+                    mineyintai_tc.setVisibility(View.VISIBLE);
+                }
                 break;
             case R.id.relativelayout_quanbu:
+                if (img_dengluzhuceVisibility == 0) {
+                    startActivityForResult(new Intent(getActivity(), LoginActivity.class), 100);
+                } else if (img_dengluzhuceVisibility == 8) {
+                    img_dengluzhuce.setVisibility(View.GONE);
+                    text_hunaying.setVisibility(View.GONE);
+                    mineyintai_img.setVisibility(View.VISIBLE);
+                    mineyintai_relative.setVisibility(View.VISIBLE);
+                    mineyintai_yhm.setVisibility(View.VISIBLE);
+                    mineyintai_yhm_mc.setVisibility(View.VISIBLE);
+                    mineyintai_hy.setVisibility(View.VISIBLE);
+                    mineyintai_tc.setVisibility(View.VISIBLE);
+                }
                 break;
             case R.id.relativelayout_youhui:
+                if (img_dengluzhuceVisibility == 0) {
+                    startActivityForResult(new Intent(getActivity(), LoginActivity.class), 100);
+                } else if (img_dengluzhuceVisibility == 8) {
+                    img_dengluzhuce.setVisibility(View.GONE);
+                    text_hunaying.setVisibility(View.GONE);
+                    mineyintai_img.setVisibility(View.VISIBLE);
+                    mineyintai_relative.setVisibility(View.VISIBLE);
+                    mineyintai_yhm.setVisibility(View.VISIBLE);
+                    mineyintai_yhm_mc.setVisibility(View.VISIBLE);
+                    mineyintai_hy.setVisibility(View.VISIBLE);
+                    mineyintai_tc.setVisibility(View.VISIBLE);
+                }
                 break;
             case R.id.relativelayout_dizhi:
+                if (img_dengluzhuceVisibility == 0) {
+                    startActivityForResult(new Intent(getActivity(), LoginActivity.class), 100);
+                } else if (img_dengluzhuceVisibility == 8) {
+                    img_dengluzhuce.setVisibility(View.GONE);
+                    text_hunaying.setVisibility(View.GONE);
+                    mineyintai_img.setVisibility(View.VISIBLE);
+                    mineyintai_relative.setVisibility(View.VISIBLE);
+                    mineyintai_yhm.setVisibility(View.VISIBLE);
+                    mineyintai_yhm_mc.setVisibility(View.VISIBLE);
+                    mineyintai_hy.setVisibility(View.VISIBLE);
+                    mineyintai_tc.setVisibility(View.VISIBLE);
+                }
                 break;
             case R.id.relativelayout_xiaoxi:
                 break;
             case R.id.relativelayout_shezhi:
+                if (img_dengluzhuceVisibility == 0) {
+                    startActivityForResult(new Intent(getActivity(), LoginActivity.class), 100);
+                } else if (img_dengluzhuceVisibility == 8) {
+                    img_dengluzhuce.setVisibility(View.GONE);
+                    text_hunaying.setVisibility(View.GONE);
+                    mineyintai_img.setVisibility(View.VISIBLE);
+                    mineyintai_relative.setVisibility(View.VISIBLE);
+                    mineyintai_yhm.setVisibility(View.VISIBLE);
+                    mineyintai_yhm_mc.setVisibility(View.VISIBLE);
+                    mineyintai_hy.setVisibility(View.VISIBLE);
+                    mineyintai_tc.setVisibility(View.VISIBLE);
+                }
                 break;
 
 
         }
     }
 
+    //回传方法 判断登录前还是登陆后的布局
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 100 && resultCode == 120) {
             stringName = data.getStringExtra("name");
             stringPassword = data.getStringExtra("password");
             if (uName.isEmpty() || pWord.isEmpty()) {
-                Toast.makeText(getActivity(), "000000000000000", Toast.LENGTH_SHORT).show();
                 img_dengluzhuce.setVisibility(View.VISIBLE);
                 text_hunaying.setVisibility(View.VISIBLE);
                 mineyintai_img.setVisibility(View.GONE);
@@ -162,9 +258,7 @@ public class MineYinTaiFragment extends Fragment implements View.OnClickListener
                 mineyintai_hy.setVisibility(View.GONE);
                 mineyintai_tc.setVisibility(View.GONE);
             } else {
-
                 if (uName.equals(stringName) && pWord.equals(stringPassword)) {
-
                     img_dengluzhuce.setVisibility(View.GONE);
                     text_hunaying.setVisibility(View.GONE);
                     mineyintai_img.setVisibility(View.VISIBLE);
@@ -183,11 +277,7 @@ public class MineYinTaiFragment extends Fragment implements View.OnClickListener
                     mineyintai_hy.setVisibility(View.GONE);
                     mineyintai_tc.setVisibility(View.GONE);
                 }
-
-
             }
-
         }
-
     }
 }

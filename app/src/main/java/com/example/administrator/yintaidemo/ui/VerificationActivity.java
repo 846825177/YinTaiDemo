@@ -212,6 +212,7 @@ public class VerificationActivity extends AppCompatActivity implements View.OnCl
             editor.commit();
             Intent intent = new Intent(VerificationActivity.this, LoginActivity.class);
             startActivity(intent);
+            finish();
         }
 
 
