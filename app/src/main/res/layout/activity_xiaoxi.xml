@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context="com.example.administrator.yintaidemo.ui.dengluactivity.XiaoxiActivity">
+    <LinearLayout
+android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/xiaoxi_img_fanhui"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:src="@drawable/zuojiantou" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="消息中心"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/xiaoxi_textview_bianji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="编辑"
+            android:textSize="15sp"
+            android:textColor="#ff00"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -38,889 +38,878 @@
     <string name="register_sumbit">提交</string>
     <string name="reg_tip">请输入您的手机号</string>
 
-        <!-- 公用字符串 -->
+    <!-- 公用字符串 -->
 
-        <string name="tip_title1">温馨提示</string>
-        <string name="OK">确定</string>
-        <string name="quit">退出</string>
-        <string name="loading_prompt">请稍后...</string>
-        <string name="tip_param_error">参数错误，无法打开页面</string>
-        <string name="reminder">温馨提示</string>
-        <string name="no_net_temp">您现在没有网络连接</string>
-        <string name="sure">确定</string>
-        <string name="cancel">取消</string>
-        <string name="no_data">暂无信息</string>
-        <!-- 公用字符串 -->
+    <string name="tip_title1">温馨提示</string>
+    <string name="OK">确定</string>
+    <string name="quit">退出</string>
+    <string name="loading_prompt">请稍后...</string>
+    <string name="tip_param_error">参数错误，无法打开页面</string>
+    <string name="reminder">温馨提示</string>
+    <string name="no_net_temp">您现在没有网络连接</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="no_data">暂无信息</string>
+    <!-- 公用字符串 -->
 
-        <string name="toolsbuttons_home">首页</string>
-        <string name="toolsbuttons_category">分类</string>
-        <string name="toolsbuttons_topic">消息中心</string>
-        <string name="toolsbuttons_shopcar">购物车</string>
-        <string name="toolsbuttons_me">我的银泰</string>
-        <string name="toolsbuttons_sale">特卖</string>
-        <string name="serverIP">http://60.247.44.101:8080/service</string>
+    <string name="toolsbuttons_home">首页</string>
+    <string name="toolsbuttons_category">分类</string>
+    <string name="toolsbuttons_topic">消息中心</string>
+    <string name="toolsbuttons_shopcar">购物车</string>
+    <string name="toolsbuttons_me">我的银泰</string>
+    <string name="toolsbuttons_sale">特卖</string>
+    <string name="serverIP">http://60.247.44.101:8080/service</string>
 
 
-        <!-- 超时时弹出框上面的文字   更多页面-->
-        <string name="name_null">用户名不能为空</string>
+    <!-- 超时时弹出框上面的文字   更多页面-->
+    <string name="name_null">用户名不能为空</string>
 
-        <!-- 密码为空 更多页面-->
-        <string name="pwd1_null">密码不能为空</string>
-        <string name="service_started">服务启动了</string>
-        <string name="errorTitle">温馨提示</string>
+    <!-- 密码为空 更多页面-->
+    <string name="pwd1_null">密码不能为空</string>
+    <string name="service_started">服务启动了</string>
+    <string name="errorTitle">温馨提示</string>
 
-        <!--下载数据提示标题 更多页面-->
-        <string name="loadTitle"><strong>正在更新数据</strong></string>
-        <!--下载数据提示内容  更多页面-->
-        <string name="LoadContent"><strong>请稍候……</strong></string>
-        <!-- 优惠券页提示信息 -->
+    <!--下载数据提示标题 更多页面-->
+    <string name="loadTitle"><strong>正在更新数据</strong></string>
+    <!--下载数据提示内容  更多页面-->
+    <string name="LoadContent"><strong>请稍候……</strong></string>
+    <!-- 优惠券页提示信息 -->
         <string name="promotion_tip">1.为确保账户安全,非移动客户端渠道优惠券请在银泰官方网站激活,使用。
 		"\n"2.移动客户端优惠券仅用于移动客户端订单,网站订单不可使用。</string>
-        <!-- 支付宝 -->
-        <string name="Ensure">"确定"</string>
-        <string name="Cancel">"取消"</string>
-        <string name="confirm_install_hint">"安装提示"</string>
-        <string name="confirm_install">"为保证您的交易安全，需要您安装支付宝安全支付服务，才能进行付款。\n\n点击确定，立即安装。"</string>
-        <string name="confirm_wallet_install">"为保证您的交易安全，需要您安装/更新支付宝钱包，才能进行付款。\n\n点击确定，立即安装。"</string>
-        <string name="check_sign_failed">您的订单信息已被非法篡改。</string>
-        <string name="remote_call_failed">Failure calling remote service</string>
+    <!-- 支付宝 -->
+    <string name="Ensure">"确定"</string>
+    <string name="Cancel">"取消"</string>
+    <string name="confirm_install_hint">"安装提示"</string>
+    <string name="confirm_install">"为保证您的交易安全，需要您安装支付宝安全支付服务，才能进行付款。\n\n点击确定，立即安装。"</string>
+    <string name="confirm_wallet_install">"为保证您的交易安全，需要您安装/更新支付宝钱包，才能进行付款。\n\n点击确定，立即安装。"</string>
+    <string name="check_sign_failed">您的订单信息已被非法篡改。</string>
+    <string name="remote_call_failed">Failure calling remote service</string>
 
-        <!-- 银元余额 -->
-        <string name="silverremainder_total">您的订单需要支付金额:</string>
-        <string name="silverremainder_need">您还需支付金额:</string>
-        <string name="paypwd_tip">支付密码是您使用银元余额支付订单时输入的密码。</string>
-        <string name="alipay_failure">支付失败</string>
-        <string name="coin_balance_tip">使用说明：\n请先选择满减或优惠券后再使用银元余额。</string>
-
-
-        <string name="name">姓名:</string>
-        <string name="age">年龄:</string>
-        <string name="pinlv">位置信息上报周期(min):</string>
-        <string name="setTag">设置标签</string>
-        <string name="delTag">删除标签</string>
-        <string name="location">位置上报</string>
-        <string name="setInterval">设置周期(秒)</string>
-        <string name="openLBS">开启位置定时上报</string>
-        <string name="closeLBS">关闭位置定时上报</string>
-        <string name="logintimeout">您已经很长时候没有使用啦,为保证你的账户安全,请重新登录.</string>
-        <string name="titles">欢迎来到银泰</string>
-        <string name="more_login">登录/注册</string>
-
-        <string name="weibosdk_demo_has_installed_weibo">\t已安装</string>
-        <string name="weibosdk_demo_has_not_installed_weibo">\t未安装</string>
-        <string name="weibosdk_demo_cancel_download_weibo">\t取消下载</string>
-
-        <string name="weibosdk_demo_toast_share_success">分享成功</string>
-        <string name="weibosdk_demo_toast_share_failed">分享失败</string>
-        <string name="weibosdk_demo_toast_share_canceled">取消分享</string>
-        <string name="share_label_etc">其他</string>
-        <string name="share_productdetail_content">我在银泰网发现了这个宝贝，只售“%1$s元”快来抢吧！</string>
-
-        <string name="scan_text">将条码/二维码放入框内, 即可自动扫描</string>
-        <string name="photo_album">相册</string>
-        <string name="scan_scan">扫一扫</string>
-        <string name="scan_qr_img">选择二维码图片</string>
-        <string name="scan_qr_not_find">未发现二维码</string>
-        <string name="scan_failure">扫描失败!</string>
-
-        <string name="search_hint">请输入商品名称、品牌或编号</string>
-        <string name="search">搜索</string>
-
-        <string name="label_default">默认</string>
-
-        <string name="china_mobile">中国移动</string>
-        <string name="china_unicom">中国联通</string>
-        <string name="China_telecom">中国电信</string>
-
-        <!-- 标题相关 -->
-        <string name="title_aboutyintai">关于银泰</string>
-        <string name="title_action">活动</string>
-        <string name="title_address_detail">地址详情</string>
-        <string name="title_address_add">添加地址</string>
-        <string name="title_address_modify">编辑地址</string>
-        <string name="title_address_manage">地址管理</string>
-        <string name="title_app_recommend">软件推荐</string>
-        <string name="title_brand">品牌墙</string>
-        <string name="title_deal_rule">银泰网交易条款</string>
-        <string name="title_category">分类</string>
-        <string name="title_dealcenter">结算中心</string>
-        <string name="title_wuliu">物流查询</string>
-        <string name="title_myfavorite">我的收藏</string>
-        <string name="title_feedback">意见反馈</string>
-        <string name="title_help">常见问题</string>
-        <string name="title_banlituihuo">办理退货</string>
-        <string name="title_homepage">首页</string>
-        <string name="title_input_guidecode">录入导购编码</string>
-        <string name="title_invoice">填写发票信息</string>
-        <string name="title_mingpin">名品馆</string>
-        <string name="title_msgcenter">消息中心</string>
-        <string name="title_mymsg">我的消息</string>
-        <string name="title_myyintai">我的银泰</string>
-        <string name="title_more">更多</string>
-        <string name="title_orderdetail">订单详情</string>
-        <string name="title_order_submit_success">提交成功</string>
-        <string name="title_choosepaymode">选择支付方式</string>
-        <string name="title_setpaypwd">设置支付密码</string>
-        <string name="title_myvoucher">我的优惠券</string>
-        <string name="title_branddetail">品牌明细</string>
-        <string name="title_recentbrowser">最近浏览</string>
-        <string name="title_regist">注册</string>
-        <string name="title_regist_byphoneno">手机号注册</string>
-        <string name="title_regist_verify">验证</string>
-        <string name="title_scan_result">扫描结果</string>
-        <string name="title_shiyong_yinyuan">使用银元或余额</string>
-        <string name="title_tuihuo">退货</string>
-        <string name="title_tuihuanhuo_shuoming">退换货说明</string>
-        <string name="title_tuihuanhuo_zhuangtai">退换货状态</string>
-        <string name="title_verify_phone">手机验证</string>
-        <string name="title_my_yinyuanyue">我的银元余额</string>
-        <string name="title_shopcar">购物车</string>
-        <string name="title_noticelist">公告</string>
-        <string name="title_style">全部风格</string>
-
-        <string name="title_big_picture">查看大图</string>
-        <string name="title_limitbuy_subtitle">(每天11点名品折扣上新)</string>
-        <string name="title_publicmsg_detail">公告详情</string>
-        <string name="title_sale">特卖</string>
-        <string name="title_detailinfo">详细信息</string>
-        <string name="title_productdetail">商品详情</string>
-        <string name="title_sizedetail">尺码详情</string>
+    <!-- 银元余额 -->
+    <string name="silverremainder_total">您的订单需要支付金额:</string>
+    <string name="silverremainder_need">您还需支付金额:</string>
+    <string name="paypwd_tip">支付密码是您使用银元余额支付订单时输入的密码。</string>
+    <string name="alipay_failure">支付失败</string>
+    <string name="coin_balance_tip">使用说明：\n请先选择满减或优惠券后再使用银元余额。</string>
 
 
-        <string name="title_rightbtn_modify">修改</string>
-        <string name="title_rightbtn_complete">完成</string>
-        <string name="title_rightbtn_seekbar_bychar">按字母索引</string>
-        <string name="title_rightbtn_seekbar_bybrand">按品牌索引</string>
-        <string name="title_rightbtn_ordersubmit">提交订单</string>
-        <string name="title_rightbtn_edit">编辑</string>
-        <string name="title_rightbtn_onlinepay">在线支付</string>
-        <string name="title_rightbtn_help">帮助</string>
-        <string name="title_rightbtn_clear">清除记录</string>
-        <string name="title_rightbtn_subscribe">订阅频道</string>
-        <string name="title_rightbtn_filter">筛选</string>
+    <string name="name">姓名:</string>
+    <string name="age">年龄:</string>
+    <string name="pinlv">位置信息上报周期(min):</string>
+    <string name="setTag">设置标签</string>
+    <string name="delTag">删除标签</string>
+    <string name="location">位置上报</string>
+    <string name="setInterval">设置周期(秒)</string>
+    <string name="openLBS">开启位置定时上报</string>
+    <string name="closeLBS">关闭位置定时上报</string>
+    <string name="logintimeout">您已经很长时候没有使用啦,为保证你的账户安全,请重新登录.</string>
+    <string name="titles">欢迎来到银泰</string>
+    <string name="more_login">登录/注册</string>
+
+    <string name="weibosdk_demo_has_installed_weibo">\t已安装</string>
+    <string name="weibosdk_demo_has_not_installed_weibo">\t未安装</string>
+    <string name="weibosdk_demo_cancel_download_weibo">\t取消下载</string>
+
+    <string name="weibosdk_demo_toast_share_success">分享成功</string>
+    <string name="weibosdk_demo_toast_share_failed">分享失败</string>
+    <string name="weibosdk_demo_toast_share_canceled">取消分享</string>
+    <string name="share_label_etc">其他</string>
+    <string name="share_productdetail_content">我在银泰网发现了这个宝贝，只售“%1$s元”快来抢吧！</string>
+
+    <string name="scan_text">将条码/二维码放入框内, 即可自动扫描</string>
+    <string name="photo_album">相册</string>
+    <string name="scan_scan">扫一扫</string>
+    <string name="scan_qr_img">选择二维码图片</string>
+    <string name="scan_qr_not_find">未发现二维码</string>
+    <string name="scan_failure">扫描失败!</string>
+
+    <string name="search_hint">请输入商品名称、品牌或编号</string>
+    <string name="search">搜索</string>
+
+    <string name="label_default">默认</string>
+
+    <string name="china_mobile">中国移动</string>
+    <string name="china_unicom">中国联通</string>
+    <string name="China_telecom">中国电信</string>
+
+    <!-- 标题相关 -->
+    <string name="title_aboutyintai">关于银泰</string>
+    <string name="title_action">活动</string>
+    <string name="title_address_detail">地址详情</string>
+    <string name="title_address_add">添加地址</string>
+    <string name="title_address_modify">编辑地址</string>
+    <string name="title_address_manage">地址管理</string>
+    <string name="title_app_recommend">软件推荐</string>
+    <string name="title_brand">品牌墙</string>
+    <string name="title_deal_rule">银泰网交易条款</string>
+    <string name="title_category">分类</string>
+    <string name="title_dealcenter">结算中心</string>
+    <string name="title_wuliu">物流查询</string>
+    <string name="title_myfavorite">我的收藏</string>
+    <string name="title_feedback">意见反馈</string>
+    <string name="title_help">常见问题</string>
+    <string name="title_banlituihuo">办理退货</string>
+    <string name="title_homepage">首页</string>
+    <string name="title_input_guidecode">录入导购编码</string>
+    <string name="title_invoice">填写发票信息</string>
+    <string name="title_mingpin">名品馆</string>
+    <string name="title_msgcenter">消息中心</string>
+    <string name="title_mymsg">我的消息</string>
+    <string name="title_myyintai">我的银泰</string>
+    <string name="title_more">更多</string>
+    <string name="title_orderdetail">订单详情</string>
+    <string name="title_order_submit_success">提交成功</string>
+    <string name="title_choosepaymode">选择支付方式</string>
+    <string name="title_setpaypwd">设置支付密码</string>
+    <string name="title_myvoucher">我的优惠券</string>
+    <string name="title_branddetail">品牌明细</string>
+    <string name="title_recentbrowser">最近浏览</string>
+    <string name="title_regist">注册</string>
+    <string name="title_regist_byphoneno">手机号注册</string>
+    <string name="title_regist_verify">验证</string>
+    <string name="title_scan_result">扫描结果</string>
+    <string name="title_shiyong_yinyuan">使用银元或余额</string>
+    <string name="title_tuihuo">退货</string>
+    <string name="title_tuihuanhuo_shuoming">退换货说明</string>
+    <string name="title_tuihuanhuo_zhuangtai">退换货状态</string>
+    <string name="title_verify_phone">手机验证</string>
+    <string name="title_my_yinyuanyue">我的银元余额</string>
+    <string name="title_shopcar">购物车</string>
+    <string name="title_noticelist">公告</string>
+    <string name="title_style">全部风格</string>
+
+    <string name="title_big_picture">查看大图</string>
+    <string name="title_limitbuy_subtitle">(每天11点名品折扣上新)</string>
+    <string name="title_publicmsg_detail">公告详情</string>
+    <string name="title_sale">特卖</string>
+    <string name="title_detailinfo">详细信息</string>
+    <string name="title_productdetail">商品详情</string>
+    <string name="title_sizedetail">尺码详情</string>
 
 
+    <string name="title_rightbtn_modify">修改</string>
+    <string name="title_rightbtn_complete">完成</string>
+    <string name="title_rightbtn_seekbar_bychar">按字母索引</string>
+    <string name="title_rightbtn_seekbar_bybrand">按品牌索引</string>
+    <string name="title_rightbtn_ordersubmit">提交订单</string>
+    <string name="title_rightbtn_edit">编辑</string>
+    <string name="title_rightbtn_onlinepay">在线支付</string>
+    <string name="title_rightbtn_help">帮助</string>
+    <string name="title_rightbtn_clear">清除记录</string>
+    <string name="title_rightbtn_subscribe">订阅频道</string>
+    <string name="title_rightbtn_filter">筛选</string>
 
 
+    <!--  支付相关 -->
+    <string name="pay_label_paysuccess">支付成功</string>
+    <string name="pay_label_paysuccess_result">付款成功</string>
+
+    <!-- 模版相关 -->
+    <string name="template_jump_needlogin">请先登录后再操作</string>
+    <string name="template_addshopcar_success">加入购物车成功</string>
+    <string name="template_addvoucher_success">领取优惠卷成功</string>
+    <string name="template_addfavorite_success">收藏商品成功</string>
+
+    <!-- 订单相关 -->
+    <string name="order_submitsucess_hotline_tip">如有疑问，您可以拨打银泰网客服电话：</string>
+    <string name="order_submitsucess_hotline">400-119-1111</string>
+    <string name="order_submitsucess_hotline_time">服务时间：8:00-24:00</string>
+    <string name="orderlist_title_all">全部订单</string>
+    <string name="orderlist_title_needpay">待支付订单</string>
+    <string name="order">订单</string>
+
+    <!-- 商品详情 -->
+    <string name="productdetail_popup_addconfrim">确认加入</string>
+    <string name="productdetail_popup_buyconfrim">确认购买</string>
+    <string name="add_shopcart">加入购物车</string>
+    <string name="now_buy">立即购买</string>
+
+    <!-- 结算中心 -->
+    <string name="settlement_shelfproduct_tip">订单中有已下架的商品,请重新选择</string>
+    <string name="settlement_lowstocks_tip">订单中有商品库存不足,请重新选择</string>
+    <string name="shake_tip_label">每天都可摇，每天有惊喜！</string>
+    <string name="order_submit_bottom_tip_label">银泰网不会以任何名义向您索要银行卡信息、验证码或要求您转账汇款，请提高警惕，谨防上当受骗！</string>
+    <string name="idcard_tip">身份信息是以个人名义申报进口物品的重要信息，为试您的物品可以正常通关，请准确填写。&lt;br>&lt;font color=\"#e5004f\">注意，该身份信息须与您用于支付的支付宝账号绑定的身份证信息一致！&lt;/font></string>
+    <string name="pay_cash_not_support_silver">海淘和货到付款不支持使用银元</string>
+
+    <!-- 扫描 -->
+    <string name="sure_open_url">是否打开链接</string>
+    <string name="keep_open_url">继续访问</string>
+    <string name="caprue_yintai">银泰网</string>
+    <string name="sure_to_open">您确定要访问该网址吗？</string>
 
 
+    <!-- 公用部分 -->
+    <string name="listview_pull_loading">正在加载...</string>
+
+    <string name="pull_to_refresh_pull_label">下拉刷新…</string>
+    <string name="pull_to_refresh_release_label">释放即可刷新</string>
+    <string name="pull_to_refresh_refreshing_label">正在刷新…</string>
+    <string name="pull_to_refresh_last_loadtime">上次更新时间：</string>
+    <string name="listview_label_today">今天</string>
+    <string name="update_new_version">升级体验新版</string>
+    <string name="no_update_temp">暂不升级</string>
+
+    <!-- 网络相关 -->
+    <string name="net_parse_json_errora">很抱歉，您暂时无法查看内容…</string>
+    <string name="net_accessserver_error">请求数据错误</string>
+    <string name="net_unavailable_net_tip">网络不给力哦...</string>
+    <string name="net_get_data_failure">获取数据失败</string>
+    <string name="net_wait_tip">处理中，请稍后</string>
+    <string name="net_parse_json_error">数据解析错误…</string>
 
 
+    <string name="imgscription">imageview content scription</string>
+    <string name="rmb_mark">￥</string>
+    <string name="label_kill_title">秒杀专区</string>
+    <string name="label_kill_nexttrailer_title">下期预告</string>
+    <string name="label_everyday_20_new">（每天20点上新）</string>
+    <string name="label_now_kill">本期秒杀</string>
+    <string name="limitbuy_productlist_title">特卖商品列表</string>
 
+    <!--我的银泰 MoreNewActivity-->
+    <string name="cache_clearing">清理中</string>
+    <string name="cache_clear_finish">清理完成</string>
+    <string name="bi_clear_finish">清除完成</string>
+    <string name="login_out_tip">是否退出登录</string>
+    <string name="login_out_sure">确定</string>
+    <string name="login_out_cancel">取消</string>
+    <string name="welcome_to_yintai">欢迎来到银泰</string>
+    <string name="my_username">用户名：</string>
+    <string name="member_level_common">普通会员</string>
+    <string name="integral">积分</string>
+    <string name="sliver_dollar">银元</string>
+    <string name="balance">余额</string>
+    <string name="collection">收藏</string>
+    <string name="recent_visit">最近浏览</string>
+    <string name="my_order">我的订单</string>
+    <string name="payment_order">待支付订单</string>
+    <string name="all_order">全部订单</string>
+    <string name="coupons">优惠券 </string>
+    <string name="address_manager">地址管理</string>
+    <string name="msg_center">消息中心</string>
+    <string name="set_pay_password">设置支付密码</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="service_phone">客服电话</string>
+    <string name="service_phone_number">400-119-1111</string>
+    <string name="service_phone_time">(8:00-24:00)</string>
+    <string name="more">更多</string>
+    <string name="quite_login">退出登录</string>
 
+    <string name="about_yintai">关于银泰</string>
+    <string name="version_tip">银泰网客户端V</string>
+    <string name="version_android"> For Android</string>
+    <string name="bi_export_tip">开始导出BI存储数据</string>
+    <string name="bi_export_tip_success">导出BI存储数据成功\n储存路径:</string>
+    <string name="bi_export_tip_failure">导出BI存储失败</string>
+    <string name="yintai_net">银泰网  www.yintai.com</string>
+    <string name="yintai_description_part_one">        银泰网(  www.yintai.com )是专注于精品时尚百货经营的大型B2C电子商务平台，由国内领先百货连锁集团、香港联交所上市公司银泰百货投资控股.</string>
+    <string name="yintai_description_part_two">        银泰网抱着“为13亿在中国人传递新的生活美学”的梦想，把“为用户提供超出想像的满意服务，传播优质品牌影响力”作为使命，致力于让中国时尚消费人群，专享最时尚、最品牌、最品质、最价格的生活品质与潮流购物体验，成为中国最卓越的精品时尚百货购物网站.</string>
+    <string name="yintai_copright_left">银泰网( </string>
+    <string name="yintai_copright_right"> )版权所有</string>
+    <string name="yintai_net_address">www.yintai.com</string>
+    <string name="weibo_tip">欢迎关注新浪官方微博@手机银泰</string>
+    <string name="weixin_tip">微信公众帐号@手机银泰百货</string>
 
+    <!--意见反馈 FeedbackActivity-->
+    <string name="feedback">意见反馈</string>
+    <string name="sumbit_tip_no_content">请填写您的意见</string>
+    <string name="sumbit_tip_no_phone">请填写您的手机号</string>
+    <string name="sumbit_tip_wrong_phone">请填写正确的手机号</string>
+    <string name="feedback_tip">欢迎您提出宝贵意见,协助我们不断的提高服务和购物体验,谢谢您对银泰网的支持!</string>
+    <string name="feedback_content_tip">请输入您的意见或建议(必填)</string>
+    <string name="feedback_link_tip">联系方式:</string>
+    <string name="feedback_phone_tip">请输入您的手机号(必填)</string>
+    <string name="feedback_submit">提交</string>
+    <!--使用帮助 HelpActivity-->
+    <string name="help">帮助</string>
 
+    <!-- 收藏页面  FavoriteActivity -->
+    <string name="favorite_no_data">暂无收藏商品</string>
+    <string name="favorite_dialog_tip">温馨提示</string>
+    <string name="favorite_dialog_sure">确定</string>
+    <string name="favorite_delete_tip">您确定要删除</string>
+    <string name="favorite_delete_cancel">取消</string>
+    <string name="favorite_sell_out">售罄</string>
+    <string name="favorite_buy_gifts">买赠</string>
+    <string name="favorite_full_cut">满减</string>
+    <string name="favorite_full_add">满赠</string>
+    <!-- 最近浏览  RecentlyActivity -->
+    <string name="recent_dialog_tip">温馨提示</string>
+    <string name="recent_dialog_tip_content">是否清空最近浏览记录？</string>
+    <string name="recent_dialog_sure">确定</string>
+    <string name="recent_dialog_cancel">取消</string>
 
-        <!--  支付相关 -->
-        <string name="pay_label_paysuccess">支付成功</string>
-        <string name="pay_label_paysuccess_result">付款成功</string>
+    <!-- 优惠券 PromotionActivity -->
+    <string name="input_validcode">请输入验证码</string>
+    <string name="promotion">优惠券</string>
+    <string name="no_to_use_promotion">无可使用优惠券记录</string>
+    <string name="no_used_promotion">无已使用优惠券记录</string>
+    <string name="no_overdue_promotion">无已过期优惠券记录</string>
+    <string name="no_not_to_use_promotion">无未生效优惠券记录</string>
+    <string name="not_to_use">未使用</string>
+    <string name="promotion_has_used">已使用</string>
+    <string name="promotion_overdue">已过期</string>
+    <string name="promotion_not_to_use">未生效</string>
+    <string name="promotion_explain">说明</string>
+    <string name="promotion_new_add_for_app">新增移动客户端优惠券</string>
+    <string name="input_promotion_code">输入优惠券代码</string>
+    <string name="promotion_valid">验证</string>
+    <string name="promotion_to_use">可使用</string>
+    <string name="promotion_no">无优惠券</string>
+    <string name="promotion_num">优惠券编号:</string>
+    <string name="promotion_type">类型:</string>
+    <string name="promotion_brand">品牌:</string>
+    <string name="promotion_brand_details">查看品牌明细>></string>
+    <string name="promotion_channel">适用:</string>
+    <string name="promotion_used_time">使用时间:</string>
+    <string name="promotion_action_name">活动名称:</string>
+    <string name="promotion_activation_time">激活时间:</string>
+    <string name="promotion_relevant_order">相关订单号:</string>
+    <string name="promotion_state">状态:</string>
 
-        <!-- 模版相关 -->
-        <string name="template_jump_needlogin">请先登录后再操作</string>
-        <string name="template_addshopcar_success">加入购物车成功</string>
-        <string name="template_addvoucher_success">领取优惠卷成功</string>
-        <string name="template_addfavorite_success">收藏商品成功</string>
+    <!-- 地址管理   AddressListActivity  AddressEditActivity-->
+    <string name="address_name">收货人：</string>
+    <string name="address_address">收货地址：</string>
+    <string name="addresss_phone">联系方式：</string>
+    <string name="address_sure">确定</string>
+    <string name="address_no_name">收货人不能为空</string>
+    <string name="address_name_must_chinese">收货人姓名必须为中文</string>
+    <string name="address_no_phone">联系方式不能为空</string>
+    <string name="address_phone_wrong">联系方式应该在10到12位</string>
+    <string name="address_phone_wrong_and_repeat_input">联系方式输入有误请重新输入</string>
+    <string name="address_not_blank">详细地址不能为空</string>
+    <string name="address_no_address">地址不能为空</string>
+    <string name="address_input_right_phone">请输入正确的手机号码</string>
+    <string name="address_dialog_cancel">取消</string>
+    <string name="address_dialog_delete_tip">您确定要删除</string>
+    <string name="address_select_city">请选择城市</string>
+    <string name="address_edit_tip">说明：移动客户端订单支持货到付款和支付宝支付方式</string>
+    <string name="address_name_tip">输入姓名：\t</string>
+    <string name="address_china_name_tip">请输入中文姓名</string>
+    <string name="address_phone_tip">联系方式：</string>
+    <string name="address_phone_tip_content">请输入手机号码/区号固定电话</string>
+    <string name="address_area_tip">省市/地区：\t</string>
+    <string name="address_area_hint">请选择省市及城市名称</string>
+    <string name="address_detail_tip">详细地址：\t</string>
+    <string name="address_detail_hint">请输入您的详细地址</string>
+    <string name="address_delete">删除收货地址</string>
 
-        <!-- 订单相关 -->
-        <string name="order_submitsucess_hotline_tip">如有疑问，您可以拨打银泰网客服电话：</string>
-        <string name="order_submitsucess_hotline">400-119-1111</string>
-        <string name="order_submitsucess_hotline_time">服务时间：8:00-24:00</string>
-        <string name="orderlist_title_all">全部订单</string>
-        <string name="orderlist_title_needpay">待支付订单</string>
-        <string name="order">订单</string>
+    <!-- 消息中心 MessageCenterActivity、MessageResultActivity -->
+    <string name="msg_overdue_delete_tip">这条消息已过期，内容已失效。可在我-清除缓存中删除</string>
+    <string name="my_msg">我的消息</string>
+    <string name="msg_click_to_detail">点击查看详情</string>
+    <string name="msg_time">2014-01-02</string>
+    <string name="msg_state_tip">已过期</string>
 
-        <!-- 商品详情 -->
-        <string name="productdetail_popup_addconfrim">确认加入</string>
-        <string name="productdetail_popup_buyconfrim">确认购买</string>
-        <string name="add_shopcart">加入购物车</string>
-        <string name="now_buy">立即购买</string>
+    <!-- 设置支付密码 PayPwdActivity、ValidatePhoneActivity -->
+    <string name="pwd_input_your_login_pwd">请输入您的登录密码</string>
+    <string name="pwd_input_your_pay_pwd">请输入您的支付密码</string>
+    <string name="pwd_wrong_format_pay_pwd">您输入支付密码少于6位或多于16位字符,请重新输入!</string>
+    <string name="pwd_pay_pwd_format">支付密码必须由数字和字母组成!</string>
+    <string name="pwd_not_same_pwd">您两次支付密码输入不一致,请重新输入!</string>
+    <string name="pwd_login_pwd">登录密码：</string>
+    <string name="pwd_login_pwd_hint">请输入您的登录密码 　　　  　　　  　 　　　 </string>
+    <string name="pwd_pay_pwd">支付密码：</string>
+    <string name="pwd_pay_pwd_hint">6-16字符，需包括数字和字母 　 　　  　　　 </string>
+    <string name="pwd_repeat_input">再次输入：</string>
+    <string name="pwd_repeat_input_hint">请再次输入支付密码 　 　　　　　   　　　 　 </string>
+    <string name="pwd_next_to_valid_phone">下一步：验证手机号</string>
+    <string name="valid_input_phone">请输入手机号</string>
+    <string name="valid_input_right_phone">请输入正确的手机号码</string>
+    <string name="valid_input_validcode">请输入验证码</string>
+    <string name="valid_seconds_to_get">秒后重新获取</string>
+    <string name="valid_free_to_get_validcode">免费获取验证码</string>
+    <string name="valid_send_validcode_success">验证码已经下发到您的手机，请注意查收</string>
+    <string name="valid_set_pwd_success">设置支付密码成功</string>
+    <string name="valid_edit_pay_pwd_success">修改支付密码成功</string>
+    <string name="pwd_server_error">服务器异常,请稍后再试</string>
+    <string name="valid_phone">手机号：</string>
+    <string name="valid_phone_hint">请输入11位手机号</string>
+    <string name="valid_validcode">验证码：</string>
+    <string name="valid_validcode_hint">请输入验证码</string>
+    <string name="valid_sure">确认</string>
+    <string name="validatephone_tip">验证手机是为了确保及时通知您促销优惠等活动信息，无任何费用，我们会尊重和保护您的隐私。\n如果您不能及时收到验证码，请与客服联系，我们将帮您绑定手机号码，谢谢！\n手机验证码的设置您可以在"我的账户"-"设置支付密码"中进行设置和修改。</string>
 
-        <!-- 结算中心 -->
-        <string name="settlement_shelfproduct_tip">订单中有已下架的商品,请重新选择</string>
-        <string name="settlement_lowstocks_tip">订单中有商品库存不足,请重新选择</string>
-        <string name="shake_tip_label">每天都可摇，每天有惊喜！</string>
-        <string name="order_submit_bottom_tip_label">银泰网不会以任何名义向您索要银行卡信息、验证码或要求您转账汇款，请提高警惕，谨防上当受骗！</string>
-        <string name="idcard_tip">身份信息是以个人名义申报进口物品的重要信息，为试您的物品可以正常通关，请准确填写。&lt;br>&lt;font color=\"#e5004f\">注意，该身份信息须与您用于支付的支付宝账号绑定的身份证信息一致！&lt;/font></string>
-        <string name="pay_cash_not_support_silver">海淘和货到付款不支持使用银元</string>
+    <!-- 购物车 ShopCarActivity -->
+    <string name="shopcar_to_balance">去结算</string>
+    <string name="shopcar_to_balance_and_left_bracket">去结算(</string>
+    <string name="shopcar_right_bracket">)</string>
+    <string name="shopcar_dialog_cancel">知道了</string>
+    <string name="shopcar_max_num_tip">购物车商品总数量不能大于99！</string>
+    <string name="shopcar_eidt_save_tip">请先保存编辑信息</string>
+    <string name="shopcar_off_the_shief_tip">当前购买商品已下架，请重新选择商品</string>
+    <string name="shopcar_no_shop">您还没有选择商品哦</string>
+    <string name="shopcar_select_to_delete_shop">您还没有选择要删除的商品</string>
+    <string name="shopcar_delete_shop_tip">是否确定删除商品？</string>
+    <string name="shopcar_dialog_delete_sure">删除</string>
+    <string name="shopcar_delete_shop_cancel">取消</string>
+    <string name="shopcar_all_select">全选</string>
+    <string name="shopcar_delete">删除</string>
+    <string name="shopcar_add_all">合计:</string>
+    <string name="rmb_code">￥</string>
+    <string name="shopcar_free_freight_tip">未满199元,需支付运费15元</string>
+    <string name="shopcar_free_to_look">随便逛逛</string>
+    <string name="shopcar_common_shop">普通商品</string>
+    <string name="shopcar_color_point">...</string>
+    <string name="shopcar_color">颜色:</string>
+    <string name="shopcar_size">尺码:</string>
+    <string name="shopcar_rmb_code">"￥ "</string>
+    <string name="shopcar_x">x</string>
+    <string name="shopcar_offed_to_shelf">已下架</string>
+    <string name="shopcar_sell_out">已售罄</string>
+    <string name="shopcar_zero">0</string>
+    <string name="shopcar_low_stocks">库存不足</string>
+    <string name="shopcar_full_cut">满减</string>
+    <string name="shopcar_full_cut_content">已购满200元，已减12元</string>
 
-        <!-- 扫描 -->
-        <string name="sure_open_url">是否打开链接</string>
-        <string name="keep_open_url">继续访问</string>
-        <string name="caprue_yintai">银泰网</string>
-        <string name="sure_to_open">您确定要访问该网址吗？</string>
-
-
-        <!-- 公用部分 -->
-        <string name="listview_pull_loading">正在加载...</string>
-
-        <string name="pull_to_refresh_pull_label">下拉刷新…</string>
-        <string name="pull_to_refresh_release_label">释放即可刷新</string>
-        <string name="pull_to_refresh_refreshing_label">正在刷新…</string>
-        <string name="pull_to_refresh_last_loadtime">上次更新时间：</string>
-        <string name="listview_label_today">今天</string>
-        <string name="update_new_version">升级体验新版</string>
-        <string name="no_update_temp">暂不升级</string>
-
-        <!-- 网络相关 -->
-        <string name="net_parse_json_errora">很抱歉，您暂时无法查看内容…</string>
-        <string name="net_accessserver_error">请求数据错误</string>
-        <string name="net_unavailable_net_tip">网络不给力哦...</string>
-        <string name="net_get_data_failure">获取数据失败</string>
-        <string name="net_wait_tip">处理中，请稍后</string>
-        <string name="net_parse_json_error">数据解析错误…</string>
-
-
-        <string name="imgscription">imageview content scription</string>
-        <string name="rmb_mark">￥</string>
-        <string name="label_kill_title">秒杀专区</string>
-        <string name="label_kill_nexttrailer_title">下期预告</string>
-        <string name="label_everyday_20_new">（每天20点上新）</string>
-        <string name="label_now_kill">本期秒杀</string>
-        <string name="limitbuy_productlist_title">特卖商品列表</string>
-
-        <!--我的银泰 MoreNewActivity-->
-        <string name="cache_clearing">清理中</string>
-        <string name="cache_clear_finish">清理完成</string>
-        <string name="bi_clear_finish">清除完成</string>
-        <string name="login_out_tip">是否退出登录</string>
-        <string name="login_out_sure">确定</string>
-        <string name="login_out_cancel">取消</string>
-        <string name="welcome_to_yintai">欢迎来到银泰</string>
-        <string name="my_username">用户名：</string>
-        <string name="member_level_common">普通会员</string>
-        <string name="integral">积分</string>
-        <string name="sliver_dollar">银元</string>
-        <string name="balance">余额</string>
-        <string name="collection">收藏</string>
-        <string name="recent_visit">最近浏览</string>
-        <string name="my_order">我的订单</string>
-        <string name="payment_order">待支付订单</string>
-        <string name="all_order">全部订单</string>
-        <string name="coupons">优惠券 </string>
-        <string name="address_manager">地址管理</string>
-        <string name="msg_center">消息中心</string>
-        <string name="set_pay_password">设置支付密码</string>
-        <string name="clear_cache">清除缓存</string>
-        <string name="service_phone">客服电话</string>
-        <string name="service_phone_number">400-119-1111</string>
-        <string name="service_phone_time">(8:00-24:00)</string>
-        <string name="more">更多</string>
-        <string name="quite_login">退出登录</string>
-
-        <string name="about_yintai">关于银泰</string>
-        <string name="version_tip">银泰网客户端V</string>
-        <string name="version_android"> For Android</string>
-        <string name="bi_export_tip">开始导出BI存储数据</string>
-        <string name="bi_export_tip_success">导出BI存储数据成功\n储存路径:</string>
-        <string name="bi_export_tip_failure">导出BI存储失败</string>
-        <string name="yintai_net">银泰网  www.yintai.com</string>
-        <string name="yintai_description_part_one">        银泰网(  www.yintai.com )是专注于精品时尚百货经营的大型B2C电子商务平台，由国内领先百货连锁集团、香港联交所上市公司银泰百货投资控股.</string>
-        <string name="yintai_description_part_two">        银泰网抱着“为13亿在中国人传递新的生活美学”的梦想，把“为用户提供超出想像的满意服务，传播优质品牌影响力”作为使命，致力于让中国时尚消费人群，专享最时尚、最品牌、最品质、最价格的生活品质与潮流购物体验，成为中国最卓越的精品时尚百货购物网站.</string>
-        <string name="yintai_copright_left">银泰网( </string>
-        <string name="yintai_copright_right"> )版权所有</string>
-        <string name="yintai_net_address">www.yintai.com</string>
-        <string name="weibo_tip">欢迎关注新浪官方微博@手机银泰</string>
-        <string name="weixin_tip">微信公众帐号@手机银泰百货</string>
-
-        <!--意见反馈 FeedbackActivity-->
-        <string name="feedback">意见反馈</string>
-        <string name="sumbit_tip_no_content">请填写您的意见</string>
-        <string name="sumbit_tip_no_phone">请填写您的手机号</string>
-        <string name="sumbit_tip_wrong_phone">请填写正确的手机号</string>
-        <string name="feedback_tip">欢迎您提出宝贵意见,协助我们不断的提高服务和购物体验,谢谢您对银泰网的支持!</string>
-        <string name="feedback_content_tip">请输入您的意见或建议(必填)</string>
-        <string name="feedback_link_tip">联系方式:</string>
-        <string name="feedback_phone_tip">请输入您的手机号(必填)</string>
-        <string name="feedback_submit">提交</string>
-        <!--使用帮助 HelpActivity-->
-        <string name="help">帮助</string>
-
-        <!-- 收藏页面  FavoriteActivity -->
-        <string name="favorite_no_data">暂无收藏商品</string>
-        <string name="favorite_dialog_tip">温馨提示</string>
-        <string name="favorite_dialog_sure">确定</string>
-        <string name="favorite_delete_tip">您确定要删除</string>
-        <string name="favorite_delete_cancel">取消</string>
-        <string name="favorite_sell_out">售罄</string>
-        <string name="favorite_buy_gifts">买赠</string>
-        <string name="favorite_full_cut">满减</string>
-        <string name="favorite_full_add">满赠</string>
-        <!-- 最近浏览  RecentlyActivity -->
-        <string name="recent_dialog_tip">温馨提示</string>
-        <string name="recent_dialog_tip_content">是否清空最近浏览记录？</string>
-        <string name="recent_dialog_sure">确定</string>
-        <string name="recent_dialog_cancel">取消</string>
-
-        <!-- 优惠券 PromotionActivity -->
-        <string name="input_validcode">请输入验证码</string>
-        <string name="promotion">优惠券</string>
-        <string name="no_to_use_promotion">无可使用优惠券记录</string>
-        <string name="no_used_promotion">无已使用优惠券记录</string>
-        <string name="no_overdue_promotion">无已过期优惠券记录</string>
-        <string name="no_not_to_use_promotion">无未生效优惠券记录</string>
-        <string name="not_to_use">未使用</string>
-        <string name="promotion_has_used">已使用</string>
-        <string name="promotion_overdue">已过期</string>
-        <string name="promotion_not_to_use">未生效</string>
-        <string name="promotion_explain">说明</string>
-        <string name="promotion_new_add_for_app">新增移动客户端优惠券</string>
-        <string name="input_promotion_code">输入优惠券代码</string>
-        <string name="promotion_valid">验证</string>
-        <string name="promotion_to_use">可使用</string>
-        <string name="promotion_no">无优惠券</string>
-        <string name="promotion_num">优惠券编号:</string>
-        <string name="promotion_type">类型:</string>
-        <string name="promotion_brand">品牌:</string>
-        <string name="promotion_brand_details">查看品牌明细>></string>
-        <string name="promotion_channel">适用:</string>
-        <string name="promotion_used_time">使用时间:</string>
-        <string name="promotion_action_name">活动名称:</string>
-        <string name="promotion_activation_time">激活时间:</string>
-        <string name="promotion_relevant_order">相关订单号:</string>
-        <string name="promotion_state">状态:</string>
-
-        <!-- 地址管理   AddressListActivity  AddressEditActivity-->
-        <string name="address_name">收货人：</string>
-        <string name="address_address">收货地址：</string>
-        <string name="addresss_phone">联系方式：</string>
-        <string name="address_sure">确定</string>
-        <string name="address_no_name">收货人不能为空</string>
-        <string name="address_name_must_chinese">收货人姓名必须为中文</string>
-        <string name="address_no_phone">联系方式不能为空</string>
-        <string name="address_phone_wrong">联系方式应该在10到12位</string>
-        <string name="address_phone_wrong_and_repeat_input">联系方式输入有误请重新输入</string>
-        <string name="address_not_blank">详细地址不能为空</string>
-        <string name="address_no_address">地址不能为空</string>
-        <string name="address_input_right_phone">请输入正确的手机号码</string>
-        <string name="address_dialog_cancel">取消</string>
-        <string name="address_dialog_delete_tip">您确定要删除</string>
-        <string name="address_select_city">请选择城市</string>
-        <string name="address_edit_tip">说明：移动客户端订单支持货到付款和支付宝支付方式</string>
-        <string name="address_name_tip">输入姓名：\t</string>
-        <string name="address_china_name_tip">请输入中文姓名</string>
-        <string name="address_phone_tip">联系方式：</string>
-        <string name="address_phone_tip_content">请输入手机号码/区号固定电话</string>
-        <string name="address_area_tip">省市/地区：\t</string>
-        <string name="address_area_hint">请选择省市及城市名称</string>
-        <string name="address_detail_tip">详细地址：\t</string>
-        <string name="address_detail_hint">请输入您的详细地址</string>
-        <string name="address_delete">删除收货地址</string>
-
-        <!-- 消息中心 MessageCenterActivity、MessageResultActivity -->
-        <string name="msg_overdue_delete_tip">这条消息已过期，内容已失效。可在我-清除缓存中删除</string>
-        <string name="my_msg">我的消息</string>
-        <string name="msg_click_to_detail">点击查看详情</string>
-        <string name="msg_time">2014-01-02</string>
-        <string name="msg_state_tip">已过期</string>
-
-        <!-- 设置支付密码 PayPwdActivity、ValidatePhoneActivity -->
-        <string name="pwd_input_your_login_pwd">请输入您的登录密码</string>
-        <string name="pwd_input_your_pay_pwd">请输入您的支付密码</string>
-        <string name="pwd_wrong_format_pay_pwd">您输入支付密码少于6位或多于16位字符,请重新输入!</string>
-        <string name="pwd_pay_pwd_format">支付密码必须由数字和字母组成!</string>
-        <string name="pwd_not_same_pwd">您两次支付密码输入不一致,请重新输入!</string>
-        <string name="pwd_login_pwd">登录密码：</string>
-        <string name="pwd_login_pwd_hint">请输入您的登录密码 　　　  　　　  　 　　　 </string>
-        <string name="pwd_pay_pwd">支付密码：</string>
-        <string name="pwd_pay_pwd_hint">6-16字符，需包括数字和字母 　 　　  　　　 </string>
-        <string name="pwd_repeat_input">再次输入：</string>
-        <string name="pwd_repeat_input_hint">请再次输入支付密码 　 　　　　　   　　　 　 </string>
-        <string name="pwd_next_to_valid_phone">下一步：验证手机号</string>
-        <string name="valid_input_phone">请输入手机号</string>
-        <string name="valid_input_right_phone">请输入正确的手机号码</string>
-        <string name="valid_input_validcode">请输入验证码</string>
-        <string name="valid_seconds_to_get">秒后重新获取</string>
-        <string name="valid_free_to_get_validcode">免费获取验证码</string>
-        <string name="valid_send_validcode_success">验证码已经下发到您的手机，请注意查收</string>
-        <string name="valid_set_pwd_success">设置支付密码成功</string>
-        <string name="valid_edit_pay_pwd_success">修改支付密码成功</string>
-        <string name="pwd_server_error">服务器异常,请稍后再试</string>
-        <string name="valid_phone">手机号：</string>
-        <string name="valid_phone_hint">请输入11位手机号</string>
-        <string name="valid_validcode">验证码：</string>
-        <string name="valid_validcode_hint">请输入验证码</string>
-        <string name="valid_sure">确认</string>
-        <string name="validatephone_tip">验证手机是为了确保及时通知您促销优惠等活动信息，无任何费用，我们会尊重和保护您的隐私。\n如果您不能及时收到验证码，请与客服联系，我们将帮您绑定手机号码，谢谢！\n手机验证码的设置您可以在"我的账户"-"设置支付密码"中进行设置和修改。</string>
-
-        <!-- 购物车 ShopCarActivity -->
-        <string name="shopcar_to_balance">去结算</string>
-        <string name="shopcar_to_balance_and_left_bracket">去结算(</string>
-        <string name="shopcar_right_bracket">)</string>
-        <string name="shopcar_dialog_cancel">知道了</string>
-        <string name="shopcar_max_num_tip">购物车商品总数量不能大于99！</string>
-        <string name="shopcar_eidt_save_tip">请先保存编辑信息</string>
-        <string name="shopcar_off_the_shief_tip">当前购买商品已下架，请重新选择商品</string>
-        <string name="shopcar_no_shop">您还没有选择商品哦</string>
-        <string name="shopcar_select_to_delete_shop">您还没有选择要删除的商品</string>
-        <string name="shopcar_delete_shop_tip">是否确定删除商品？</string>
-        <string name="shopcar_dialog_delete_sure">删除</string>
-        <string name="shopcar_delete_shop_cancel">取消</string>
-        <string name="shopcar_all_select">全选</string>
-        <string name="shopcar_delete">删除</string>
-        <string name="shopcar_add_all">合计:</string>
-        <string name="rmb_code">￥</string>
-        <string name="shopcar_free_freight_tip">未满199元,需支付运费15元</string>
-        <string name="shopcar_free_to_look">随便逛逛</string>
-        <string name="shopcar_common_shop">普通商品</string>
-        <string name="shopcar_color_point">...</string>
-        <string name="shopcar_color">颜色:</string>
-        <string name="shopcar_size">尺码:</string>
-        <string name="shopcar_rmb_code">"￥ "</string>
-        <string name="shopcar_x">x</string>
-        <string name="shopcar_offed_to_shelf">已下架</string>
-        <string name="shopcar_sell_out">已售罄</string>
-        <string name="shopcar_zero">0</string>
-        <string name="shopcar_low_stocks">库存不足</string>
-        <string name="shopcar_full_cut">满减</string>
-        <string name="shopcar_full_cut_content">已购满200元，已减12元</string>
-
-        <!-- 结算中心 DealCenterActivity -->
-        <string-array name="deliveryTimeData">
-            <item>工作日、双休日与假日均可送货</item>
-            <item>只双休日、假日送货(工作日不用送货)</item>
-            <item>只工作日送货(双休日、假日不用送货)</item>
-        </string-array>
-        <string name="dealcenter_returned_tip_left">您够买的商品中含有</string>
-        <string name="dealcenter_returned_tip_right">的商品属于特殊商品，签收后如无质量问题不提供退换货服务</string>
-        <string name="order_preferential_tip">每张订单只能享受一种优惠形式，如参加满减活动，请先取消对优惠券的使用！</string>
-        <string name="check_and_submit_order">请提交并核对订单信息</string>
-        <string name="dealcenter_coupons_count_tip_left">此订单可使用</string>
-        <string name="dealcenter_coupons_count_tip_right">张优惠券</string>
-        <string name="dealcenter_used">已使用</string>
-        <string name="dealcenter_rmb">"￥ "</string>
-        <string name="dealcenter_silver_dollar">银元</string>
-        <string name="dealcenter_yuan">元</string>
-        <string name="dealcenter_balance">余额</string>
-        <string name="may_reductible_balance">(可抵扣订单金额)</string>
-        <string name="dealcenter_item">件</string>
-        <string name="dealcenter_rmb_no_blank">￥</string>
-        <string name="dealcenter_use">使用</string>
-        <string name="dealcenter_please_improve">请完善</string>
-        <string name="seal_buy_and_zhifubao_pay">海淘支付宝支付</string>
-        <string name="invoice_info">发票信息</string>
-        <string name="seal_buy_invoice_tip">海外直邮商品是由银泰网筛选并保证信誉的海外商家销售给国内用户的商品，海外商家不提供中国发票</string>
-        <string name="sure_order_has_no_reason_retruned_product">请您先在下方确认：已知道订单中有不支持无理由退换的商品</string>
-        <string name="dealcenter_address">请填写收货人地址!</string>
-        <string name="no_select_pay_and_repeat_deal">暂无可选支付方式,请尝试重新结算!</string>
-        <string name="dealcenter_send_time">请选择送货时间</string>
-        <string name="dealcenter_dialog_cancel">取消</string>
-        <string name="dealcenter_improve_receiver_info">请完善收货人信息</string>
-        <string name="dealcenter_add_idcard_info">添加身份信息</string>
-        <string name="dealcenter_edit_idcard_info">修改身份信息</string>
-        <string name="your_account_has_no_sliver_and_money">您的账户中目前没有银元和余额</string>
-        <string name="your_account_cannot_use_sliver_for_data_error">您的账户数据异常,暂无法使用银元余额功能</string>
-        <string name="dealcenter_select_pay_type">请选择支付方式!</string>
-        <string name="dealcenter_select_send_time">请选择送货时间!</string>
-        <string name="dealcenter_idcard_info">请添写身份信息</string>
-        <string name="dealcenter_dialog_tip">温馨提示</string>
-        <string name="dealcenter_pay_sliver_and_money">使用银元和余额支付，需要验证手机</string>
-        <string name="dealcenter_valid">去验证</string>
-        <string name="dealcenter_input_pay_pwd">请输入支付密码</string>
-        <string name="dealcenter_dialog_sure">确认</string>
-        <string name="dealcenter_shop_detail_list">商品清单</string>
-        <string name="dealcenter_action">活动</string>
-        <string name="dealcenter_all_have">共有</string>
-        <string name="dealcenter_product_attend_action">件商品参加活动</string>
-        <string name="dealcenter_total_price_left">累积商品金额为</string>
-        <string name="dealcenter_total_price_middle">元，减免金额</string>
-        <string name="dealcenter_pay_type_explain">说明：移动客户端目前支持货到付款和支付宝付款方式</string>
-        <string name="dealcenter_address_tip">收货人地址</string>
-        <string name="dealcenter_idcard">身份证信息</string>
-        <string name="dealcenter_pay_method">支付方式</string>
-        <string name="dealcenter_send_time_tip">送货时间</string>
-        <string name="dealcenter_invoice">索要发票</string>
-        <string name="dealcenter_use_coupons">使用优惠券</string>
-        <string name="dealcenter_silver_remainder">使用银元余额</string>
-        <string name="dealcenter_silver_remainder_hint">(可抵扣订单金额)</string>
-        <string name="dealcenter_select_attend_action">选择您要参加的活动</string>
-        <string name="dealcenter_product_count_total">商品数量总计：</string>
-        <string name="dealcenter_discount">优惠：</string>
-        <string name="dealcenter_send_cost">运费：</string>
-        <string name="dealcenter_use_silver">使用银元：</string>
-        <string name="dealcenter_use_left_money">使用余额：</string>
-        <string name="dealcenter_you_should_pay">您需要支付：</string>
-        <string name="dealcenter_get_integral">获取积分：</string>
-        <string name="dealcenter_product_total_price">商品总价：</string>
-        <string name="dealcenter_save_money">节省金额：</string>
-        <string name="dealcenter_send_tax">行邮税额：</string>
-        <string name="dealcenter_haitao_send_tax">海淘运费：</string>
-        <string name="dealcenter_haitao_must_know">海淘商品购物须知</string>
+    <!-- 结算中心 DealCenterActivity -->
+    <string-array name="deliveryTimeData">
+        <item>工作日、双休日与假日均可送货</item>
+        <item>只双休日、假日送货(工作日不用送货)</item>
+        <item>只工作日送货(双休日、假日不用送货)</item>
+    </string-array>
+    <string name="dealcenter_returned_tip_left">您够买的商品中含有</string>
+    <string name="dealcenter_returned_tip_right">的商品属于特殊商品，签收后如无质量问题不提供退换货服务</string>
+    <string name="order_preferential_tip">每张订单只能享受一种优惠形式，如参加满减活动，请先取消对优惠券的使用！</string>
+    <string name="check_and_submit_order">请提交并核对订单信息</string>
+    <string name="dealcenter_coupons_count_tip_left">此订单可使用</string>
+    <string name="dealcenter_coupons_count_tip_right">张优惠券</string>
+    <string name="dealcenter_used">已使用</string>
+    <string name="dealcenter_rmb">"￥ "</string>
+    <string name="dealcenter_silver_dollar">银元</string>
+    <string name="dealcenter_yuan">元</string>
+    <string name="dealcenter_balance">余额</string>
+    <string name="may_reductible_balance">(可抵扣订单金额)</string>
+    <string name="dealcenter_item">件</string>
+    <string name="dealcenter_rmb_no_blank">￥</string>
+    <string name="dealcenter_use">使用</string>
+    <string name="dealcenter_please_improve">请完善</string>
+    <string name="seal_buy_and_zhifubao_pay">海淘支付宝支付</string>
+    <string name="invoice_info">发票信息</string>
+    <string name="seal_buy_invoice_tip">海外直邮商品是由银泰网筛选并保证信誉的海外商家销售给国内用户的商品，海外商家不提供中国发票</string>
+    <string name="sure_order_has_no_reason_retruned_product">请您先在下方确认：已知道订单中有不支持无理由退换的商品</string>
+    <string name="dealcenter_address">请填写收货人地址!</string>
+    <string name="no_select_pay_and_repeat_deal">暂无可选支付方式,请尝试重新结算!</string>
+    <string name="dealcenter_send_time">请选择送货时间</string>
+    <string name="dealcenter_dialog_cancel">取消</string>
+    <string name="dealcenter_improve_receiver_info">请完善收货人信息</string>
+    <string name="dealcenter_add_idcard_info">添加身份信息</string>
+    <string name="dealcenter_edit_idcard_info">修改身份信息</string>
+    <string name="your_account_has_no_sliver_and_money">您的账户中目前没有银元和余额</string>
+    <string name="your_account_cannot_use_sliver_for_data_error">您的账户数据异常,暂无法使用银元余额功能</string>
+    <string name="dealcenter_select_pay_type">请选择支付方式!</string>
+    <string name="dealcenter_select_send_time">请选择送货时间!</string>
+    <string name="dealcenter_idcard_info">请添写身份信息</string>
+    <string name="dealcenter_dialog_tip">温馨提示</string>
+    <string name="dealcenter_pay_sliver_and_money">使用银元和余额支付，需要验证手机</string>
+    <string name="dealcenter_valid">去验证</string>
+    <string name="dealcenter_input_pay_pwd">请输入支付密码</string>
+    <string name="dealcenter_dialog_sure">确认</string>
+    <string name="dealcenter_shop_detail_list">商品清单</string>
+    <string name="dealcenter_action">活动</string>
+    <string name="dealcenter_all_have">共有</string>
+    <string name="dealcenter_product_attend_action">件商品参加活动</string>
+    <string name="dealcenter_total_price_left">累积商品金额为</string>
+    <string name="dealcenter_total_price_middle">元，减免金额</string>
+    <string name="dealcenter_pay_type_explain">说明：移动客户端目前支持货到付款和支付宝付款方式</string>
+    <string name="dealcenter_address_tip">收货人地址</string>
+    <string name="dealcenter_idcard">身份证信息</string>
+    <string name="dealcenter_pay_method">支付方式</string>
+    <string name="dealcenter_send_time_tip">送货时间</string>
+    <string name="dealcenter_invoice">索要发票</string>
+    <string name="dealcenter_use_coupons">使用优惠券</string>
+    <string name="dealcenter_silver_remainder">使用银元余额</string>
+    <string name="dealcenter_silver_remainder_hint">(可抵扣订单金额)</string>
+    <string name="dealcenter_select_attend_action">选择您要参加的活动</string>
+    <string name="dealcenter_product_count_total">商品数量总计：</string>
+    <string name="dealcenter_discount">优惠：</string>
+    <string name="dealcenter_send_cost">运费：</string>
+    <string name="dealcenter_use_silver">使用银元：</string>
+    <string name="dealcenter_use_left_money">使用余额：</string>
+    <string name="dealcenter_you_should_pay">您需要支付：</string>
+    <string name="dealcenter_get_integral">获取积分：</string>
+    <string name="dealcenter_product_total_price">商品总价：</string>
+    <string name="dealcenter_save_money">节省金额：</string>
+    <string name="dealcenter_send_tax">行邮税额：</string>
+    <string name="dealcenter_haitao_send_tax">海淘运费：</string>
+    <string name="dealcenter_haitao_must_know">海淘商品购物须知</string>
         <string name="dealcenter_haitao_know_deacription">本平台消费者承诺：本人所购商品系个人自用，现委托网站运营商指定专业报关企业代为办理如下事项：\n(1) 代理本人向海关申报；\n(2) 代理本人配合海关进行货品查验； \n(3)代理本人向海关缴纳所需税款。\n本人保证遵守《海关法》和国家相关法律法规，保证所提供的身份信息和收货信息真实完整，愿意接受海关、检验检疫机构及其他监管部门的监管。对被委托人在办理上述事项过程中所申报的有关数据，本人均予以认可，并承担相应的法律责任
 \n\t\t\t</string>
-        <string name="dealcenter_i_know_and_goon_buy">我知道了,继续购买</string>
-        <string name="dealcenter_sumbit">提交订单</string>
+    <string name="dealcenter_i_know_and_goon_buy">我知道了,继续购买</string>
+    <string name="dealcenter_sumbit">提交订单</string>
 
-        <!-- 结算中心二级页面  支付方式  发票  优惠券  银元 -->
-        <string name="pay_online_pay">线上支付</string>
-        <string name="pay_pay_by_zhifubao">支付宝钱包支付</string>
-        <string name="pay_haitao_by_zhifubao">海淘支付宝支付</string>
-        <string name="pay_union_pay">银联支付</string>
-        <string name="pay_pay_on_line">线下支付</string>
-        <string name="pay_pay_by_cash">货到后，现金支付</string>
-        <string name="pay_pay_by_pos">货到后，POS机刷卡</string>
-        <string-array name="invoiceTypeData">
-            <item>个人</item>
-            <item>公司</item>
-        </string-array>
-        <string-array name="invoiceConData">
-            <item>商品明细</item>
-            <item>服装</item>
-            <item>皮具</item>
-            <item>箱包</item>
-            <item>化妆品</item>
-            <item>鞋</item>
-        </string-array>
-        <string name="invoice_select_invoice_type">请选择发票类型</string>
-        <string name="invoice_dialog_sure">确定</string>
-        <string name="invoice_select_type">请选择发票科目</string>
-        <string name="invoice_input_invoice_head">请输入发票抬头</string>
-        <string name="invoice_content_too_long_tip">您输入的内容过长,请限制在100个字符内</string>
-        <string name="invoice_dialog_tip">温馨提示</string>
-        <string name="invoice_dialog_content">最多只允许100个字符</string>
-        <string name="invoice_type">发票类型</string>
-        <string name="invoice_subject">发票科目</string>
-        <string name="invoice_head">发票抬头</string>
-        <string name="invoice_head_tip">请输入发票抬头（100个字符内）</string>
-        <string name="idcard_sure">确认</string>
-        <string name="idcard_name">请添写姓名</string>
-        <string name="idcard_nomber">请添写身份证号码</string>
-        <string name="idcard_complete_info">请添写完整信息</string>
-        <string name="idcard_name_tip">姓名:</string>
-        <string name="idcard_number_tip">身份证号码:</string>
-        <string name="idcard_sure_change">确定修改</string>
-        <string name="idcard_cancel_change">取消修改</string>
-        <string name="silver_input_wrong_money">您输入的金额有误,请重新输入</string>
-        <string name="silver_neednot_use_left_money">还需支付金额为0,不需要使用余额</string>
-        <string name="silver_input_bigger_money">您输入的金额大于余额,请重新输入</string>
-        <string name="silver_neednot_use_silver">还需支付金额为0,不需要使用银元</string>
-        <string name="silver_total_zero_cannot_use_complete_money">总银元金额为0,无法继续使用全额支付</string>
-        <string name="silver_total_left_zero_cannot_use_complete_money">总余额金额为0,无法继续使用全额支付</string>
-        <string name="silver_input_silver_or_left_money">请先输入银元或余额</string>
-        <string name="silver_yuan">元</string>
-        <string name="silver_silver">银元</string>
-        <string name="silver_left_money">余额</string>
-        <string name="silver_pay_complete_money">全额支付</string>
-        <string name="silver_sure_to_use">确认使用</string>
-        <string name="silver_cancel_to_use">取消使用</string>
+    <!-- 结算中心二级页面  支付方式  发票  优惠券  银元 -->
+    <string name="pay_online_pay">线上支付</string>
+    <string name="pay_pay_by_zhifubao">支付宝钱包支付</string>
+    <string name="pay_haitao_by_zhifubao">海淘支付宝支付</string>
+    <string name="pay_union_pay">银联支付</string>
+    <string name="pay_pay_on_line">线下支付</string>
+    <string name="pay_pay_by_cash">货到后，现金支付</string>
+    <string name="pay_pay_by_pos">货到后，POS机刷卡</string>
+    <string-array name="invoiceTypeData">
+        <item>个人</item>
+        <item>公司</item>
+    </string-array>
+    <string-array name="invoiceConData">
+        <item>商品明细</item>
+        <item>服装</item>
+        <item>皮具</item>
+        <item>箱包</item>
+        <item>化妆品</item>
+        <item>鞋</item>
+    </string-array>
+    <string name="invoice_select_invoice_type">请选择发票类型</string>
+    <string name="invoice_dialog_sure">确定</string>
+    <string name="invoice_select_type">请选择发票科目</string>
+    <string name="invoice_input_invoice_head">请输入发票抬头</string>
+    <string name="invoice_content_too_long_tip">您输入的内容过长,请限制在100个字符内</string>
+    <string name="invoice_dialog_tip">温馨提示</string>
+    <string name="invoice_dialog_content">最多只允许100个字符</string>
+    <string name="invoice_type">发票类型</string>
+    <string name="invoice_subject">发票科目</string>
+    <string name="invoice_head">发票抬头</string>
+    <string name="invoice_head_tip">请输入发票抬头（100个字符内）</string>
+    <string name="idcard_sure">确认</string>
+    <string name="idcard_name">请添写姓名</string>
+    <string name="idcard_nomber">请添写身份证号码</string>
+    <string name="idcard_complete_info">请添写完整信息</string>
+    <string name="idcard_name_tip">姓名:</string>
+    <string name="idcard_number_tip">身份证号码:</string>
+    <string name="idcard_sure_change">确定修改</string>
+    <string name="idcard_cancel_change">取消修改</string>
+    <string name="silver_input_wrong_money">您输入的金额有误,请重新输入</string>
+    <string name="silver_neednot_use_left_money">还需支付金额为0,不需要使用余额</string>
+    <string name="silver_input_bigger_money">您输入的金额大于余额,请重新输入</string>
+    <string name="silver_neednot_use_silver">还需支付金额为0,不需要使用银元</string>
+    <string name="silver_total_zero_cannot_use_complete_money">总银元金额为0,无法继续使用全额支付</string>
+    <string name="silver_total_left_zero_cannot_use_complete_money">总余额金额为0,无法继续使用全额支付</string>
+    <string name="silver_input_silver_or_left_money">请先输入银元或余额</string>
+    <string name="silver_yuan">元</string>
+    <string name="silver_silver">银元</string>
+    <string name="silver_left_money">余额</string>
+    <string name="silver_pay_complete_money">全额支付</string>
+    <string name="silver_sure_to_use">确认使用</string>
+    <string name="silver_cancel_to_use">取消使用</string>
 
-        <!-- 订单提交成功页  OrderSubmitActivity -->
-        <string-array name="payMethodValue">
-            <item>货到后，现金付款</item>
-            <item>货到后，POS机刷卡支付</item>
-            <item>支付宝钱包支付</item>
-        </string-array>
-        <string name="submit_tip">&lt;font color=\"#e5004f\">温馨提示 : &lt;/font></string>
-        <string name="submit_tip_content">&lt;font color=\"#000000\">银泰网不会以任何名义向您索要银行卡信息、验证码或要求您转账汇款，请提高警惕，谨防上当。&lt;/font></string>
-        <string name="submit_order_has_submited">您的订单已提交，我们尽快安排发货</string>
-        <string name="order_submited_and_send_two_hour_later">您的订单已提交，请在2小时内进行支付！</string>
-        <string name="submit_dialog_tip">您确定要拨打</string>
-        <string name="submit_dialog_sure">确定</string>
-        <string name="submit_dialog_cancel">取消</string>
-        <string name="submit_custom_service_phone">tel:4001191111</string>
-        <string name="submit_your_order">您的订单号：</string>
-        <string name="sumbit_pay_money">应付金额：</string>
-        <string name="submit_pay_type">支付方式：</string>
-        <string name="submit_goon_shopping">继续购物</string>
-        <string name="submit_look_order">查看订单详情</string>
+    <!-- 订单提交成功页  OrderSubmitActivity -->
+    <string-array name="payMethodValue">
+        <item>货到后，现金付款</item>
+        <item>货到后，POS机刷卡支付</item>
+        <item>支付宝钱包支付</item>
+    </string-array>
+    <string name="submit_tip">&lt;font color=\"#e5004f\">温馨提示 : &lt;/font></string>
+    <string name="submit_tip_content">&lt;font color=\"#000000\">银泰网不会以任何名义向您索要银行卡信息、验证码或要求您转账汇款，请提高警惕，谨防上当。&lt;/font></string>
+    <string name="submit_order_has_submited">您的订单已提交，我们尽快安排发货</string>
+    <string name="order_submited_and_send_two_hour_later">您的订单已提交，请在2小时内进行支付！</string>
+    <string name="submit_dialog_tip">您确定要拨打</string>
+    <string name="submit_dialog_sure">确定</string>
+    <string name="submit_dialog_cancel">取消</string>
+    <string name="submit_custom_service_phone">tel:4001191111</string>
+    <string name="submit_your_order">您的订单号：</string>
+    <string name="sumbit_pay_money">应付金额：</string>
+    <string name="submit_pay_type">支付方式：</string>
+    <string name="submit_goon_shopping">继续购物</string>
+    <string name="submit_look_order">查看订单详情</string>
 
-        <!-- 订单详情    OrderDetailNewActivity -->
-        <string name="order_reduce_rmb">-￥</string>
-        <string name="order_rmb">￥</string>
-        <string name="order_shop_detail_list">商品清单</string>
-        <string name="order_jian">件</string>
-        <string name="order_dialog_sure">确定</string>
-        <string name="order_cancel_order_sure">您确定要取消订单吗？</string>
-        <string name="order_dialog_cancel">取消</string>
-        <string name="order_logistics_query">物流查询</string>
-        <string name="order_order_no">订单编号:</string>
-        <string name="order_state">订单状态：</string>
-        <string name="order_pay_type">支付方式:</string>
-        <string name="order_not_pay">未支付</string>
-        <string name="order_zhifubao">支付宝</string>
-        <string name="order_username">用户名</string>
-        <string name="order_idcard">身份信息</string>
-        <string name="order_amount_of_money">订单金额:</string>
-        <string name="order_product_amount_of_money">商品金额:</string>
-        <string name="order_action_amount_of_money">活动金额:</string>
-        <string name="order_discount_left_money">余额抵扣:</string>
-        <string name="order_silver_discount">银元抵扣:</string>
-        <string name="order_coupons">优惠券:</string>
-        <string name="order_send_cost">运费:</string>
-        <string name="order_send_tax">行邮税额:</string>
-        <string name="order_save_money">节省金额:</string>
-        <string name="order_hitao_send_cost">海淘运费:</string>
-        <string name="order_now_pay">立即支付</string>
-        <string name="order_has_cannot_returned_product_tip">我知道：订单中含有不支持无理由退换的商品，签收后如无质量问题不提供退换货服务</string>
-        <string name="order_hitao_must_know">海淘商品购物须知</string>
+    <!-- 订单详情    OrderDetailNewActivity -->
+    <string name="order_reduce_rmb">-￥</string>
+    <string name="order_rmb">￥</string>
+    <string name="order_shop_detail_list">商品清单</string>
+    <string name="order_jian">件</string>
+    <string name="order_dialog_sure">确定</string>
+    <string name="order_cancel_order_sure">您确定要取消订单吗？</string>
+    <string name="order_dialog_cancel">取消</string>
+    <string name="order_logistics_query">物流查询</string>
+    <string name="order_order_no">订单编号:</string>
+    <string name="order_state">订单状态：</string>
+    <string name="order_pay_type">支付方式:</string>
+    <string name="order_not_pay">未支付</string>
+    <string name="order_zhifubao">支付宝</string>
+    <string name="order_username">用户名</string>
+    <string name="order_idcard">身份信息</string>
+    <string name="order_amount_of_money">订单金额:</string>
+    <string name="order_product_amount_of_money">商品金额:</string>
+    <string name="order_action_amount_of_money">活动金额:</string>
+    <string name="order_discount_left_money">余额抵扣:</string>
+    <string name="order_silver_discount">银元抵扣:</string>
+    <string name="order_coupons">优惠券:</string>
+    <string name="order_send_cost">运费:</string>
+    <string name="order_send_tax">行邮税额:</string>
+    <string name="order_save_money">节省金额:</string>
+    <string name="order_hitao_send_cost">海淘运费:</string>
+    <string name="order_now_pay">立即支付</string>
+    <string name="order_has_cannot_returned_product_tip">我知道：订单中含有不支持无理由退换的商品，签收后如无质量问题不提供退换货服务</string>
+    <string name="order_hitao_must_know">海淘商品购物须知</string>
         <string name="order_customer_know_content">本平台消费者承诺：本人所购商品系个人自用，现委托网站运营商指定专业报关企业代为办理如下事项：\n(1) 代理本人向海关申报；\n(2) 代理本人配合海关进行货品查验； \n(3)代理本人向海关缴纳所需税款。\n本人保证遵守《海关法》和国家相关法律法规，保证所提供的身份信息和收货信息真实完整，愿意接受海关、检验检疫机构及其他监管部门的监管。对被委托人在办理上述事项过程中所申报的有关数据，本人均予以认可，并承担相应的法律责任
 \n\t\t</string>
-        <string name="order_invoice_info">发票信息</string>
-        <string name="order_invoice_head">发票抬头</string>
-        <string name="order_invoice_subject">发票科目</string>
-        <string name="order_track">订单跟踪</string>
-        <string name="order_now_state">状态</string>
-        <string name="order_time">日期</string>
-        <string name="order_shopping_guide_code">导购编码</string>
-        <string name="order_cancel">取消订单</string>
+    <string name="order_invoice_info">发票信息</string>
+    <string name="order_invoice_head">发票抬头</string>
+    <string name="order_invoice_subject">发票科目</string>
+    <string name="order_track">订单跟踪</string>
+    <string name="order_now_state">状态</string>
+    <string name="order_time">日期</string>
+    <string name="order_shopping_guide_code">导购编码</string>
+    <string name="order_cancel">取消订单</string>
 
-        <!-- 特卖  LimitBuyActivity、LimitBuyProdutListActivity-->
-        <string name="sale_label_salelist">特卖列表</string>
-        <string name="limit_buy">特卖</string>
-        <!-- 特卖规则 -->
+    <!-- 特卖  LimitBuyActivity、LimitBuyProdutListActivity-->
+    <string name="sale_label_salelist">特卖列表</string>
+    <string name="limit_buy">特卖</string>
+    <!-- 特卖规则 -->
         <string name="sale_label_salerule">&#160;&#160;&#160;&#160;“特卖频道”的商品优惠价格是有时间限制的。只要在活动标明的时限内就可以进行购买。商品本身也是限量的，先到先得，售完为止。因为低价商品数量有限，下单后，请您尽快支付，超出2小时未支付的订单我们会为您做取消处理。因此给您带来的不便望谅解！\n\n&#160;&#160;&#160;&#160;“特卖频道”的产品都是限时限量的，一经售出，不可换货。如您不满意所购商品或收到有破损商品，银泰网承诺，自顾客收到商品之日15天内，除特殊不退品类或商品外，只要商品未经使用，保持商品原质原貌，且商品原包装完好、配件齐全，吊牌未剪、未经穿洗、没有任何污垢、气味或损坏的情况下，为您提供一次免费的退货服务。\n\n&#160;&#160;&#160;&#160;购买特卖商品可获得等同商品价格的积分，此积分可以在银泰网积分商品换取银元、优惠券，好礼多多，赶快来抢购吧~\n\n&#160;&#160;&#160;&#160;“特卖频道”是银泰网推出的限时特卖频道，银泰网的产品是与银泰百货相关联的，并且会为您提供一次免费的退货的，您可以放心购买！
 	    </string>
-        <string name="limit_dialog_tip">温馨提示</string>
-        <string name="limit_dialog_no_info_temp">暂无信息</string>
-        <string name="limit_sure">确定</string>
-        <string name="limit_now_starting_left">正在进行(</string>
-        <string name="limit_go_to_start_left">即将开始(</string>
-        <string name="limit_day">天</string>
-        <string name="limit_Subscribe_success_and_notice_you_when_start">频道订阅成功，将会提前提醒您抢购开始!</string>
-        <string name="limit_now_starting">正在进行</string>
-        <string name="limit_go_to_start">即将开始</string>
-        <string name="limit_lastbuy">最后疯抢</string>
-        <string name="limit_rule">抢购规则</string>
-        <string name="limit_subscribe_success_notice_when_start">活动订阅成功，将会提前提醒您抢购开始！</string>
-        <string name="limit_subscribe_action">+ 订阅活动</string>
-        <string name="limit_discount">折</string>
-        <string name="limit_countdown_time">倒计时:</string>
-        <string name="limit_no_net_tip">您现在没有网络连接</string>
-        <string name="limit_know">知道了</string>
-        <string name="limit_screening">筛选</string>
-        <string name="limit_no_screening">暂无任何筛选条件</string>
-        <string name="limit_sales_volume">销量</string>
-        <string name="limit_shelves_time">上架时间</string>
-        <string name="limit_no_screening_product">暂无符合条件的商品</string>
-        <string name="limit_sorry">抱歉！</string>
-        <string name="limit_no_screening_product_left">没有找到符合您要求的\"</string>
-        <string name="limit_no_screening_product_right">\"商品</string>
-        <string name="limt_brand">品牌</string>
-        <string name="limit_category">分类</string>
-        <string name="limit_all">全部</string>
-        <string name="limt_discount_right">折)</string>
-        <string name="limt_rmb">￥</string>
-        <string name="limit_no_limt">不限</string>
+    <string name="limit_dialog_tip">温馨提示</string>
+    <string name="limit_dialog_no_info_temp">暂无信息</string>
+    <string name="limit_sure">确定</string>
+    <string name="limit_now_starting_left">正在进行(</string>
+    <string name="limit_go_to_start_left">即将开始(</string>
+    <string name="limit_day">天</string>
+    <string name="limit_Subscribe_success_and_notice_you_when_start">频道订阅成功，将会提前提醒您抢购开始!</string>
+    <string name="limit_now_starting">正在进行</string>
+    <string name="limit_go_to_start">即将开始</string>
+    <string name="limit_lastbuy">最后疯抢</string>
+    <string name="limit_rule">抢购规则</string>
+    <string name="limit_subscribe_success_notice_when_start">活动订阅成功，将会提前提醒您抢购开始！</string>
+    <string name="limit_subscribe_action">+ 订阅活动</string>
+    <string name="limit_discount">折</string>
+    <string name="limit_countdown_time">倒计时:</string>
+    <string name="limit_no_net_tip">您现在没有网络连接</string>
+    <string name="limit_know">知道了</string>
+    <string name="limit_screening">筛选</string>
+    <string name="limit_no_screening">暂无任何筛选条件</string>
+    <string name="limit_sales_volume">销量</string>
+    <string name="limit_shelves_time">上架时间</string>
+    <string name="limit_no_screening_product">暂无符合条件的商品</string>
+    <string name="limit_sorry">抱歉！</string>
+    <string name="limit_no_screening_product_left">没有找到符合您要求的\"</string>
+    <string name="limit_no_screening_product_right">\"商品</string>
+    <string name="limt_brand">品牌</string>
+    <string name="limit_category">分类</string>
+    <string name="limit_all">全部</string>
+    <string name="limt_discount_right">折)</string>
+    <string name="limt_rmb">￥</string>
+    <string name="limit_no_limt">不限</string>
 
-        <!-- 商品詳情 ProductDetailActivity -->
-        <string name="collect_success">收藏成功</string>
-        <string name="remove_collect">已取消收藏</string>
-        <string name="detail_brand">品  牌:</string>
-        <string name="detail_product_number">商品编号:</string>
-        <string name="detail_select">"请选择 "</string>
-        <string name="detail_product_seckill_ended">商品秒杀活动已结束!</string>
-        <string name="detail_count">数量</string>
-        <string name="detail_haitao_must_know">海淘须知</string>
-        <string name="share_success">分享成功</string>
-        <string name="share_cancel">取消分享</string>
-        <string name="share_failure">分享失败</string>
-        <string name="authorize_success">授权成功</string>
-        <string name="authorize_cancel">取消授权</string>
-        <string name="authorize_failure">授权失败</string>
-        <string name="hour">小时</string>
-        <string name="minute">分</string>
-        <string name="second">秒</string>
-        <string name="detail_haitao">海 淘</string>
-        <string name="detail_rmb">￥</string>
-        <string name="detail_left_count">剩余数量:</string>
-        <string name="detail_tax">税率:</string>
-        <string name="detail_freight">运费:</string>
-        <string name="detail_tax_money">税额:</string>
-        <string name="detail_cannot_retrurned">商品不能退换货</string>
-        <string name="deetail_send_time">预计2~7个工作日送达</string>
-        <string name="detail_select_color_size_capacity">请选择 颜色 尺寸 容量</string>
-        <string name="detail_drag_to_look_and_advice_in_wifi">继续拖动，查看图文详情\n建议wifi环境中查看</string>
-        <string name="detail_img_and_txt_desc">图文介绍</string>
-        <string name="detail_product_params">商品参数</string>
-        <string name="recomend_same_brand">同品牌推荐</string>
-        <string name="detail_size_explain">尺码说明</string>
-        <string name="detail_look_big_img">查看大图</string>
-        <string name="detail_sell_out">已售罄</string>
-        <string name="detail_full_cout">满减</string>
-        <string name="detail_dialog_tip">温馨提示</string>
-        <string name="detail_product_sell_out">该商品已售罄</string>
-        <string name="ditail_sure">确定</string>
-        <string name="detail_input_buy_count">请输入购买数量</string>
-        <string name="detail_select_product_size">请选择商品尺寸</string>
-        <string name="shopcar_count_cannot_more_than_99">购物车总数量不能大于99！</string>
-        <string name="detail_add_shopcar_success">添加购物车成功</string>
-        <string name="detail_go_shop_car">去购物车</string>
-        <string name="detail_go_on_shopping">继续购物</string>
-        <string name="your_buy_product_has_problem_and_see_hitao_must_know">您购买的商品总额超过海关规定，请查看“海淘须知”</string>
-        <string name="detail_select_size">请选择尺码</string>
-        <string name="detail_color">颜色:</string>
-        <string name="detail_size">尺寸:</string>
-        <string name="detail_product_count">数量:</string>
+    <!-- 商品詳情 ProductDetailActivity -->
+    <string name="collect_success">收藏成功</string>
+    <string name="remove_collect">已取消收藏</string>
+    <string name="detail_brand">品  牌:</string>
+    <string name="detail_product_number">商品编号:</string>
+    <string name="detail_select">"请选择 "</string>
+    <string name="detail_product_seckill_ended">商品秒杀活动已结束!</string>
+    <string name="detail_count">数量</string>
+    <string name="detail_haitao_must_know">海淘须知</string>
+    <string name="share_success">分享成功</string>
+    <string name="share_cancel">取消分享</string>
+    <string name="share_failure">分享失败</string>
+    <string name="authorize_success">授权成功</string>
+    <string name="authorize_cancel">取消授权</string>
+    <string name="authorize_failure">授权失败</string>
+    <string name="hour">小时</string>
+    <string name="minute">分</string>
+    <string name="second">秒</string>
+    <string name="detail_haitao">海 淘</string>
+    <string name="detail_rmb">￥</string>
+    <string name="detail_left_count">剩余数量:</string>
+    <string name="detail_tax">税率:</string>
+    <string name="detail_freight">运费:</string>
+    <string name="detail_tax_money">税额:</string>
+    <string name="detail_cannot_retrurned">商品不能退换货</string>
+    <string name="deetail_send_time">预计2~7个工作日送达</string>
+    <string name="detail_select_color_size_capacity">请选择 颜色 尺寸 容量</string>
+    <string name="detail_drag_to_look_and_advice_in_wifi">继续拖动，查看图文详情\n建议wifi环境中查看</string>
+    <string name="detail_img_and_txt_desc">图文介绍</string>
+    <string name="detail_product_params">商品参数</string>
+    <string name="recomend_same_brand">同品牌推荐</string>
+    <string name="detail_size_explain">尺码说明</string>
+    <string name="detail_look_big_img">查看大图</string>
+    <string name="detail_sell_out">已售罄</string>
+    <string name="detail_full_cout">满减</string>
+    <string name="detail_dialog_tip">温馨提示</string>
+    <string name="detail_product_sell_out">该商品已售罄</string>
+    <string name="ditail_sure">确定</string>
+    <string name="detail_input_buy_count">请输入购买数量</string>
+    <string name="detail_select_product_size">请选择商品尺寸</string>
+    <string name="shopcar_count_cannot_more_than_99">购物车总数量不能大于99！</string>
+    <string name="detail_add_shopcar_success">添加购物车成功</string>
+    <string name="detail_go_shop_car">去购物车</string>
+    <string name="detail_go_on_shopping">继续购物</string>
+    <string name="your_buy_product_has_problem_and_see_hitao_must_know">您购买的商品总额超过海关规定，请查看“海淘须知”</string>
+    <string name="detail_select_size">请选择尺码</string>
+    <string name="detail_color">颜色:</string>
+    <string name="detail_size">尺寸:</string>
+    <string name="detail_product_count">数量:</string>
 
-        <!-- 产品列表  ProductListActivity -->
-        <string name="product_default">默认</string>
-        <string name="product_one_level_select">一级选项</string>
-        <string name="product_second_level_select">二级选项</string>
-        <string name="product_screening">筛选</string>
-        <string name="product_brand">品牌</string>
-        <string name="product_category">分类</string>
-        <string name="product_has_no_more_data">已经没有更多数据了！</string>
-        <string name="product_all">全部</string>
-        <string name="product_discount">折扣</string>
-        <string name="product_shelves_time">上架时间</string>
-        <string name="product_dialog_tip">温馨提示</string>
-        <string name="product_no_screening">暂无任何筛选条件</string>
-        <string name="product_know">知道了</string>
-        <string name="product_sell_count">销量</string>
-        <string name="product_online_time">上线时间</string>
-        <string name="product_rmb">￥</string>
-        <string name="product_sell_out">已售罄</string>
-        <string name="product_full_cut">满减</string>
+    <!-- 产品列表  ProductListActivity -->
+    <string name="product_default">默认</string>
+    <string name="product_one_level_select">一级选项</string>
+    <string name="product_second_level_select">二级选项</string>
+    <string name="product_screening">筛选</string>
+    <string name="product_brand">品牌</string>
+    <string name="product_category">分类</string>
+    <string name="product_has_no_more_data">已经没有更多数据了！</string>
+    <string name="product_all">全部</string>
+    <string name="product_discount">折扣</string>
+    <string name="product_shelves_time">上架时间</string>
+    <string name="product_dialog_tip">温馨提示</string>
+    <string name="product_no_screening">暂无任何筛选条件</string>
+    <string name="product_know">知道了</string>
+    <string name="product_sell_count">销量</string>
+    <string name="product_online_time">上线时间</string>
+    <string name="product_rmb">￥</string>
+    <string name="product_sell_out">已售罄</string>
+    <string name="product_full_cut">满减</string>
 
-        <!--秒杀列表  KillProductListActivity -->
-        <string name="kill_dialog_tip">温馨提示</string>
-        <string name="kill_sure">确定</string>
-        <string name="kill_know">知道了</string>
-        <string name="seckill_rule">秒杀规则</string>
-        <string name="seckill_area">秒杀专区</string>
-        <string name="seckill_underline">下期预告</string>
-        <string name="seckill_left_time">本期剩余时间：</string>
-        <string name="seckill_hour">时</string>
-        <string name="seckill_minute">分</string>
-        <string name="seckill_second">秒</string>
-        <string name="seckill_look_rule">查看规则</string>
-        <string name="seckill_next_time">下期秒杀时间：</string>
-        <string name="seckill_marker_price">市场价：</string>
-        <string name="seckill_price">秒杀价：</string>
-        <string name="seckill_left_count">剩余数量：</string>
-        <string name="seckill_market_price">市场价:￥</string>
-        <string name="seckill_rmb">￥</string>
+    <!--秒杀列表  KillProductListActivity -->
+    <string name="kill_dialog_tip">温馨提示</string>
+    <string name="kill_sure">确定</string>
+    <string name="kill_know">知道了</string>
+    <string name="seckill_rule">秒杀规则</string>
+    <string name="seckill_area">秒杀专区</string>
+    <string name="seckill_underline">下期预告</string>
+    <string name="seckill_left_time">本期剩余时间：</string>
+    <string name="seckill_hour">时</string>
+    <string name="seckill_minute">分</string>
+    <string name="seckill_second">秒</string>
+    <string name="seckill_look_rule">查看规则</string>
+    <string name="seckill_next_time">下期秒杀时间：</string>
+    <string name="seckill_marker_price">市场价：</string>
+    <string name="seckill_price">秒杀价：</string>
+    <string name="seckill_left_count">剩余数量：</string>
+    <string name="seckill_market_price">市场价:￥</string>
+    <string name="seckill_rmb">￥</string>
 
-        <!-- 搜索页面   SearchActivity -->
-        <string name="search_repeat_try">重试</string>
-        <string name="search_know">知道了</string>
-        <string name="search_keyword">关键词</string>
-        <string name="search_result">搜索结果</string>
-        <string name="search_cancel">取消</string>
+    <!-- 搜索页面   SearchActivity -->
+    <string name="search_repeat_try">重试</string>
+    <string name="search_know">知道了</string>
+    <string name="search_keyword">关键词</string>
+    <string name="search_result">搜索结果</string>
+    <string name="search_cancel">取消</string>
 
-        <!-- BaseActivity 异常处理-->
-        <string name="no_net">网络不可用</string>
-        <string name="check_and_restart">请检查后重新启动</string>
-        <string name="net_not_stable">网络不稳定</string>
-        <string name="net_not_stable_and_check_your_net">网络不稳定，请检查您的网络</string>
-        <string name="system_inner_error">系统内部错误</string>
-        <string name="system_inner_error_content">系统内部错误！</string>
-        <string name="parse_error">解析错误</string>
-        <string name="data_parse_error">数据解析错误！</string>
-        <string name="unknow_request_order">未知的请求指令</string>
-        <string name="unknow_request_order_content">未知的请求指令！</string>
-        <string name="http_protocol_exception">HTTP协议异常</string>
-        <string name="http_protocol_exception_content">HTTP协议异常！</string>
-        <string name="login_later">稍后登陆</string>
-        <string name="lagin_repeat">重新登陆</string>
-        <string name="no_goods">暂无商品</string>
-        <string name="net_not_stable_and_check_your_net_unknown">网络不稳定，请检查您的网络(Unknown)！</string>
+    <!-- BaseActivity 异常处理-->
+    <string name="no_net">网络不可用</string>
+    <string name="check_and_restart">请检查后重新启动</string>
+    <string name="net_not_stable">网络不稳定</string>
+    <string name="net_not_stable_and_check_your_net">网络不稳定，请检查您的网络</string>
+    <string name="system_inner_error">系统内部错误</string>
+    <string name="system_inner_error_content">系统内部错误！</string>
+    <string name="parse_error">解析错误</string>
+    <string name="data_parse_error">数据解析错误！</string>
+    <string name="unknow_request_order">未知的请求指令</string>
+    <string name="unknow_request_order_content">未知的请求指令！</string>
+    <string name="http_protocol_exception">HTTP协议异常</string>
+    <string name="http_protocol_exception_content">HTTP协议异常！</string>
+    <string name="login_later">稍后登陆</string>
+    <string name="lagin_repeat">重新登陆</string>
+    <string name="no_goods">暂无商品</string>
+    <string name="net_not_stable_and_check_your_net_unknown">网络不稳定，请检查您的网络(Unknown)！</string>
 
-        <!-- 其他页面   -->
-        <string name="deadline_time">截止时间：</string>
-        <string name="waybill">"运单  "</string>
-        <string name="market_price">市场价:￥</string>
-        <string name="yintai_price">银泰价：￥</string>
-        <string name="left_count">剩余数量:</string>
-        <string name="product_count">数量：</string>
-        <string name="exit_app_sure">是否退出应用？</string>
-        <string name="exit">退出</string>
-        <string name="product_detail">商品详情</string>
-        <string name="seckill">秒杀</string>
-        <string name="limit_buy_grab">限抢</string>
-        <string name="department_store">百货馆</string>
-        <string name="famous_product_museum">名品馆</string>
-        <string name="style_pavilion">风格馆</string>
-        <string name="my_collection">我的收藏</string>
-        <string name="brand_wall">品牌墙</string>
-        <string name="notice">公告</string>
-        <string name="activity_topic">活动专题</string>
-        <string name="notice_detail_one">公告详情一</string>
-        <string name="notice_detail_two">公告详情二</string>
-        <string name="login_now">立即登录</string>
-        <string name="you_need_login_when_get_coupons">您需要登录才能领取优惠券！</string>
-        <string name="now_left">还剩</string>
-        <string name="year">年</string>
-        <string name="mouth_count">个月</string>
-        <string name="day">天</string>
-        <string name="minutes">分钟</string>
-        <string name="date_format">MM月dd日HH:mm</string>
-        <string name="logistics_query">物流查询</string>
-        <string name="now_state">"状态: "</string>
-        <string name="express_delivery_company">快递公司:</string>
-        <string name="express_nomber">"快递单号: "</string>
-        <string name="parcel">包裹</string>
-        <string name="order_number">订单编号：</string>
-        <string name="express_number">快递单号:</string>
-        <string name="link_phone">联系电话:</string>
-        <string name="category">分类</string>
-        <string name="all">全部</string>
-        <string name="brand">品牌</string>
-        <string name="floor_guide">楼层导航</string>
-        <string name="list">列表</string>
-        <string name="know">知道了</string>
-        <string name="please_select">请选择</string>
-        <string name="please_input_return_reason">请输入退货原因</string>
-        <string name="please_select_returned_reason">请选择退货原因</string>
-        <string name="input_txt">输入文本……</string>
-        <string name="sure_retrun_product">确认退货</string>
-        <string name="shopping_guide_encoding_cannot_blank">导购编码不能为空！</string>
-        <string name="input_shopping_guide_encoding">请录入导购编码</string>
-        <string name="only_for_guide">仅供导购使用</string>
-        <string name="price">价格</string>
-        <string name="use_help">使用帮助</string>
-        <string name="give_good_comment">赐好评</string>
-        <string name="repeat_try">重试</string>
-        <string name="activity_time">活动时间：</string>
-        <string name="activity_explain">活动说明：</string>
-        <string name="product_properity">商品属性</string>
-        <string name="please_select_agree_trade_terms">请选择同意银泰网交易条款!</string>
-        <string name="please_input_your_mail">请输入您的邮箱地址</string>
-        <string name="please_input_your_pwd">请输入您的密码</string>
-        <string name="please_input_sure_pwd">请输入确认密码</string>
-        <string name="pwd_length_limit">密码长度应为6-16位</string>
-        <string name="pwd_not_same">密码不一致，请重新输入</string>
-        <string name="email_address">Email地址:</string>
-        <string name="email_address_hint">请输入Email地址作为登录用户名</string>
-        <string name="login_pwd">登录密码 :</string>
-        <string name="pwd_length_limit_hint">密码长度为6-16个字符</string>
-        <string name="sure_pwd">确认密码 :</string>
-        <string name="input_pwd_again">请再次输入设置的密码</string>
-        <string name="i_read_and_agree">我已阅读并同意《</string>
-        <string name="yintai_tread_items">银泰网交易条款</string>
-        <string name="right_bracket">》</string>
-        <string name="reg_by_phone_number">使用手机号注册</string>
-        <string name="no_result">没有结果</string>
-        <string name="no_returned_goods_data">暂无退货信息</string>
-        <string name="select_your_retruned_order_product">选择您要退货的订单商品</string>
-        <string name="no_product">暂无商品</string>
-        <string name="please_read_return_goods_item">请您仔细阅读退货规则</string>
-        <string name="i_have_readed_above_items">我已经仔细阅读以上规则，我要：</string>
-        <string name="no_returned_goods_state_temp">暂时没有退换货状态。</string>
-        <string name="Handle_progress">办理进度：</string>
-        <string name="update_apk_loading">正在下载安装包,请稍后...</string>
-        <string name="loading_and_wait">正在加载，请稍后......</string>
-        <string name="zhifubao_login_success">支付宝登录成功</string>
-        <string name="login_failure_and_try_login_by_wallet">登录失败，请尝试重新使用钱包登录！</string>
-        <string name="silver_dollar">"银元 "</string>
-        <string name="date">日期：</string>
-        <string name="type">类型：</string>
-        <string name="come_from">来源：</string>
-        <string name="use_method">用途：</string>
-        <string name="cancel_order_and_return">"取消订单返回 "</string>
-        <string name="balance_and_payment">收支：</string>
-        <string name="add">"增加 "</string>
-        <string name="relative_order">相关订单：</string>
-        <string name="not_the_same_order_explain">订单在不同仓库或属于不同商家，所以拆分为多个子订单配送，请谅解！</string>
-        <string name="pay_now">立即支付</string>
-        <string name="wait_check">待审核</string>
-        <string name="haitao">海淘</string>
-        <string name="view_logistics">查看物流</string>
+    <!-- 其他页面   -->
+    <string name="deadline_time">截止时间：</string>
+    <string name="waybill">"运单  "</string>
+    <string name="market_price">市场价:￥</string>
+    <string name="yintai_price">银泰价：￥</string>
+    <string name="left_count">剩余数量:</string>
+    <string name="product_count">数量：</string>
+    <string name="exit_app_sure">是否退出应用？</string>
+    <string name="exit">退出</string>
+    <string name="product_detail">商品详情</string>
+    <string name="seckill">秒杀</string>
+    <string name="limit_buy_grab">限抢</string>
+    <string name="department_store">百货馆</string>
+    <string name="famous_product_museum">名品馆</string>
+    <string name="style_pavilion">风格馆</string>
+    <string name="my_collection">我的收藏</string>
+    <string name="brand_wall">品牌墙</string>
+    <string name="notice">公告</string>
+    <string name="activity_topic">活动专题</string>
+    <string name="notice_detail_one">公告详情一</string>
+    <string name="notice_detail_two">公告详情二</string>
+    <string name="login_now">立即登录</string>
+    <string name="you_need_login_when_get_coupons">您需要登录才能领取优惠券！</string>
+    <string name="now_left">还剩</string>
+    <string name="year">年</string>
+    <string name="mouth_count">个月</string>
+    <string name="day">天</string>
+    <string name="minutes">分钟</string>
+    <string name="date_format">MM月dd日HH:mm</string>
+    <string name="logistics_query">物流查询</string>
+    <string name="now_state">"状态: "</string>
+    <string name="express_delivery_company">快递公司:</string>
+    <string name="express_nomber">"快递单号: "</string>
+    <string name="parcel">包裹</string>
+    <string name="order_number">订单编号：</string>
+    <string name="express_number">快递单号:</string>
+    <string name="link_phone">联系电话:</string>
+    <string name="category">分类</string>
+    <string name="all">全部</string>
+    <string name="brand">品牌</string>
+    <string name="floor_guide">楼层导航</string>
+    <string name="list">列表</string>
+    <string name="know">知道了</string>
+    <string name="please_select">请选择</string>
+    <string name="please_input_return_reason">请输入退货原因</string>
+    <string name="please_select_returned_reason">请选择退货原因</string>
+    <string name="input_txt">输入文本……</string>
+    <string name="sure_retrun_product">确认退货</string>
+    <string name="shopping_guide_encoding_cannot_blank">导购编码不能为空！</string>
+    <string name="input_shopping_guide_encoding">请录入导购编码</string>
+    <string name="only_for_guide">仅供导购使用</string>
+    <string name="price">价格</string>
+    <string name="use_help">使用帮助</string>
+    <string name="give_good_comment">赐好评</string>
+    <string name="repeat_try">重试</string>
+    <string name="activity_time">活动时间：</string>
+    <string name="activity_explain">活动说明：</string>
+    <string name="product_properity">商品属性</string>
+    <string name="please_select_agree_trade_terms">请选择同意银泰网交易条款!</string>
+    <string name="please_input_your_mail">请输入您的邮箱地址</string>
+    <string name="please_input_your_pwd">请输入您的密码</string>
+    <string name="please_input_sure_pwd">请输入确认密码</string>
+    <string name="pwd_length_limit">密码长度应为6-16位</string>
+    <string name="pwd_not_same">密码不一致，请重新输入</string>
+    <string name="email_address">Email地址:</string>
+    <string name="email_address_hint">请输入Email地址作为登录用户名</string>
+    <string name="login_pwd">登录密码 :</string>
+    <string name="pwd_length_limit_hint">密码长度为6-16个字符</string>
+    <string name="sure_pwd">确认密码 :</string>
+    <string name="input_pwd_again">请再次输入设置的密码</string>
+    <string name="i_read_and_agree">我已阅读并同意《</string>
+    <string name="yintai_tread_items">银泰网交易条款</string>
+    <string name="right_bracket">》</string>
+    <string name="reg_by_phone_number">使用手机号注册</string>
+    <string name="no_result">没有结果</string>
+    <string name="no_returned_goods_data">暂无退货信息</string>
+    <string name="select_your_retruned_order_product">选择您要退货的订单商品</string>
+    <string name="no_product">暂无商品</string>
+    <string name="please_read_return_goods_item">请您仔细阅读退货规则</string>
+    <string name="i_have_readed_above_items">我已经仔细阅读以上规则，我要：</string>
+    <string name="no_returned_goods_state_temp">暂时没有退换货状态。</string>
+    <string name="Handle_progress">办理进度：</string>
+    <string name="update_apk_loading">正在下载安装包,请稍后...</string>
+    <string name="loading_and_wait">正在加载，请稍后......</string>
+    <string name="zhifubao_login_success">支付宝登录成功</string>
+    <string name="login_failure_and_try_login_by_wallet">登录失败，请尝试重新使用钱包登录！</string>
+    <string name="silver_dollar">"银元 "</string>
+    <string name="date">日期：</string>
+    <string name="type">类型：</string>
+    <string name="come_from">来源：</string>
+    <string name="use_method">用途：</string>
+    <string name="cancel_order_and_return">"取消订单返回 "</string>
+    <string name="balance_and_payment">收支：</string>
+    <string name="add">"增加 "</string>
+    <string name="relative_order">相关订单：</string>
+    <string name="not_the_same_order_explain">订单在不同仓库或属于不同商家，所以拆分为多个子订单配送，请谅解！</string>
+    <string name="pay_now">立即支付</string>
+    <string name="wait_check">待审核</string>
+    <string name="haitao">海淘</string>
+    <string name="view_logistics">查看物流</string>
 
-        <!-- 分类 -->
-        <string name="category_recommend">推荐类目</string>
-        <string name="brand_recommend">推荐品牌</string>
-        <string name="more_recommend">更多类目</string>
-        <string name="finish">finish</string>
+    <!-- 分类 -->
+    <string name="category_recommend">推荐类目</string>
+    <string name="brand_recommend">推荐品牌</string>
+    <string name="more_recommend">更多类目</string>
+    <string name="finish">finish</string>
 
 
 </resources>

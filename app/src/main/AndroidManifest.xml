@@ -14,7 +14,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-    <!-- 短信验证-->
+    <!-- 短信验证 -->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -44,7 +44,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.homepage.HomePageActivity" />
-        <activity android:name=".ui.SearchActivity"></activity>
+        <activity android:name=".ui.SearchActivity" />
         <activity
             android:name="com.mob.tools.MobUIShell"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -64,46 +64,41 @@
             android:configChanges="keyboardHidden|orientation"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity"
             android:configChanges="keyboardHidden|orientation"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize">
-
-        </activity>
-
+            android:windowSoftInputMode="adjustResize"></activity>
         <activity android:name=".ui.settlement.SettlementscenterActivity" />
         <activity android:name=".ui.settlement.AdressActivity" />
         <activity android:name=".ui.settlement.PayActivity" />
         <activity android:name=".ui.settlement.WantPicketActivity" />
-
-        <activity android:name=".ui.dengluactivity.DaizhifuActivity"/>
-        <activity android:name=".ui.dengluactivity.FankuiActivity"/>
-        <activity android:name=".ui.dengluactivity.GengduoActivity"/>
-        <activity android:name=".ui.dengluactivity.GuanyuActivity"/>
-        <activity android:name=".ui.dengluactivity.LoginActivity"/>
-        <activity android:name=".ui.dengluactivity.QuanbuActivity"/>
-        <activity android:name=".ui.dengluactivity.RegisterActivity"/>
-        <activity android:name=".ui.dengluactivity.ShezhiActivity"/>
-        <activity android:name=".ui.dengluactivity.ShoucangActivity"/>
-        <activity android:name=".ui.dengluactivity.YouhuiActivity"/>
-        <activity android:name=".ui.dengluactivity.VerificationActivity"/>
+        <activity android:name=".ui.dengluactivity.DaizhifuActivity" />
+        <activity android:name=".ui.dengluactivity.FankuiActivity" />
+        <activity android:name=".ui.dengluactivity.GengduoActivity" />
+        <activity android:name=".ui.dengluactivity.GuanyuActivity" />
+        <activity android:name=".ui.dengluactivity.LoginActivity" />
+        <activity android:name=".ui.dengluactivity.QuanbuActivity" />
+        <activity android:name=".ui.dengluactivity.RegisterActivity" />
+        <activity android:name=".ui.dengluactivity.ShezhiActivity" />
+        <activity android:name=".ui.dengluactivity.ShoucangActivity" />
+        <activity android:name=".ui.dengluactivity.YouhuiActivity" />
+        <activity android:name=".ui.dengluactivity.VerificationActivity" />
         <activity
             android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
             android:launchMode="singleTask"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
         </activity>
         <activity
             android:name="com.umeng.qq.tencent.AuthActivity"
             android:launchMode="singleTask"
             android:noHistory="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -113,7 +108,6 @@
                 <data android:scheme="tencent100424468" />
             </intent-filter>
         </activity>
-
         <activity
             android:name="com.umeng.qq.tencent.AssistActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -122,12 +116,13 @@
 
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="59ea918d677baa54e0000062"></meta-data>
+            android:value="59ea918d677baa54e0000062" />
 
-        <activity android:name=".ui.WebActivity"></activity>
-        <activity android:name=".ui.AutoProductActivity"></activity>
-        <activity android:name=".ui.customproduct.CustomProductAcitivity"></activity>
-        <activity android:name=".ui.GeneralProductActivity"></activity>
+        <activity android:name=".ui.WebActivity" />
+        <activity android:name=".ui.AutoProductActivity" />
+        <activity android:name=".ui.customproduct.CustomProductAcitivity" />
+        <activity android:name=".ui.GeneralProductActivity" />
+        <activity android:name=".ui.dengluactivity.XiaoxiActivity"></activity>
     </application>
 
 </manifest>

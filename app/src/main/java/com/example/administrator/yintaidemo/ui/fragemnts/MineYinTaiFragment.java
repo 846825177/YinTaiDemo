@@ -22,6 +22,7 @@ import com.example.administrator.yintaidemo.ui.dengluactivity.LoginActivity;
 import com.example.administrator.yintaidemo.ui.dengluactivity.QuanbuActivity;
 import com.example.administrator.yintaidemo.ui.dengluactivity.ShezhiActivity;
 import com.example.administrator.yintaidemo.ui.dengluactivity.ShoucangActivity;
+import com.example.administrator.yintaidemo.ui.dengluactivity.XiaoxiActivity;
 import com.example.administrator.yintaidemo.ui.dengluactivity.YouhuiActivity;
 
 import static android.content.Context.MODE_PRIVATE;
@@ -233,6 +234,7 @@ public class MineYinTaiFragment extends Fragment implements View.OnClickListener
                 }
                 break;
             case R.id.relativelayout_xiaoxi:
+                startActivity(new Intent(getActivity(),XiaoxiActivity.class));
                 break;
             case R.id.relativelayout_shezhi:
                 if (img_dengluzhuceVisibility == 0) {
