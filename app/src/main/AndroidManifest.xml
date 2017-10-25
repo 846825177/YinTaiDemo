@@ -44,9 +44,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.homepage.HomePageActivity" />
-        <activity android:name=".ui.LoginActivity" />
-        <activity android:name=".ui.RegisterActivity" />
-        <activity android:name=".ui.VerificationActivity" />
         <activity android:name=".ui.SearchActivity"></activity>
         <activity
             android:name="com.mob.tools.MobUIShell"
@@ -81,6 +78,17 @@
         <activity android:name=".ui.settlement.PayActivity" />
         <activity android:name=".ui.settlement.WantPicketActivity" />
 
+        <activity android:name=".ui.dengluactivity.DaizhifuActivity"/>
+        <activity android:name=".ui.dengluactivity.FankuiActivity"/>
+        <activity android:name=".ui.dengluactivity.GengduoActivity"/>
+        <activity android:name=".ui.dengluactivity.GuanyuActivity"/>
+        <activity android:name=".ui.dengluactivity.LoginActivity"/>
+        <activity android:name=".ui.dengluactivity.QuanbuActivity"/>
+        <activity android:name=".ui.dengluactivity.RegisterActivity"/>
+        <activity android:name=".ui.dengluactivity.ShezhiActivity"/>
+        <activity android:name=".ui.dengluactivity.ShoucangActivity"/>
+        <activity android:name=".ui.dengluactivity.YouhuiActivity"/>
+        <activity android:name=".ui.dengluactivity.VerificationActivity"/>
         <activity
             android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
             android:launchMode="singleTask"

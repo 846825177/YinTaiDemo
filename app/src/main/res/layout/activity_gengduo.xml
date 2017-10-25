@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+    <LinearLayout
+        android:background="@color/color_F1F1F1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/gengduo_img_fanhui"
+            android:src="@drawable/zuojiantou"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:text="更多"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/gengduo_linear_bangzhu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="使用帮助"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@mipmap/title_back"
+            android:layout_width="20sp"
+            android:layout_height="20sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/gengduo_linear_fankui"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="意见反馈"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@mipmap/title_back"
+            android:layout_width="20sp"
+            android:layout_height="20sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/gengduo_linear_guanyu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="关于银泰"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@mipmap/title_back"
+            android:layout_width="20sp"
+            android:layout_height="20sp" />
+    </LinearLayout>
+
+</LinearLayout>

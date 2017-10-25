@@ -1,4 +1,4 @@
-package com.example.administrator.yintaidemo.ui;
+package com.example.administrator.yintaidemo.ui.dengluactivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;

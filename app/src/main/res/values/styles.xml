@@ -7,6 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="login_share_img">
         <item name="android:layout_width">@dimen/w110dip</item>
         <item name="android:layout_height">@dimen/h110dip</item>
@@ -33,5 +34,35 @@
     <style name="style_13_231f20">
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">#231f20</item>
+    </style>
+    <style name="style_12_666666">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+    <style name="style_14_e5004f">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#e5004f</item>
+    </style>
+    <style name="style_14_ffffff">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <style name="style_12_6666662">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+    <style name="style_20_ffffff">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+    <style name="style_14_3333332">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+    <style name="style_16_ffffff2">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textStyle">bold</item>
+
     </style>
 </resources>

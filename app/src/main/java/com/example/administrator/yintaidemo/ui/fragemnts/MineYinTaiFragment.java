@@ -16,7 +16,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.administrator.yintaidemo.R;
-import com.example.administrator.yintaidemo.ui.LoginActivity;
+import com.example.administrator.yintaidemo.ui.dengluactivity.DaizhifuActivity;
+import com.example.administrator.yintaidemo.ui.dengluactivity.GengduoActivity;
+import com.example.administrator.yintaidemo.ui.dengluactivity.LoginActivity;
+import com.example.administrator.yintaidemo.ui.dengluactivity.QuanbuActivity;
+import com.example.administrator.yintaidemo.ui.dengluactivity.ShezhiActivity;
+import com.example.administrator.yintaidemo.ui.dengluactivity.ShoucangActivity;
+import com.example.administrator.yintaidemo.ui.dengluactivity.YouhuiActivity;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -139,7 +145,8 @@ public class MineYinTaiFragment extends Fragment implements View.OnClickListener
         relativelayout_gengduo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(), "更多", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(), GengduoActivity.class));
+
             }
         });
     }
@@ -160,6 +167,7 @@ public class MineYinTaiFragment extends Fragment implements View.OnClickListener
                     mineyintai_yhm_mc.setVisibility(View.VISIBLE);
                     mineyintai_hy.setVisibility(View.VISIBLE);
                     mineyintai_tc.setVisibility(View.VISIBLE);
+                    startActivity(new Intent(getActivity(), ShoucangActivity.class));
                 }
 
                 break;
@@ -177,6 +185,7 @@ public class MineYinTaiFragment extends Fragment implements View.OnClickListener
                     mineyintai_yhm_mc.setVisibility(View.VISIBLE);
                     mineyintai_hy.setVisibility(View.VISIBLE);
                     mineyintai_tc.setVisibility(View.VISIBLE);
+                    startActivity(new Intent(getActivity(), DaizhifuActivity.class));
                 }
                 break;
             case R.id.relativelayout_quanbu:
@@ -191,6 +200,7 @@ public class MineYinTaiFragment extends Fragment implements View.OnClickListener
                     mineyintai_yhm_mc.setVisibility(View.VISIBLE);
                     mineyintai_hy.setVisibility(View.VISIBLE);
                     mineyintai_tc.setVisibility(View.VISIBLE);
+                    startActivity(new Intent(getActivity(), QuanbuActivity.class));
                 }
                 break;
             case R.id.relativelayout_youhui:
@@ -205,6 +215,7 @@ public class MineYinTaiFragment extends Fragment implements View.OnClickListener
                     mineyintai_yhm_mc.setVisibility(View.VISIBLE);
                     mineyintai_hy.setVisibility(View.VISIBLE);
                     mineyintai_tc.setVisibility(View.VISIBLE);
+                    startActivity(new Intent(getActivity(), YouhuiActivity.class));
                 }
                 break;
             case R.id.relativelayout_dizhi:
@@ -235,6 +246,7 @@ public class MineYinTaiFragment extends Fragment implements View.OnClickListener
                     mineyintai_yhm_mc.setVisibility(View.VISIBLE);
                     mineyintai_hy.setVisibility(View.VISIBLE);
                     mineyintai_tc.setVisibility(View.VISIBLE);
+                    startActivity(new Intent(getActivity(), ShezhiActivity.class));
                 }
                 break;
 
