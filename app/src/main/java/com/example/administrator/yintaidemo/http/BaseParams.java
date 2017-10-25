@@ -19,7 +19,7 @@ public class BaseParams {
         mParams.put("ver","2.0");
         mParams.put("screenwidth",String.valueOf(PhoneParamsUtils.getPhoneWidth(context)));
         mParams.put("screenheight",String.valueOf(PhoneParamsUtils.getPhoneHeigth(context)));
-        mParams.put("client_v","4.0.1");
+        mParams.put("client_v","4.0.5");
         mParams.put("osversion",PhoneParamsUtils.getPhoneOsversion());
         mParams.put("devicename",PhoneParamsUtils.getPhoneDeviceName());
         mParams.put("carrier",PhoneParamsUtils.getPhoneCarrier(context) );

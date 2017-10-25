@@ -118,7 +118,7 @@
 
         <activity android:name=".ui.WebActivity"></activity>
         <activity android:name=".ui.AutoProductActivity"></activity>
-        <activity android:name=".ui.CustomProductAcitivity"></activity>
+        <activity android:name=".ui.customproduct.CustomProductAcitivity"></activity>
         <activity android:name=".ui.GeneralProductActivity"></activity>
     </application>
 

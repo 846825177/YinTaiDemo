@@ -1,51 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical">
+        android:paddingBottom="5dp">
 
-        <RadioGroup
+        <Button
+            android:id="@+id/mDefault_RadioBtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="9"
-            android:orientation="horizontal">
+            android:layout_weight="2"
+            android:button="@null"
+            android:text="默认" />
 
-            <RadioButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:button="@null"
-                android:text="默认" />
+        <Button
+            android:id="@+id/mSv_RadioBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:button="@null"
+            android:text="销量" />
 
-            <RadioButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:button="@null"
-                android:text="销量" />
+        <Button
+            android:id="@+id/mPrice_RadioBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:button="@null"
+            android:text="价格" />
 
-            <RadioButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:button="@null"
-                android:text="价格" />
-
-            <RadioButton
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:button="@null"
-                android:text="折扣" />
-        </RadioGroup>
+        <Button
+            android:id="@+id/mDiscount_RadioBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:button="@null"
+            android:text="折扣" />
 
         <CheckBox
+            android:id="@+id/mGhBj"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="布局更换" />
     </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mCustomProduct"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 </LinearLayout>

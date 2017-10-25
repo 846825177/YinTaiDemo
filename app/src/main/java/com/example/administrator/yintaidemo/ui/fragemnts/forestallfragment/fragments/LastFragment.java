@@ -69,7 +69,6 @@ public class LastFragment extends Fragment implements ForestallView<Forestall> {
             boolean b = TimeUtils.getLong(endtime);
             if (b) {
                 datalist.add(list.get(i));
-                Log.e("TAG",datalist.size()+"");
             }
         }
 

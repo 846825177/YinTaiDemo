@@ -55,7 +55,7 @@ public class StartActivity extends BaseActivity implements StartView<StartBean> 
 
         mStartPage.setBackgroundResource(R.mipmap.welcome);
         mStart_progressBar.setVisibility(View.VISIBLE);
-        startpage = StartActivity.this.getSharedPreferences("startpage", this.MODE_PRIVATE);
+        startpage = StartActivity.this.getSharedPreferences("publicfile", this.MODE_PRIVATE);
         mStartJump.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

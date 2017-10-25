@@ -7,4 +7,5 @@ import com.example.administrator.yintaidemo.interfaces.HttpCallBack;
  */
 
 public interface StartView<T> extends HttpCallBack<T> {
+
 }

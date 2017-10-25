@@ -59,7 +59,6 @@ public class OutFragment extends Fragment  implements ForestallView<Forestall> {
 
     @Override
     public void success(Forestall forestall) {
-        Log.e("TAG",forestall.toString());
         list = forestall.getData().getActivityinfo().get(0).getActivitylist();
 
         adapter = new Forestall_lv_twoAdapter(list, getContext());

@@ -1,5 +1,7 @@
 package com.example.administrator.yintaidemo.http.product;
 
+import android.util.Log;
+
 import com.example.administrator.yintaidemo.apis.Retrofits;
 import com.example.administrator.yintaidemo.http.utils.RetrofitUtils;
 import com.example.administrator.yintaidemo.interfaces.HttpCallBack;
@@ -42,10 +44,10 @@ public class RetrofitHttpRequest<T> implements HttpRequest<T> {
 
                         try {
                             String string = responseBody.string();
+                            Log.e("TAG",string);
                             //TODO 注意这个地方：
-
                             Gson gson = new Gson();
-                            T t = gson.fromJson(string,type);
+                            T t = gson.fromJson(string, type);
                             callBack.success(t);
                         } catch (IOException e) {
                             e.printStackTrace();
