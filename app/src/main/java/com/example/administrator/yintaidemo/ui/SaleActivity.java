@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import com.example.administrator.yintaidemo.R;
 import com.example.administrator.yintaidemo.adapters.SaleLvAdapter;
+import com.example.administrator.yintaidemo.adapters.SalePopuAdapter;
 import com.example.administrator.yintaidemo.entity.SaleEntity;
 import com.example.administrator.yintaidemo.http.BaseParams;
 import com.example.administrator.yintaidemo.ui.fragemnts.forestallfragment.presenter.ForestallPresenter;
@@ -70,8 +71,9 @@ public class SaleActivity extends AppCompatActivity implements ForestallView<Sal
     private Toolbar tb_sale;
     private String title;
     private LinearLayout ll_sale;
-    private TextView clear_sale;
-    private ExpandableListView ev_sale;
+    private TextView clear_sale_condition;
+    private ListView lv_sale_condition;
+    private ArrayList<String> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -260,8 +262,6 @@ public class SaleActivity extends AppCompatActivity implements ForestallView<Sal
      */
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        SaleEntity.DataBean.ProductListBean bean = listBeen.get(i);
-        String itemcode = bean.getItemcode();
 
     }
 
@@ -331,18 +331,25 @@ public class SaleActivity extends AppCompatActivity implements ForestallView<Sal
         switch (item.getItemId()) {
             case R.id.condition_menu:
                 View view = LayoutInflater.from(this).inflate(R.layout.sale_condition, null);
-                clear_sale = view.findViewById(R.id.clear_sale_condition);
-                clear_sale.setOnClickListener(this);
-                ev_sale = view.findViewById(R.id.ev_sale_condition);
+                clear_sale_condition = view.findViewById(R.id.clear_sale_condition);
+                clear_sale_condition.setOnClickListener(this);
+                lv_sale_condition = view.findViewById(R.id.lv_sale_condition);
+                list.add("分类");
+                list.add("品牌");
+                list.add("价格");
+                list.add("折扣");
+                SalePopuAdapter adapter = new SalePopuAdapter(list, SaleActivity.this);
+                lv_sale_condition.setAdapter(adapter);
+                lv_sale_condition.setOnItemClickListener(this);
 
                 //创建popupWindow对象。
                 PopupWindow window = new PopupWindow(view, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
                 //可被结束
                 window.setTouchable(true);
                 //必须设置背景
-                window.setBackgroundDrawable(new ColorDrawable(0x66666666));
+                window.setBackgroundDrawable(new ColorDrawable(0xffffffff));
                 //显示位置
-                window.showAtLocation(ll_sale, Gravity.BOTTOM, 0, 0);
+                window.showAtLocation(ll_sale, Gravity.TOP, 0, 0);
                 //可获取焦点
                 window.setFocusable(true);
                 //设置动画样式
