@@ -17,7 +17,7 @@
             android:layout_centerInParent="true"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="visible"></LinearLayout>
+            android:visibility="visible"/>
 
         <!-- 海淘商品标签 -->
 
@@ -86,7 +86,7 @@
             android:lineSpacingExtra="7dp"
             android:lines="2"
             android:paddingBottom="7dp"
-            android:text=""
+            android:text="【新品】【自营】SUNCOO混合材质镶金丝设计女士套头毛衣"
             android:textColor="@color/color_333333"
             android:textSize="18sp" />
     </RelativeLayout>

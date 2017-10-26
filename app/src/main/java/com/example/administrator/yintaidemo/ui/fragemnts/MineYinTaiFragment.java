@@ -231,6 +231,7 @@ public class MineYinTaiFragment extends Fragment implements View.OnClickListener
                     mineyintai_yhm_mc.setVisibility(View.VISIBLE);
                     mineyintai_hy.setVisibility(View.VISIBLE);
                     mineyintai_tc.setVisibility(View.VISIBLE);
+
                 }
                 break;
             case R.id.relativelayout_xiaoxi:

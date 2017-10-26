@@ -122,6 +122,18 @@
         <activity android:name=".ui.AutoProductActivity"></activity>
         <activity android:name=".ui.CustomProductAcitivity"></activity>
         <activity android:name=".ui.GeneralProductActivity"></activity>
+        <activity android:name=".ui.dengluactivity.LoginActivity"></activity>
+        <activity android:name=".ui.dengluactivity.DaizhifuActivity"></activity>
+        <activity android:name=".ui.dengluactivity.FankuiActivity"></activity>
+        <activity android:name=".ui.dengluactivity.GengduoActivity"></activity>
+        <activity android:name=".ui.dengluactivity.GuanyuActivity"></activity>
+        <activity android:name=".ui.dengluactivity.QuanbuActivity"></activity>
+        <activity android:name=".ui.dengluactivity.RegisterActivity"></activity>
+        <activity android:name=".ui.dengluactivity.ShezhiActivity"></activity>
+        <activity android:name=".ui.dengluactivity.ShoucangActivity"></activity>
+        <activity android:name=".ui.dengluactivity.VerificationActivity"></activity>
+        <activity android:name=".ui.dengluactivity.XiaoxiActivity"></activity>
+        <activity android:name=".ui.dengluactivity.YouhuiActivity"></activity>
     </application>
 
 </manifest>
