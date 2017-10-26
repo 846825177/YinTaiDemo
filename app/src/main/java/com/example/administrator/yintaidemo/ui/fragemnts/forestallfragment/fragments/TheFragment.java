@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -24,7 +25,7 @@ import java.util.List;
  * Created by 张扬帆 on 2017/10/20.
  */
 
-public class TheFragment extends Fragment implements ForestallView<Forestall>, View.OnClickListener {
+public class TheFragment extends Fragment implements ForestallView<Forestall>, View.OnClickListener, AdapterView.OnItemClickListener {
     private ListView lv_forestall_vp;
     private Forestall forestall;
     private List<Forestall.DataBean.ActivityinfoBean.ActivitylistBean> list;
@@ -45,6 +46,8 @@ public class TheFragment extends Fragment implements ForestallView<Forestall>, V
         lv_forestall_vp.addHeaderView(head);
         ll_forestall_lv_head = (LinearLayout) view.findViewById(R.id.ll_forestall_lv_head);
         ll_forestall_lv_head.setOnClickListener(this);
+
+        lv_forestall_vp.setOnItemClickListener(this);
     }
 
     private void initData() {
@@ -77,5 +80,10 @@ public class TheFragment extends Fragment implements ForestallView<Forestall>, V
     @Override
     public void onClick(View view) {
         Toast.makeText(getContext(), "活动订阅成功，将会提前提醒您抢购开始", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
     }
 }
