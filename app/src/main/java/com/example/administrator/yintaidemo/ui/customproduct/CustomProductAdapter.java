@@ -25,10 +25,20 @@ public class CustomProductAdapter extends RecyclerView.Adapter {
     private ArrayList<CustomProductBean.DataBean.ProductListBean> mList;
     private int itemType;
     private Context context;
+    private OnItemClicklistener onItemClicklistener;
 
-    public void setItemType(int type){
-        this.itemType=type;
+    public void setOnItemClicklistener(OnItemClicklistener onItemClicklistener) {
+        this.onItemClicklistener = onItemClicklistener;
     }
+
+    public interface OnItemClicklistener {
+        void click(int position);
+    }
+
+    public void setItemType(int type) {
+        this.itemType = type;
+    }
+
     public CustomProductAdapter(ArrayList<CustomProductBean.DataBean.ProductListBean> mList, int itemType, Context context) {
         this.mList = mList;
         this.itemType = itemType;
@@ -65,7 +75,13 @@ public class CustomProductAdapter extends RecyclerView.Adapter {
                 holder1.mPrice_right.setText(mList.get(position).getPromotion_price() + "");
                 holder1.mPrice_right.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
                 holder1.mPriductName.setText(mList.get(position).getName());
-                holder1.mPromotion_price.setText(mList.get(position).getPrice()+"");
+                holder1.mPromotion_price.setText(mList.get(position).getPrice() + "");
+                holder1.rootView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        onItemClicklistener.click(position);
+                    }
+                });
                 break;
             case 1:
                 ViewHolder2 holder2 = (ViewHolder2) holder;
@@ -75,7 +91,12 @@ public class CustomProductAdapter extends RecyclerView.Adapter {
                 holder2.mRight_Price.getPaint().setFlags(mList.get(position).getPrice());
                 holder2.mRight_name.setText(mList.get(position).getName());
                 holder2.mRight_promotionlabel.setText(mList.get(position).getPromotionlabel());
-
+                holder2.rootView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        onItemClicklistener.click(position);
+                    }
+                });
                 break;
 
 

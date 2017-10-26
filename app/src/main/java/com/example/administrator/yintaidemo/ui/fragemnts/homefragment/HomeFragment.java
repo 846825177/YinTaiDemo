@@ -1,5 +1,6 @@
 package com.example.administrator.yintaidemo.ui.fragemnts.homefragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -7,10 +8,14 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.administrator.yintaidemo.R;
 import com.example.administrator.yintaidemo.entity.HomePageBean;
 import com.example.administrator.yintaidemo.http.BaseParams;
+import com.example.administrator.yintaidemo.ui.SearchActivity;
 import com.example.administrator.yintaidemo.ui.fragemnts.homefragment.presenters.HomeFragmentPresenter;
 import com.example.administrator.yintaidemo.ui.fragemnts.homefragment.views.HomeFragmentView;
 import com.example.administrator.yintaidemo.utils.JumpActivityUtils;
@@ -41,6 +46,10 @@ public class HomeFragment extends Fragment implements HomeFragmentView<HomePageB
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.homefragment, container, false);
         View bannerView = LayoutInflater.from(getActivity()).inflate(R.layout.homefragment_banner, container, false);
         mHomeFragment_banner = bannerView.findViewById(R.id.mHomeFragment_Banner);
+        ImageView home_scan = (ImageView) view.findViewById(R.id.home_scan);
+        EditText search = (EditText) view.findViewById(R.id.search);
+        search.setOnClickListener((v) -> startActivity(new Intent(getActivity(), SearchActivity.class)));
+        home_scan.setOnClickListener((v) -> Toast.makeText(getActivity(), "二维码扫描", Toast.LENGTH_SHORT).show());
         initView(view);
         adapter = new HomeRecyclerViewAdapter(mList, getActivity());
         adapter.setOnItemClickListener((jumpurl) -> JumpActivityUtils.jump(getActivity(), jumpurl));

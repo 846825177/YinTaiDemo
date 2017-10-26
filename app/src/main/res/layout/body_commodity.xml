@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
     <!-- 商品轮播图相关 -->
 
     <com.recker.flybanner.FlyBanner
-
         android:id="@+id/banner_top_body"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -35,7 +34,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="23dp"
                 android:layout_marginRight="23dp"
-               />
+                android:src="@mipmap/favority_normal_productdetail"/>
         </LinearLayout>
 
 
@@ -164,7 +163,7 @@
             android:layout_marginRight="9dp"
             android:background="#d5d5d5"/>
 
-        <com.example.administrator.yintaidemo.views.ScrollViewExpandableListView
+        <ExpandableListView
             android:id="@+id/promotion_body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -173,6 +172,8 @@
             android:layout_marginRight="9dp"
             android:layout_marginTop="10dp"
             android:layout_weight="3.17"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/transparent"
             android:dividerHeight="0dp"/>
 
         <View
@@ -208,7 +209,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="15dp"
-          />
+            android:src="@mipmap/rignt_arrow_icon_product_detail"/>
     </RelativeLayout>
 
     <TextView

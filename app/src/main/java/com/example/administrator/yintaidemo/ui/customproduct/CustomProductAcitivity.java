@@ -15,6 +15,7 @@ import com.example.administrator.yintaidemo.R;
 import com.example.administrator.yintaidemo.entity.CustomProductBean;
 import com.example.administrator.yintaidemo.http.BaseParams;
 import com.example.administrator.yintaidemo.ui.BaseActivity;
+import com.example.administrator.yintaidemo.ui.GeneralProductActivity;
 import com.example.administrator.yintaidemo.ui.customproduct.presenters.CustomPresenter;
 import com.example.administrator.yintaidemo.ui.customproduct.views.CustomViews;
 import com.example.administrator.yintaidemo.utils.JumpActivityUtils;
@@ -62,6 +63,16 @@ public class CustomProductAcitivity extends BaseActivity implements CustomViews<
         TextView customproduct_title = (TextView) findViewById(R.id.customproduct_title);
         mCustomProduct.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
         customProductAdapter = new CustomProductAdapter(mList, ITEM_TYPE, CustomProductAcitivity.this);
+        customProductAdapter.setOnItemClicklistener(new CustomProductAdapter.OnItemClicklistener() {
+            @Override
+            public void click(int position) {
+//                startActivity(mList.get(position).get());
+                Intent intent1 = new Intent(CustomProductAcitivity.this, GeneralProductActivity.class);
+                intent1.putExtra("sku",mList.get(position).getGroupno());
+                startActivity(intent1);
+
+            }
+        });
         mCustomProduct.setAdapter(customProductAdapter);
         mGhBj.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
